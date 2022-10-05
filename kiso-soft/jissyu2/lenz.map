@@ -1,0 +1,40 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000000040000 xrw
+rom0             0x0000000000c00000 0x0000000000080000
+device           0x0000000000fff000 0x0000000000001000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD lenz.o
+                [!provide]                        PROVIDE (__stack = 0x3fff0)
+
+.text           0x0000000000000400       0x1c
+ *(.text)
+ .text          0x0000000000000400       0x1c lenz.o
+
+.data           0x000000000000041c        0xc
+                0x000000000000041c                . = ALIGN (0x4)
+ *(.data)
+ .data          0x000000000000041c        0xc lenz.o
+
+.bss            0x0000000000000428        0x0
+                0x0000000000000428                . = ALIGN (0x4)
+ *(.bss)
+ .bss           0x0000000000000428        0x0 lenz.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+Address of section .text set to 0x400
+OUTPUT(lenz.abs.tmp4100 srec)
+
+Cross Reference Table
+
+Symbol                                            File
+No symbols

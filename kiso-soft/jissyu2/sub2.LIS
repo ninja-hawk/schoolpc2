@@ -1,0 +1,15 @@
+                         4 .list
+                         5 .section .text
+                         6 start:
+                         7 	.equ	X1, 15  /* C言語の「#define X1 15」と同じ意味 */
+                         8 	.equ	X2, 10
+                         9 	.equ	X3, 30
+                        10 	.equ	X4, 12
+                        11 
+000400 303C 000F        12 	move.w	#X1, %d0
+000404 0440 000A        13 	sub.w	#X2, %d0
+000408 303C 001E        14 	move.w	#X3, %d0
+00040c 0440 000C        15 	sub.w	#X4, %d0
+                        16 
+000410 4E72 2700        17 	stop	#0x2700	/* 終了 */
+                        18 .end
