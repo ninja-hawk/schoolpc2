@@ -9,22 +9,22 @@ device           0x0000000000fff000 0x0000000000001000
 
 Linker script and memory map
 
-LOAD fact2.o
+LOAD fact3.o
                 [!provide]                        PROVIDE (__stack = 0x3fff0)
 
-.text           0x0000000000000400       0x26
+.text           0x0000000000000400       0x2a
  *(.text)
- .text          0x0000000000000400       0x26 fact2.o
+ .text          0x0000000000000400       0x2a fact3.o
 
-.data           0x0000000000000428        0x0
-                0x0000000000000428                . = ALIGN (0x4)
+.data           0x000000000000042c        0x0
+                0x000000000000042c                . = ALIGN (0x4)
  *(.data)
- .data          0x0000000000000428        0x0 fact2.o
+ .data          0x000000000000042c        0x0 fact3.o
 
-.bss            0x0000000000000428        0x0
-                0x0000000000000428                . = ALIGN (0x4)
+.bss            0x000000000000042c        0x0
+                0x000000000000042c                . = ALIGN (0x4)
  *(.bss)
- .bss           0x0000000000000428        0x0 fact2.o
+ .bss           0x000000000000042c        0x0 fact3.o
 
 .stab
  *(.stab)
@@ -32,7 +32,7 @@ LOAD fact2.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(fact2.abs.tmp11791 srec)
+OUTPUT(fact3.abs.tmp602 srec)
 
 Cross Reference Table
 

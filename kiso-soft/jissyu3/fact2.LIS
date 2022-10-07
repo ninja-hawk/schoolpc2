@@ -2,14 +2,17 @@
                          5 /* sample program fact.s 階乗  d1 := d0 ! (d0 >= 0)*/
                          6 .section .text
                          7 start:
-000400 7201              8 	moveq  #1,%d1
-000402 0C40 0000         9 	cmp    #0,%d0
-000406 6700 0010        10 	beq    end_of_program
-00040a 2400             11 	move.l %d0,%d2
-                        12 loop:
-00040c C2C2             13 	mulu %d2,%d1
-00040e 5342             14 	subq      #1,%d2
-000410 0C42 0000        15 	cmp.w  #0,%d2
-000414 6E00 FFF6        16 	bgt    loop
-                        17 end_of_program:
-000418 4E72 2700        18 	stop      #0x2700 /* 終了*/
+000400 0C41 0000         8 	cmp    #0,%d1
+000404 6700 001C         9 	beq    end_of_program
+000408 B441             10 	cmp    %d1, %d2
+00040a 6E00 0016        11 	bgt    end_of_program
+00040e 7001             12 	moveq  #1, %d0
+000410 0C42 0000        13 	cmp    #0, %d2
+000414 6700 000C        14 	beq    end_of_program
+                        15 loop:
+000418 C0C1             16 	mulu   %d1,%d0
+00041a 5341             17 	subq   #1, %d1
+00041c 5342             18 	subq   #1, %d2
+00041e 6E00 FFF8        19 	bgt    loop
+                        20 end_of_program:
+000422 4E72 2700        21 	stop      #0x2700 /* 終了*/
