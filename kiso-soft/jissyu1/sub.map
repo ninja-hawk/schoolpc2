@@ -32,7 +32,7 @@ LOAD sub.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(sub.abs.tmp16765 srec)
+OUTPUT(sub.abs.tmp29689 srec)
 
 Cross Reference Table
 
