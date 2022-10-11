@@ -12,19 +12,19 @@ Linker script and memory map
 LOAD fact3.o
                 [!provide]                        PROVIDE (__stack = 0x3fff0)
 
-.text           0x0000000000000400       0x2a
+.text           0x0000000000000400       0x2e
  *(.text)
- .text          0x0000000000000400       0x2a fact3.o
+ .text          0x0000000000000400       0x2e fact3.o
 
-.data           0x000000000000042c        0x0
-                0x000000000000042c                . = ALIGN (0x4)
+.data           0x0000000000000430        0x0
+                0x0000000000000430                . = ALIGN (0x4)
  *(.data)
- .data          0x000000000000042c        0x0 fact3.o
+ .data          0x0000000000000430        0x0 fact3.o
 
-.bss            0x000000000000042c        0x0
-                0x000000000000042c                . = ALIGN (0x4)
+.bss            0x0000000000000430        0x0
+                0x0000000000000430                . = ALIGN (0x4)
  *(.bss)
- .bss           0x000000000000042c        0x0 fact3.o
+ .bss           0x0000000000000430        0x0 fact3.o
 
 .stab
  *(.stab)
@@ -32,7 +32,7 @@ LOAD fact3.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(fact3.abs.tmp602 srec)
+OUTPUT(fact3.abs.tmp524 srec)
 
 Cross Reference Table
 
