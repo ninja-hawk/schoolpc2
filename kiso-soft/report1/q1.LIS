@@ -1,0 +1,15 @@
+                         4 .list
+                         5 /*レポート１　問１実験用 */
+                         6 
+                         7 .section .text
+                         8 start:
+000400 32D8              9 	move.w	(%a0)+, (%a1)+
+000402 33FC 07F7        10 	move.w  #0x07F7, MASK
+       00FF FC80        10 
+                        11 
+                        12 .section .data
+                        13 	.equ TOP, 0xFFFC00
+                        14 	.equ MASK, TOP+0x80
+                        15 		
+                        16 
+                        17 .end
