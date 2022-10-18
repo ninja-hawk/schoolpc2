@@ -1,4 +1,2 @@
 # schoolpc2
 
-## token
-
