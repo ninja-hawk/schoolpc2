@@ -6,10 +6,12 @@
 000400 32D8              9 	move.w	(%a0)+, (%a1)+
 000402 33FC 07F7        10 	move.w  #0x07F7, MASK
        00FF FC80        10 
-                        11 
-                        12 .section .data
-                        13 	.equ TOP, 0xFFFC00
-                        14 	.equ MASK, TOP+0x80
-                        15 		
-                        16 
-                        17 .end
+00040a 3039 00FF        11 	move.w  MASK, %d0
+       FC80             11 
+                        12 
+                        13 .section .data
+                        14 	.equ TOP, 0xFFFC00
+                        15 	.equ MASK, TOP+0x80
+                        16 		
+                        17 
+                        18 .end
