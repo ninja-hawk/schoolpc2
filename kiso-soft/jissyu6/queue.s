@@ -60,7 +60,7 @@ PUT_BUF_STEP1:
 PUT_BUF_STEP2:
 	move.b  #0xff, GET_FLG
 PUT_BUF_Finish:
-	movem.l (%sp)+, %d2/%a1-%a3 
+	movem.l (%sp)+, %a1-%a3 
 	rts
 .section .data
 ******************************
