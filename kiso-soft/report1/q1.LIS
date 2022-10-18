@@ -8,10 +8,16 @@
        00FF FC80        10 
 00040a 3039 00FF        11 	move.w  MASK, %d0
        FC80             11 
-                        12 
-                        13 .section .data
-                        14 	.equ TOP, 0xFFFC00
-                        15 	.equ MASK, TOP+0x80
-                        16 		
-                        17 
-                        18 .end
+000410 314A 01F4        12 	move.w  %A2,BOTTOM(%A0)
+000414 3239 0000        13 	move.w	BOTTOM, %d1
+       01F4             13 
+                        14 
+                        15 .section .data
+                        16 	.equ TOP, 0xFFFC00
+                        17 	.equ MASK, TOP+0x80
+00041c 6162 6364        18 	.dc.b   'a','b','c','d','e',0
+       6500             18 
+                        19 	.equ BOTTOM,        500
+                        20 
+                        21 
+                        22 .end
