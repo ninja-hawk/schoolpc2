@@ -1,0 +1,12 @@
+                         4 .list
+                         5 .section .text
+                         6 start:
+000400 2039 0000         7 	move.l    B_SIZE, %d0
+       0002              7 
+000406 23FC 0000         8 	move.l   #1, B_SIZE
+       0001 0000         8 
+       0002              8 
+000410 2239 0000         9 	move.l   B_SIZE, %d1
+       0002              9 
+                        10 
+                        11 .equ	B_SIZE, 2
