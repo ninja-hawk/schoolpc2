@@ -8,20 +8,21 @@
 ** メインルーチン
 ** a1:読み込むデータのアドレス
 ** a2:書き込むデータのアドレス
+** a3:各データのサイズ
 ** d1:1データのサイズ
 ** d0:書き込み回数
 **************************************************
 start:
 	lea.l  READ, %a1
 	lea.l  WRITE, %a2
-	lea.w  SIZE, %a3
+	lea.l  SIZE, %a3
 	move.w LENGTH, %d0
 LOOP:
 	move.w (%a3)+, BYTE
 	jsr    COPY
-	subq.i #1, %d0
+	subq   #1, %d0
 	beq    END_PROGRAM
-	bra LOOP1
+	bra    LOOP
 
 END_PROGRAM:
 	stop   #0x2700   /* プログラム終了*/
@@ -34,6 +35,7 @@ END_PROGRAM:
 
 COPY:
 	movem.l  %d0-%d7/%a0-%a6,-(%sp) /* レジスタ退避 */
+	
 
 
 	
@@ -50,7 +52,7 @@ READ:
 	.ascii  "HUKUOKASHI HIGASHIKU                    "  /* ADDRESS */
 	.ascii  "HANAKO              "    /* NAME */
 	.ascii  "HUKUOKASHI MINAMIKU                     "  /* ADDRESS */
-BYTE:　/* 各データのサイズ　*/
+BYTE: /* 各データのサイズ */
 	.dc.b 20
 
 WRITE:
