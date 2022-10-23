@@ -12,19 +12,19 @@ Linker script and memory map
 LOAD trs.o
                 [!provide]                        PROVIDE (__stack = 0x3fff0)
 
-.text           0x0000000000000400       0x34
+.text           0x0000000000000400       0x2e
  *(.text)
- .text          0x0000000000000400       0x34 trs.o
+ .text          0x0000000000000400       0x2e trs.o
 
-.data           0x0000000000000434       0x97
-                0x0000000000000434                . = ALIGN (0x4)
+.data           0x0000000000000430       0x28
+                0x0000000000000430                . = ALIGN (0x4)
  *(.data)
- .data          0x0000000000000434       0x97 trs.o
+ .data          0x0000000000000430       0x28 trs.o
 
-.bss            0x00000000000004cc        0x0
-                0x00000000000004cc                . = ALIGN (0x4)
+.bss            0x0000000000000458        0x0
+                0x0000000000000458                . = ALIGN (0x4)
  *(.bss)
- .bss           0x00000000000004cc        0x0 trs.o
+ .bss           0x0000000000000458        0x0 trs.o
 
 .stab
  *(.stab)
@@ -32,7 +32,7 @@ LOAD trs.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(trs.abs.tmp4566 srec)
+OUTPUT(trs.abs.tmp31904 srec)
 
 Cross Reference Table
 
