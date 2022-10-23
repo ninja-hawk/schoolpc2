@@ -6,54 +6,45 @@
 .section .text
 **************************************************
 ** メインルーチン
-** a1:読み込むデータのアドレス
-** a2:書き込むデータのアドレス
-** a3:各データのサイズ
-** d1:1データのサイズ
-** d0:書き込み回数
 **************************************************
 start:
-	lea.l  READ, %a1
-	lea.l  WRITE, %a2
-	lea.l  SIZE, %a3
-	move.w LENGTH, %d0
-LOOP:
-	move.w (%a3)+, BYTE
-	jsr    COPY
-	subq   #1, %d0
-	beq    END_PROGRAM
-	bra    LOOP
-
-END_PROGRAM:
-	stop   #0x2700   /* プログラム終了*/
+	jsr    COPY      /* サブルーチンへ */
+	stop   #0x2700   /* プログラム終了 */
 
 **************************************************
 ** データを転送するサブルーチン
-**
-** d1:1データのサイズ
+** a1:読み込みデータのアドレス
+** a2:書き込みデータのアドレス
+** d0:書き込み回数
 **************************************************
 
 COPY:
 	movem.l  %d0-%d7/%a0-%a6,-(%sp) /* レジスタ退避 */
-	
 
+	lea.l    #READ, %d1 /* 読み込みデータREADの先頭アドレス */
+	movea.l  %d1, %a1 /* READ先頭アドレスをa1レジスタへ */
 
-	
+	lea.l    WRITE, %a2 /* 書き込み先WRITEの先頭アドレスをa2レジスタへ */
+
+	moveq.l  #0, %d0 /* 書き込み回数初期化 */
+
+LOOP:
+	move.b   (%a1)+, (%a2)+	/* READからWIRTEへ */
+	addq.l   #1, %d0 /* 書き込み回数 +1 */
+	cmp.l    #LENGTH, %d0 /* 書き込み回数 < LENGTH ならば */
+	bne      LOPP /* LOOPへ */
+
+	movem.l (%sp)+,%d0-%d7/%a0-%a6 /* レジスタ復帰 */
+	rts /* サブルーチンから復帰 */	
 **************************************************
 ** データエリア
 **************************************************
+.equ        LENGTH,20
+
 .section .data
-LENGTH:
-	dc.w   4  /* データの個数 */
-SIZE: /* 各データのサイズの配列 */
-	dc.w   20, 40, 20, 40
 READ:
 	.ascii  "TAROU               "    /* NAME */
-	.ascii  "HUKUOKASHI HIGASHIKU                    "  /* ADDRESS */
-	.ascii  "HANAKO              "    /* NAME */
-	.ascii  "HUKUOKASHI MINAMIKU                     "  /* ADDRESS */
-BYTE: /* 各データのサイズ */
-	.dc.b 20
+
 
 WRITE:
 	.ds.b 20          /* 書き込みデータ出力先 */
