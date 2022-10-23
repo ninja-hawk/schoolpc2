@@ -16,15 +16,15 @@ LOAD report2-5.o
  *(.text)
  .text          0x0000000000000400       0xb2 report2-5.o
 
-.data           0x00000000000004b4      0x14b
+.data           0x00000000000004b4      0x127
                 0x00000000000004b4                . = ALIGN (0x4)
  *(.data)
- .data          0x00000000000004b4      0x14b report2-5.o
+ .data          0x00000000000004b4      0x127 report2-5.o
 
-.bss            0x0000000000000600        0x0
-                0x0000000000000600                . = ALIGN (0x4)
+.bss            0x00000000000005dc        0x0
+                0x00000000000005dc                . = ALIGN (0x4)
  *(.bss)
- .bss           0x0000000000000600        0x0 report2-5.o
+ .bss           0x00000000000005dc        0x0 report2-5.o
 
 .stab
  *(.stab)
@@ -32,7 +32,7 @@ LOAD report2-5.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(report2-5.abs.tmp21285 srec)
+OUTPUT(report2-5.abs.tmp12406 srec)
 
 Cross Reference Table
 
