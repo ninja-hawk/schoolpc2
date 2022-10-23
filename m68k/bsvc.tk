@@ -1,0 +1,7 @@
+#!wish -f
+set Program(InstallDir) /usr/local/lib/bsvc
+set Program(BitmapDir) $Program(InstallDir)/UI/bitmaps
+set Program(HelpDir) $Program(InstallDir)/UI/help
+set Program(LibDir) $Program(InstallDir)/UI
+option readfile $Program(InstallDir)/UI/bsvc.ad 40
+source $Program(InstallDir)/UI/main.tk

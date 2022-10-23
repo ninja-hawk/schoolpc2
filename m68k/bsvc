@@ -1,0 +1,4 @@
+#!/bin/sh
+ARGS="$@"
+export ARGS
+exec wish -f /usr/local/lib/bsvc/UI/bsvc.tk
