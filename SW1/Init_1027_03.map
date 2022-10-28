@@ -9,22 +9,22 @@ device           0x0000000000fff000 0x0000000000001000
 
 Linker script and memory map
 
-LOAD Init.o
+LOAD Init_1027_03.o
                 [!provide]                        PROVIDE (__stack = 0x3fff0)
 
-.text           0x0000000000000400       0xb8
+.text           0x0000000000000400       0xda
  *(.text)
- .text          0x0000000000000400       0xb8 Init.o
+ .text          0x0000000000000400       0xda Init_1027_03.o
 
-.data           0x00000000000004b8        0x0
-                0x00000000000004b8                . = ALIGN (0x4)
+.data           0x00000000000004dc        0x0
+                0x00000000000004dc                . = ALIGN (0x4)
  *(.data)
- .data          0x00000000000004b8        0x0 Init.o
+ .data          0x00000000000004dc        0x0 Init_1027_03.o
 
-.bss            0x00000000000004b8     0x4000
-                0x00000000000004b8                . = ALIGN (0x4)
+.bss            0x00000000000004dc     0x4000
+                0x00000000000004dc                . = ALIGN (0x4)
  *(.bss)
- .bss           0x00000000000004b8     0x4000 Init.o
+ .bss           0x00000000000004dc     0x4000 Init_1027_03.o
 
 .stab
  *(.stab)
@@ -32,7 +32,7 @@ LOAD Init.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(Init.abs.tmp2358 srec)
+OUTPUT(Init_1027_03.abs.tmp313 srec)
 
 Cross Reference Table
 
