@@ -9,22 +9,22 @@ device           0x0000000000fff000 0x0000000000001000
 
 Linker script and memory map
 
-LOAD timer_1102.o
+LOAD timer_1108.o
                 [!provide]                        PROVIDE (__stack = 0x3fff0)
 
-.text           0x0000000000000400      0x39a
+.text           0x0000000000000400      0x3b2
  *(.text)
- .text          0x0000000000000400      0x39a timer_1102.o
+ .text          0x0000000000000400      0x3b2 timer_1108.o
 
-.data           0x000000000000079c      0x238
-                0x000000000000079c                . = ALIGN (0x4)
+.data           0x00000000000007b4      0x238
+                0x00000000000007b4                . = ALIGN (0x4)
  *(.data)
- .data          0x000000000000079c      0x238 timer_1102.o
+ .data          0x00000000000007b4      0x238 timer_1108.o
 
-.bss            0x00000000000009d4     0x4004
-                0x00000000000009d4                . = ALIGN (0x4)
+.bss            0x00000000000009ec     0x4004
+                0x00000000000009ec                . = ALIGN (0x4)
  *(.bss)
- .bss           0x00000000000009d4     0x4004 timer_1102.o
+ .bss           0x00000000000009ec     0x4004 timer_1108.o
 
 .stab
  *(.stab)
@@ -32,7 +32,7 @@ LOAD timer_1102.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(timer_1102.abs.tmp20412 srec)
+OUTPUT(timer_1108.abs.tmp18653 srec)
 
 Cross Reference Table
 

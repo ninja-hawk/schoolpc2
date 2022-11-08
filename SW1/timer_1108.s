@@ -88,9 +88,25 @@ boot:
 		move.w #0x0004, TCTL1   | restart, 割り込み不可 ,
 					| システムクロックの 1/16 を単位として計時,
 					| タイマ使用停止
+		move.l #COMPARE_INTERPUT, 0x118 /* level 6 */
                 
                 jsr Init_Q              | キューの初期化 
 		bra MAIN
+
+******************************
+** COMPARE_INTERPUT:	タイマ用のハードウェア割り込みインターフェース
+******************************
+COMPARE_INTERPUT:
+		movem.l %d0, -(%sp) /* d0退避 */
+		move.w  TSTAT1, %d0 /* TSTATの値をd0へ */
+		btst	#0, %d0 /* タイマ1ステータスレジスタの0ビット目が0か、否か */
+		beq	COMPARE_END /* 0ならコンペアイベントなし、つまりカウンタ値とコンペアレジスタ値が異なる */
+		move.w	#0x0000, TSTAT1 /* タイマ1ステータスレジスタを0クリア */
+		jsr	CALL_RP /* CALL_RPを呼び出す */
+
+COMPARE_END:
+		*rte
+		movem.l (%sp)+, %d0 /* d0復帰 */
 
 *************************************
 ** UART1_interrupt
@@ -127,7 +143,7 @@ END_interrupt:
 ** 引数     :  %d1.l = チャネル(ch)	
 *************************************
 INTERPUT:
-                move.b #'3', LED5/*デバック用*/
+                *move.b #'3', LED5/*デバック用*/
 		move.w  #0x2700, %SR | 走行レベルを７に設定
 		cmpi.l  #0, %d1      | ch = 0 を確認
 		bne     END_INTERPUT | if ch != 0 => 復帰
@@ -138,7 +154,7 @@ INTERPUT:
 		bne     TX_DATA      | if so => 送信割り込みをマスク(真下)
 		move.w  #0xe108, USTCNT1
 TX_DATA:
-		move.b #'4', LED4/*デバック用*/
+		*move.b #'4', LED4/*デバック用*/
                 add.w   #0x0800, %d1 | ヘッダを付与
 		move.w  %d1, UTX1
 END_INTERPUT:
@@ -376,6 +392,10 @@ SET_TIMER:
 		move.w	#0206, TPRER1 /* 0.1msec進むとカウンタが1増えるようにする */
 		move.w	%d1, TCMP1 /* t秒周期に設定 */
 		move.w  #0x0015, TCTL1 /* タイマ1コントロールレジスタに0x0015を設定→割り込み許可、(SYSCLK/16選択)、タイマ許可 */
+		move.b	#'t', LED7
+		move.b	#'e', LED6
+		move.b	#'s', LED5
+		move.b	#'t', LED4	
 		rts
 
 ******************************
@@ -387,8 +407,6 @@ CALL_RP:
 		jsr (%a0)
 		movem.l (%sp)+, %a0
 		rts
-
-
 
 TEST_LIGHT:
 		move.b	#'G', LED7
@@ -432,26 +450,15 @@ TDATA2: .ascii "klmnopqrstuvwxyz"
 .even
 MAIN:
 	        *move.w #0x0800+'A', UTX1
+***************************************************************
+** タイマテスト用
 		jsr	RESET_TIMER
 		move.l	#TEST_LIGHT, %d2
 		move.w	#50000, %d1
-		jsr	SET_TIMER
+		jsr	SET_TIMER	
 
+***************************************************************
 		
 LOOP:
-******************************
-** COMPARE_INTERPUT:	タイマ用のハードウェア割り込みインターフェース
-******************************
-COMPARE_INTERPUT:
-		movem.l %d0, -(%sp) /* d0退避 */
-		move.w  TSTAT1, %d0 /* TSTATの値をd0へ */
-		btst	#0, %d0 /* タイマ1ステータスレジスタの0ビット目が0か、否か */
-		beq	COMPARE_END /* 0ならコンペアイベントなし、つまりカウンタ値とコンペアレジスタ値が異なる */
-		move.w	#0x0000, TSTAT1 /* タイマ1ステータスレジスタを0クリア */
-		jsr	CALL_RP /* CALL_RPを呼び出す */
-
-COMPARE_END:
-		*rte
-		movem.l (%sp)+, %d0 /* d0復帰 */
 		bra LOOP	
 
