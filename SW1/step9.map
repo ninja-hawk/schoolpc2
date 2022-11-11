@@ -1,0 +1,40 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000000040000 xrw
+rom0             0x0000000000c00000 0x0000000000080000
+device           0x0000000000fff000 0x0000000000001000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD step9.o
+                [!provide]                        PROVIDE (__stack = 0x3fff0)
+
+.text           0x0000000000000400      0x132
+ *(.text)
+ .text          0x0000000000000400      0x132 step9.o
+
+.data           0x0000000000000534      0x504
+                0x0000000000000534                . = ALIGN (0x4)
+ *(.data)
+ .data          0x0000000000000534      0x504 step9.o
+
+.bss            0x0000000000000a38     0x8104
+                0x0000000000000a38                . = ALIGN (0x4)
+ *(.bss)
+ .bss           0x0000000000000a38     0x8104 step9.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+Address of section .text set to 0x400
+OUTPUT(step9.abs.tmp1866 srec)
+
+Cross Reference Table
+
+Symbol                                            File
+No symbols
