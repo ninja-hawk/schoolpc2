@@ -110,7 +110,7 @@ MAIN:
 		trap   #0
 		**システムコールによるSET_TIMERの起動
 		move.l #SYSCALL_NUM_SET_TIMER, %D0
-		move.w #10000, %D1
+		move.w #100, %D1
 		move.l #SELECT,%D2
 		trap   #0
 		
@@ -126,29 +126,29 @@ LOOP:
 ******************************
 SELECT:
 		movem.l %D0-%D7/%A0-%A6,-(%SP)
-		cmpi.b #0x0a,CS1            | CS1カウンタで10回実行したかどうか数える
+		cmpi.b #0x3a,CS1            | CS1カウンタで10回実行したかどうか数える
 		beq    CS1KILL
 SECOND:
-		cmpi.b #0x0a,CS2            | CS2カウンタで6回実行したかどうか数える
+		cmpi.b #0x3a,CS2            | CS2カウンタで6回実行したかどうか数える
 		beq    CS2KILL
 TENSECOND:
-		cmpi.b #0x0a,SS1            | SS1カウンタで10回実行したかどうか数える
+		cmpi.b #0x3a,SS1            | SS1カウンタで10回実行したかどうか数える
 		beq    SS1KILL		
 MINUTE:
-		cmpi.b #0x06,SS2            | SS2カウンタで6回実行したかどうか数える
+		cmpi.b #0x36,SS2            | SS2カウンタで6回実行したかどうか数える
 		beq    SS2KILL
 TENMINUTE:
-		cmpi.b #0x0a,MM1            | MM1カウンタで10回実行したかどうか数える
+		cmpi.b #0x3a,MM1            | MM1カウンタで10回実行したかどうか数える
 		beq    MM1KILL		
 ENDCLOCK:
-		cmpi.b #0x06,MM2            | MM2カウンタで10回実行したかどうか数える
+		cmpi.b #0x36,MM2            | MM2カウンタで10回実行したかどうか数える
 		beq    MM2KILL	
 
 COUNT:
 		move.l #SYSCALL_NUM_PUTSTRING,%D0
 		move.l #0,    %D1        | ch = 0
 		move.l #BACK, %D2        | p  = #BACK
-		move.l #1,    %D3        | size = 8
+		move.l #8,    %D3        | size = 8
 		trap   #0
 
 		lea.l  MMSSFF, %a0
@@ -161,71 +161,59 @@ COUNT:
 		move.b CS2, (%a0)+
 		move.b CS1, (%a0)
 
-		move.l #SYSCALL_NUM_GETSTRING, %D0
-		move.l #0,   %D1        | ch   = 0
-		move.l #MMSSFF, %D2     | p    = #BUF
-		move.l #8, %D3        | size = 256
-		trap   #0
-
 		move.l #SYSCALL_NUM_PUTSTRING,%D0
 		move.l #0,    %D1        | ch = 0
-		move.l #MMSSFF, %D2      | p  = #TMSG
+		move.l #MMSSFF,  %D2      | p  = #MMSSFF
 		move.l #8,    %D3        | size = 8
 		trap   #0
 		/* c秒 */
 		move.b CS1, %d7
-		add.b  #0x30, %d7
 		move.b %d7, LED0
 		/* 10c秒 */
 		move.b CS2, %d7
-		add.b  #0x30, %d7
 		move.b %d7, LED1
 		/* 秒 */
 		move.b SS1, %d7
-		add.b  #0x30, %d7
 		move.b %d7, LED3
 		/* 10秒 */
 		move.b SS2, %d7
-		add.b  #0x30, %d7
 		move.b %d7, LED4
 		/* 分 */
 		move.b MM1, %d7
-		add.b  #0x30, %d7
 		move.b %d7, LED6
 		/* 10分 */
 		move.b MM2, %d7
-		add.b  #0x30, %d7
 		move.b %d7, LED7
 		/* カウントアップ */
 		addi.b #1,CS1           | SS1カウンタを1つ増やして
 		bra    SELECTEND         |そのまま戻る
 CS1KILL:
-		move.b #0x00, CS1
+		move.b #0x30, CS1
 		add.b  #0x01, CS2
 		bra    SECOND
 CS2KILL:
-		move.b #0x00, CS2
+		move.b #0x30, CS2
 		add.b  #0x01, SS1
 		bra    TENSECOND
 SS1KILL:
-		move.b #0x00, SS1
+		move.b #0x30, SS1
 		add.b  #0x01, SS2
 		bra    MINUTE
 SS2KILL:
-		move.b #0x00, SS2
+		move.b #0x30, SS2
 		add.b  #0x01, MM1
 		bra    TENMINUTE
 MM1KILL:
-		move.b #0x00, MM1
+		move.b #0x30, MM1
 		add.b  #0x01, MM2
 		bra    ENDCLOCK
 MM2KILL:
-		move.b #0x00, CS1
-		move.b #0x00, CS1
-		move.b #0x00, SS1
-		move.b #0x00, SS1
-		move.b #0x00, MM1
-		move.b #0x00, MM2
+		move.b #0x30, CS1
+		move.b #0x30, CS1
+		move.b #0x30, SS1
+		move.b #0x30, SS1
+		move.b #0x30, MM1
+		move.b #0x30, MM2
 		move.b	#'M', LED7
 		move.b	#'M', LED6
 		move.b  #':', LED5
@@ -241,7 +229,15 @@ SELECTEND:
 		movem.l (%SP)+,%D0-%D7/%A0-%A6
 		rts
 
-
+RAP:
+		movem.l %D0-%D7/%A0-%A6,-(%SP)
+		move.l #SYSCALL_NUM_PUTSTRING,%D0
+		move.l #0,    %D1        | ch = 0
+		move.l #TMSG,  %D2      | p  = #TMSg
+		move.l #8,    %D3        | size = 8
+		trap   #0
+		movem.l (%SP)+,%D0-%D7/%A0-%A6
+		rte
 
 ******************************
 *タイマのテスト
@@ -620,34 +616,40 @@ TMSG:
 		.ascii  "******\r\n"      | \r:行頭へ(キャリッジリターン)
 		.even                     | \n:次の行へ(ラインフィード)
 BACK:
-		.ascii  "\r"
-		.even               
+		.ascii  "\rTIME = "
+		.even
+NXROW:
+		.ascii  "\n"
+		.even
+MMSSFF:
+		.ascii  "12:34.56"
+		.even     
 TTC:
-		.dc.w  0
+		.dc.w  0x30
 		.even
 MM2:
-		.dc.b  0
+		.dc.b  0x30
 		.even
 MM1:
-		.dc.b  0
+		.dc.b  0x30
 		.even
 COLON:
-		.dc.b  0x2e
-		.even
-SS2:
-		.dc.b  0
-		.even
-SS1:
-		.dc.b  0
-		.even
-PERIOD:
 		.dc.b  0x3a
 		.even
+SS2:
+		.dc.b  0x30
+		.even
+SS1:
+		.dc.b  0x30
+		.even
+PERIOD:
+		.dc.b  0x2e
+		.even
 CS2:
-		.dc.b  0
+		.dc.b  0x30
 		.even
 CS1:
-		.dc.b  0
+		.dc.b  0x30
 		.even
 
 ****************************************************************
@@ -655,9 +657,6 @@ CS1:
 .section .bss
 BUF:
 		.ds.b 256      |BUF[256]
-		.even
-MMSSFF:
-		.ds.b 8      |BUF[256]
 		.even
 USR_STK:
 		.ds.b 0x4000   |ユーザスタック領域
