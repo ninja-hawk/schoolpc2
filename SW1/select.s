@@ -235,8 +235,8 @@ MM2KILL:
 		move.b #'.', LED2				| LED2を.に点灯
 		move.b #'f', LED1				| LED1をfに点灯
 		move.b #'f', LED0				| LED0をfに点灯
-		move.l #SYSCALL_NUM_RESET_TIMER,%D0	| タイマリセット
-		trap   #0		　				|  システムコール呼び出し
+		move.l #SYSCALL_NUM_RESET_TIMER,%D0		| タイマリセット
+		trap   #0					| システムコール呼び出し
 
 SELECTEND:
 		movem.l (%SP)+,%D0-%D7/%A0-%A6		| レジスタ復帰
@@ -541,7 +541,7 @@ RESET_TIMER:
 ******************************
 SET_TIMER:
 		move.l	%d2, task_p /* 割り込み時に起動するルーチンの先頭アドレスpを大域変数task_pへ */
-		move.w	#0206, TPRER1 /* 0.1msec進むとカウンタが1増えるようにする */
+		move.w	#0xce, TPRER1 /* 0.1msec進むとカウンタが1増えるようにする */
 		move.w	%d1, TCMP1 /* t秒周期に設定 */
 		move.w  #0x0015, TCTL1 /* タイマ1コントロールレジスタに0x0015を設定→割り込み許可、(SYSCLK/16選択)、タイマ許可 */
 		move.b	#'M', LED7
