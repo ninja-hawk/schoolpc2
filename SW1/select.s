@@ -123,121 +123,125 @@ LOOP:
 		
 ******************************
 ** 選択課題ゾーン
+** 時計(2)
+** プログラムを実行してからの時間を
+** ターミナルとLEDを"MM:SS.ff"という形で表示する
+** CS1, CS2 -> 小数第2位、第1位
+**  SS1,  SS1 -> 秒数1の位、10の位
+**  MM1,  MM2 ->  分数1の位、10の位
+**  MMSSFF       ->  ターミナル表示用メモリ領域
+** BACK     -> ターミナル表示用ヘッダ(\rTIME = )
+** COLON    -> :(0x3a)
+** PERIOED  -> .(0x2e)
 ******************************
 SELECT:
-		movem.l %D0-%D7/%A0-%A6,-(%SP)
-		cmpi.b #0x3a,CS1            | CS1カウンタで10回実行したかどうか数える
-		beq    CS1KILL
+		movem.l %D0-%D7/%A0-%A6,-(%SP)	| レジスタ退避
+		cmpi.b #0x3a,CS1            	| CS1カウンタで10回実行したかどうか数える
+		beq    CS1KILL				| 0.10秒経っていたら繰り上げ
 SECOND:
-		cmpi.b #0x3a,CS2            | CS2カウンタで6回実行したかどうか数える
-		beq    CS2KILL
+		cmpi.b #0x3a,CS2           		| CS2カウンタで10回実行したかどうか数える
+		beq    CS2KILL				| 1.00秒経っていたら繰り上げ
 TENSECOND:
-		cmpi.b #0x3a,SS1            | SS1カウンタで10回実行したかどうか数える
-		beq    SS1KILL		
+		cmpi.b #0x3a,SS1            	| SS1カウンタで10回実行したかどうか数える
+		beq    SS1KILL				| 10.00秒経っていたら繰り上げ
 MINUTE:
-		cmpi.b #0x36,SS2            | SS2カウンタで6回実行したかどうか数える
-		beq    SS2KILL
+		cmpi.b #0x36,SS2            	| SS2カウンタで6回実行したかどうか数える
+		beq    SS2KILL				| 60.00秒経っていたら繰り上げ
 TENMINUTE:
-		cmpi.b #0x3a,MM1            | MM1カウンタで10回実行したかどうか数える
-		beq    MM1KILL		
+		cmpi.b #0x3a,MM1            	| MM1カウンタで10回実行したかどうか数える
+		beq    MM1KILL				| 1.00分経っていたら繰り上げ
 ENDCLOCK:
-		cmpi.b #0x36,MM2            | MM2カウンタで10回実行したかどうか数える
-		beq    MM2KILL	
+		cmpi.b #0x36,MM2            	| MM2カウンタで6回実行したかどうか数える
+		beq    MM2KILL				| 60.00分経っていたらタイマストップ
 
 COUNT:
-		move.l #SYSCALL_NUM_PUTSTRING,%D0
-		move.l #0,    %D1        | ch = 0
-		move.l #BACK, %D2        | p  = #BACK
-		move.l #8,    %D3        | size = 8
-		trap   #0
+		move.l #SYSCALL_NUM_PUTSTRING,%D0	| コール番号格納
+		move.l #0,    %D1       			| ch = 0
+		move.l #BACK, %D2        			| p  = #BACK
+		move.l #8,    %D3        			| size = 8
+		trap   #0						| 呼び出し
 
-		lea.l  MMSSFF, %a0
-		move.b MM2, (%a0)+
-		move.b MM1, (%a0)+
-		move.b COLON, (%a0)+
-		move.b SS2, (%a0)+
-		move.b SS1, (%a0)+
-		move.b PERIOD, (%a0)+
-		move.b CS2, (%a0)+
-		move.b CS1, (%a0)
+		lea.l  MMSSFF, %a0				| a0レジスタにMMSSFFのメモリ番地
+		move.b MM2, (%a0)+				| 分数10の位代入
+		move.b MM1, (%a0)+				| 分数1の位代入
+		move.b COLON, (%a0)+				| :代入
+		move.b SS2, (%a0)+				| 秒数10の位代入
+		move.b SS1, (%a0)+				| 秒数1の位代入
+		move.b PERIOD, (%a0)+				|　.代入
+		move.b CS2, (%a0)+				| 小数第1位代入
+		move.b CS1, (%a0)				|  小数第2位代入
 
-		move.l #SYSCALL_NUM_PUTSTRING,%D0
-		move.l #0,    %D1        | ch = 0
-		move.l #MMSSFF,  %D2      | p  = #MMSSFF
-		move.l #8,    %D3        | size = 8
-		trap   #0
+		move.l #SYSCALL_NUM_PUTSTRING,%D0	| コール番号格納
+		move.l #0,    %D1        			| ch = 0
+		move.l #MMSSFF,  %D2      			| p  = #MMSSFF
+		move.l #8,    %D3        			| size = 8
+		trap   #0						| システム呼び出し
+
 		/* c秒 */
-		move.b CS1, %d7
-		move.b %d7, LED0
+		move.b CS1, %d7					| CS1をd7レジスタへ代入
+		move.b %d7, LED0					| LED0を変化
 		/* 10c秒 */
-		move.b CS2, %d7
-		move.b %d7, LED1
+		move.b CS2, %d7					| CS2をd7レジスタへ代入
+		move.b %d7, LED1					| LED1を変化
 		/* 秒 */
-		move.b SS1, %d7
-		move.b %d7, LED3
+		move.b SS1, %d7					| SS1をd7レジスタへ代入
+		move.b %d7, LED3					| LED3を変化
 		/* 10秒 */
-		move.b SS2, %d7
-		move.b %d7, LED4
+		move.b SS2, %d7					| SS2をd7レジスタへ代入
+		move.b %d7, LED4					| LED4を変化
 		/* 分 */
-		move.b MM1, %d7
-		move.b %d7, LED6
+		move.b MM1, %d7					| MM1をd7レジスタへ代入
+		move.b %d7, LED6					| LED6を変化
 		/* 10分 */
-		move.b MM2, %d7
-		move.b %d7, LED7
+		move.b MM2, %d7					| CS1をd7レジスタへ代入
+		move.b %d7, LED7					| MM2を変化
 		/* カウントアップ */
-		addi.b #1,CS1           | SS1カウンタを1つ増やして
-		bra    SELECTEND         |そのまま戻る
+		addi.b #1,CS1      				| CS1カウンタを1つ増やして
+		bra    SELECTEND         			| サブルーチン終了へ
+
+
 CS1KILL:
-		move.b #0x30, CS1
-		add.b  #0x01, CS2
+		move.b #0x30, CS1				| 小数第2位を0に
+		add.b  #0x01, CS2				| 小数第1位に繰り上げ
 		bra    SECOND
 CS2KILL:
-		move.b #0x30, CS2
-		add.b  #0x01, SS1
+		move.b #0x30, CS2				| 小数第1位を0に
+		add.b  #0x01, SS1				| 秒数1の位に繰り上げ
 		bra    TENSECOND
 SS1KILL:
-		move.b #0x30, SS1
-		add.b  #0x01, SS2
+		move.b #0x30, SS1				| 秒数1の位を0に
+		add.b  #0x01, SS2				| 秒数10の位に繰り上げ
 		bra    MINUTE
 SS2KILL:
-		move.b #0x30, SS2
-		add.b  #0x01, MM1
+		move.b #0x30, SS2				| 秒数10の位を0に
+		add.b  #0x01, MM1				| 分数1の位に繰り上げ
 		bra    TENMINUTE
 MM1KILL:
-		move.b #0x30, MM1
-		add.b  #0x01, MM2
+		move.b #0x30, MM1				| 分数1の位を0に
+		add.b  #0x01, MM2				| 分数10の位に繰り上げ
 		bra    ENDCLOCK
 MM2KILL:
-		move.b #0x30, CS1
-		move.b #0x30, CS1
-		move.b #0x30, SS1
-		move.b #0x30, SS1
-		move.b #0x30, MM1
-		move.b #0x30, MM2
-		move.b	#'M', LED7
-		move.b	#'M', LED6
-		move.b  #':', LED5
-		move.b	#'S', LED4
-		move.b	#'S', LED3
-		move.b	#'.', LED2
-		move.b	#'f', LED1
-		move.b	#'f', LED0
-		move.l #SYSCALL_NUM_RESET_TIMER,%D0
-		trap   #0		
+		move.b #0x30, CS1				| 小数第2位を0に
+		move.b #0x30, CS2				| 小数第1位を0に
+		move.b #0x30, SS1				| 秒数1の位を0に
+		move.b #0x30, SS2				| 秒数10の位を0に
+		move.b #0x30, MM1				| 分数1の位を0に
+		move.b #0x30, MM2				| 分数10の位を0に
+		move.b #'M', LED7				| LED7をMに点灯
+		move.b #'M', LED6				| LED6をMに点灯
+		move.b #':', LED5				| LED5を:に点灯
+		move.b #'S', LED4				| LED4をSに点灯
+		move.b #'S', LED3				| LED3をSに点灯
+		move.b #'.', LED2				| LED2を.に点灯
+		move.b #'f', LED1				| LED1をfに点灯
+		move.b #'f', LED0				| LED0をfに点灯
+		move.l #SYSCALL_NUM_RESET_TIMER,%D0	| タイマリセット
+		trap   #0		　				|  システムコール呼び出し
 
 SELECTEND:
-		movem.l (%SP)+,%D0-%D7/%A0-%A6
-		rts
+		movem.l (%SP)+,%D0-%D7/%A0-%A6		| レジスタ復帰
+		rts							| サブルーチン呼び出し前へ戻る
 
-RAP:
-		movem.l %D0-%D7/%A0-%A6,-(%SP)
-		move.l #SYSCALL_NUM_PUTSTRING,%D0
-		move.l #0,    %D1        | ch = 0
-		move.l #TMSG,  %D2      | p  = #TMSg
-		move.l #8,    %D3        | size = 8
-		trap   #0
-		movem.l (%SP)+,%D0-%D7/%A0-%A6
-		rte
 
 ******************************
 *タイマのテスト
@@ -615,11 +619,20 @@ task_p:		.ds.l 1	      | タイマ割り込み時に起動するルーチン先�
 TMSG:
 		.ascii  "******\r\n"      | \r:行頭へ(キャリッジリターン)
 		.even                     | \n:次の行へ(ラインフィード)
+
+******************************
+** 選択課題ゾーン
+** CS1, CS2 -> 小数第2位、第1位
+**  SS1,  SS1 -> 秒数1の位、10の位
+**  MM1,  MM2 ->  分数1の位、10の位
+**  MMSSFF       ->  ターミナル表示用メモリ領域
+** BACK     -> ターミナル表示用ヘッダ(\rTIME = )
+** COLON    -> :(0x3a)
+** PERIOED  -> .(0x2e)
+******************************
+
 BACK:
 		.ascii  "\rTIME = "
-		.even
-NXROW:
-		.ascii  "\n"
 		.even
 MMSSFF:
 		.ascii  "12:34.56"
