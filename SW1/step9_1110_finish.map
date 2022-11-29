@@ -32,7 +32,7 @@ LOAD step9_1110_finish.o
 .stabstr
  *(.stabstr)
 Address of section .text set to 0x400
-OUTPUT(step9_1110_finish.abs.tmp22304 srec)
+OUTPUT(step9_1110_finish.abs.tmp356 srec)
 
 Cross Reference Table
 

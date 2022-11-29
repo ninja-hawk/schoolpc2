@@ -110,7 +110,7 @@ MAIN:
 		trap   #0
 		**システムコールによるSET_TIMERの起動
 		move.l #SYSCALL_NUM_SET_TIMER, %D0
-		move.w #50000, %D1
+		move.w #0xc350, %D1
 		move.l #TT,    %D2
 		trap   #0
 		

@@ -133,7 +133,7 @@
 00049c 4E40            114 		trap   #0
                        115 		**システムコールによるSET_TIMERの起動
 00049e 7004            116 		move.l #SYSCALL_NUM_SET_TIMER, %D0
-0004a0 323C C350       117 		move.w #50000, %D1
+0004a0 323C C350       117 		move.w #0xc350, %D1
 0004a4 243C 0000       118 		move.l #TT,    %D2
        0000            118 
 0004aa 4E40            119 		trap   #0
