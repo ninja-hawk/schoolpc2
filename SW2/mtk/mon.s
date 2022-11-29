@@ -110,7 +110,7 @@ MAIN:
 		trap   #0
 		**システムコールによるSET_TIMERの起動
 		move.l #SYSCALL_NUM_SET_TIMER, %D0
-		move.w #0xc350, %D1
+		move.w #50000, %D1
 		move.l #TT,    %D2
 		trap   #0
 		
@@ -438,7 +438,7 @@ RESET_TIMER:
 ******************************
 SET_TIMER:
 		move.l	%d2, task_p /* 割り込み時に起動するルーチンの先頭アドレスpを大域変数task_pへ */
-		move.w	#0206, TPRER1 /* 0.1msec進むとカウンタが1増えるようにする */
+		move.w	#0xce, TPRER1 /* 0.1msec進むとカウンタが1増えるようにする */
 		move.w	%d1, TCMP1 /* t秒周期に設定 */
 		move.w  #0x0015, TCTL1 /* タイマ1コントロールレジスタに0x0015を設定→割り込み許可、(SYSCLK/16選択)、タイマ許可 */
 		move.b	#'t', LED7
