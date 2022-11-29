@@ -1,0 +1,21 @@
+2port対応モニタのオブジェクトファイルについて
+
+Moodleから mtk内の mon_r1+r2_230k.tgz を入手し、
+以下の様に行って下さい。
+
+cd テーマ3作業フォルダ
+tar xfz ダウンロードフォルダ名/mon_r1+r2_230k.tgz
+cp mon_r/mon_r2_230k.o mon.o
+touch mon.o
+make test3
+
+--------
+About the object file of the monitor supporting 2 serial ports
+
+Get mon_r1+r2_230k.tgz from mtk folder of Moodle and do the following operation.
+
+cd Theme3_working_folder
+tar xfz Download_folder/mon_r1+r2_230k.tgz
+cp mon_r/mon_r2_230k.o mon.o
+touch mon.o
+make test3
