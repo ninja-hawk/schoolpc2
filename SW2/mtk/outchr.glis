@@ -1,0 +1,58 @@
+68K GAS  outchr.s 			page 1
+
+
+   1               	.global outbyte
+   2               	.equ SYSCALL_NUM_PUTSTRING,     2
+   3               	
+   4               	.text
+   5               	.even
+   6               	
+   7               	outbyte:
+   8 0000 48E7 F040 		movem.l %d0-%d3/%a1, -(%sp)
+   9               	outbyte_step0:
+  10               	
+  11               		**引数のchを取る
+  12 0004 43D7      		lea.l (%sp), %a1
+  13 0006 7418      		move.l #24, %d2	/*4xレジスタ5個+PC分4*/
+  14 0008 D3C2      		add.l %d2, %a1
+  15 000a 23D1 0000 		move.l (%a1), ch
+  15      0000 
+  16               	
+  17               		**引数の文字を取る
+  18 0010 7407      		move.l #7, %d2
+  19 0012 D3C2      		add.l %d2, %a1
+  20 0014 13D1 0000 		move.b (%a1), buf
+  20      0000 
+  21               		
+  22 001a 7002      		move.l #SYSCALL_NUM_PUTSTRING,%D0
+  23 001c 2239 0000 		move.l ch,    %d1        | ch = ch
+  23      0000 
+  24 0022 243C 0000 		move.l #buf,  %d2        | p  = #BUF
+  24      0000 
+  25 0028 7601      		move.l #1,    %d3        | size = 1
+  26 002a 4E40      		trap #0
+  27               	
+  28 002c 0C80 0000 		cmpi.l #1, %d0
+  28      0001 
+  29 0032 6600 FFD0 		bne outbyte_step0
+  30 0036 4CDF 020F 		movem.l (%sp)+, %d0-%d3/%a1
+  31 003a 4E75      		rts
+  32               		
+  33               		.section .bss
+  34               	buf:
+  35 0000 00        		.ds.b 1
+  36 0001 00        		.even
+  37               	ch:
+  38 0002 0000 0000 		.ds.l 1
+  39               		.even	/*ここのevenは必要*/
+68K GAS  outchr.s 			page 2
+
+
+DEFINED SYMBOLS
+            outchr.s:7      .text:0000000000000000 outbyte
+            outchr.s:2      *ABS*:0000000000000002 SYSCALL_NUM_PUTSTRING
+            outchr.s:9      .text:0000000000000004 outbyte_step0
+            outchr.s:37     .bss:0000000000000002 ch
+            outchr.s:34     .bss:0000000000000000 buf
+
+NO UNDEFINED SYMBOLS
