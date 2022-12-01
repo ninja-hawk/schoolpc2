@@ -2,24 +2,21 @@
 
 .text
 .even
-	
+
 inbyte:
-	movem.l	%a0-%a1/%d1-%d3,-(%sp)
-	lea.l	inbyte_buf, %a0	/* °ì»şÊİÂ¸ÎÎ°è */
-inbyte_do:	
-	move.l	#1, %d0	/* GETSTRING¸Æ¤Ó½Ğ¤· */
-	move.l	%sp, %a1
-	adda.l	#24, %a1
-	move.l	(%a1), %d1 /* ch¤ò»ØÄê */
-	move.l	%a0, %d2	/* °ì»şÊİÂ¸ÎÎ°è¤ËÊİÂ¸¤¹¤ë */
-	move.l	#1, %d3	/* 1Ê¸»ú¤À¤±ÆÉ¤ß¹ş¤à */
-	trap	#0	/* ¸Æ¤Ó½Ğ¤· */
-	cmpi.l	#1, %d0	/* ·ë²Ì³ÎÇ§ */
-	bne	inbyte_do	/* ¼ºÇÔ¤·¤¿¾ì¹ç¤Ï¥ê¥È¥é¥¤ */
-	move.b	(%a0), %d0	/* ÊİÂ¸¤·¤¿Ê¸»ú¤òÌá¤êÃÍÍÑÎÎ°è¤Ë¥³¥Ô¡¼ */
-	movem.l	(%sp)+, %a0-%a1/%d1-%d3
-	rts
+		movem.l %D1-%D3, -(%sp)
+inbyte_loop:
+		move.l #1, %D0          |GETSTRINGã‚’å‘¼ã³å‡ºã™
+		move.l #0,   %D1        | ch   = 0
+		move.l #In_BUF, %D2        | p    = #BUF
+		move.l #1, %D3        | size = 1
+		trap   #0
+        cmpi   #1, %d0       | GETSTRINGã®è¿”ã‚Šå€¤ãŒ1ã¨ä¸€è‡´ã™ã‚‹ã‹ç¢ºèª
+		bne    inbyte_loop | ä¸€è‡´ã—ãªã‘ã‚Œã°å†å—ä¿¡
+		move.b In_BUF, %d0 |æˆ»ã‚Šå€¤ã‚’d0ã«è¿½åŠ 
+		movem.l	(%sp)+, %D1-%D3
+        rts
 
 .section .bss
-inbyte_buf:	ds.b 1	/* °ì»şÊİÂ¸ÎÎ°è */
-		.even
+In_BUF: 
+		.ds.b 1

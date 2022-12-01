@@ -244,7 +244,7 @@ END_INTERGET:
 ** 引数     :  %d1.l = チャネル(ch)	
 *************************************
 INTERPUT:
-		move.l  %d1, -(%SP)
+		move.l  %d0, -(%SP)
 		move.w  #0x2700, %SR | 走行レベルを７に設定
 		cmpi.l  #0, %d1      | ch = 0 を確認
 		bne     END_INTERPUT | if ch != 0 => 復帰
