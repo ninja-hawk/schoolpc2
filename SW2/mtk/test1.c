@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int main()
-{
-	char s;
-	while(1)
-	{
-		printf("input: ");
-		scanf("%c", &s);
-		printf("%c", s);
-	}
-	return 0;
+int main(void){
+    while(1){
+        char c[200];
+        printf("input: ");
+        scanf("%s", c);
+        printf("output: %s\n", c);
+    }
+    
+    return 0;
 }
+
