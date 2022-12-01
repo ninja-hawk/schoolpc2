@@ -55,22 +55,11 @@
 ***************************************************************
 ** 初期化
 ***************************************************************
-
-***************************************************************
-** step1.3.2
-
-.extern start
-.global monitor_begin
-
-***************************************************************
-
 .section .text
 .even
-
+.extern start           | crt0.s内のstartをextern
+.global monitor_begin   | 大域変数（関数）の宣言	
 monitor_begin:
-
-
-boot:
 		* スーパーバイザ & 各種設定を行っている最中の割込禁止
 		move.w #0x2000,%SR
 		lea.l SYS_STK_TOP, %SP | Set SSP
@@ -108,12 +97,8 @@ boot:
 		move.l %a3, in1
 		move.l #0, s0
 		move.l #0, s1
-		
-
-***************************************************************
+	
 		jmp start
-***************************************************************	
-		** bra MAIN
 	
 ****************************************************************
 ***プログラム領域
@@ -258,7 +243,7 @@ TX_DATA:
 		add.w   #0x0800, %d1 | ヘッダを付与
 		move.w  %d1, UTX1
 END_INTERPUT:
-		move.l  (%SP)+, %d1
+		move.l  (%SP)+, %d0
 		rts
 
 ******************************
@@ -385,10 +370,11 @@ o1_Finish:
 ** 出力     :  %d0.l = 取り出した要素数
 *************************************
 PUTSTRING:
+		movem.l %d4/%a5, -(%sp)
 		cmp    #0, %d1         | ch = 0 であるか確認
 		bne    END_PUTSTRING   | そうでなければ復帰
-		move.w #0, %d4         | sz = 0 (取った要素数)
-		move.l  %d2, %a5       | i  = %d2 = 読み込み先 address
+		move.l #0, %d4         | sz = 0 (取った要素数)
+		move.l %d2, %a5       | i  = %d2 = 読み込み先 address
 		cmp    #0, %d3         | 取り出すべきサイズが０であるか確認
 		beq    END2_PUTSTRING  | 0であれば復帰
 LOOP1_PUTSTRING:
@@ -406,8 +392,9 @@ END3_PUTSTRING:
                 
 		move.w #0xe10c, USTCNT1 | 送信割り込みを許可（アンマスク）
 END2_PUTSTRING:
-		move   %d4, %d0         | 返り値　%d0 = sz (取った要素数)
+		move.l %d4, %d0         | 返り値　%d0 = sz (取った要素数)
 END_PUTSTRING:
+		movem.l (%sp)+, %d4/%a5
 		rts
 
 
@@ -420,9 +407,10 @@ END_PUTSTRING:
 ** 出力     :　%d0.l = 実際に取り出したデータ数		
 *************************************
 GETSTRING:
+		movem.l %d4/%a5, -(%sp)
 		cmp    #0, %d1           | ch = 0 であるか確認
 		bne    END_GETSTRING     | そうでなければ復帰
-		move.w #0, %d4           | sz = 0 (取った要素数)
+		move.l #0, %d4           | sz = 0 (取った要素数)
 		move.l %d2, %a5          | i  = %d2 = 書き込み先 address
 LOOP1_GETSTRING:	
 		cmp    %d4, %d3          | 取るべき要素数と取り出した要素数を比較
@@ -435,8 +423,9 @@ LOOP1_GETSTRING:
 		add    #1, %d4           | sz ++
 		bra    LOOP1_GETSTRING
 END2_GETSTRING:
-		move   %d4, %d0          | 返り値 %d0 = sz (実際に取り出したデータ数)
+		move.l  %d4, %d0          | 返り値 %d0 = sz (実際に取り出したデータ数)
 END_GETSTRING:
+		movem.l (%sp)+, %d4/%a5
 		rts
 
 ******************************
@@ -572,6 +561,4 @@ s1:
 		.ds.l 1
 
 .end
-
-
 
