@@ -8,6 +8,10 @@
 .global hard_clock
 .global init_timer
 
+.extern addq
+.extern sched
+.extern curr_task
+.extern ready
 
      move.l #SYS_CALL2, 0x084 /*SYS_CALLの割り込みベクタ設定*/
 
@@ -20,10 +24,25 @@ pv_handler:
      movem.l %D0-%D7/%A0-%A6, -(%sp) |使用可能性のあるレジスタの退避
      movem.l %SR, -(%sp)  |SRの退避
 
+****************************************************************
+** hard_clock
+** SW実験1で作成したタイマ用ハードウェア割り込み処理インターフェースから呼び出される
+**
+** このルーチン内で使用するレジスタをスーパーバイザスタックに積むが、
+** タイマ割り込みで実行されるルーチンであるため退避忘れが多いらしい
+****************************************************************
 
 hard_clock:
-	movem.l %D0-%D7/%A0-%A6, -(%sp) |使用可能性のあるレジスタの退避
-	movem.l %SR, -(%sp)  |SRの退避
+	movem.l %D0-%D7/%A0-%A6, -(%sp)		|使用可能性のあるレジスタの退避
+	move.w	%SR, %D0			|%SRを%D0へ
+	btst.l	#13, %D0			|SRの13bit目を見てスーパーバイザか否かを確認
+	bne	end_hard_clock			|13bit目が1でなければ、スーパーバイザモードでなければ終了
+	jsr	addq				|current_taskをreadyの末尾に追加
+	jsr	sched				|schedを起動し、次に実行されるタスクIDがnext_taskにセット
+	jsr	swtch				|swtchの起動
+
+end_hard_clock:
+	movem.l (%sp)+, %D0-%D7/%A0-%A6  	|レジスタ復帰退避
 	
 
 init_timer:
