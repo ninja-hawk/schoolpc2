@@ -13,6 +13,10 @@
 void init_kernel() {
 	ready = 0;                  //readyの初期化
 	*(int*)0x084 = (int)pv_handler;  //pv_handlerをtrap#1の割り込みベクタに登録
+	for (int i=0; i<NUMSEMAPHORE; i++) {
+	    semaphore[i].count = 1;
+	}
+	
 }
 
 void set_task(void *p) {
@@ -50,19 +54,13 @@ void *init_stack(int id) {
 
 void begin_sch()
 {
-    *(char*)0x00d00039 = 'C';
     int i;
-    *(char*)0x00d00039 = 'D';
     i = removeq(&ready);
-    *(char*)0x00d00039 = 'E';
     curr_task = i;
-    *(char*)0x00d00039 = 'F';
-    init_timer();
-    *(char*)0x00d00039 = 'G';
-    first_task();
-    *(char*)0x00d00039 = 'H';
-    return;
 
+    init_timer();
+    first_task();
+    return;
 }
 
 TASK_ID_TYPE removeq(TASK_ID_TYPE *q){
@@ -81,19 +79,44 @@ void sched(void) {
     while(!next_task);
 }
 
+/* addq(*ready, tid) キューにタスクを追加 */
+void addaddq(TASK_ID_TYPE* ready, TASK_ID_TYPE tid){
+  if(*ready==NULLTASKID){ /* readyキューが空の場合 */
+    *ready=tid; /* タスクを登録 */
+    return;
+  }
+  TCB_TYPE* id=&task_tab[*ready]; /* キューの要素へのポインタ */
+  while(1){
+    if((*id).next==NULLTASKID){ /* キューの末尾 */
+      (*id).next=tid; /* タスクを登録 */
+      break;
+    }
+    id=&task_tab[(*id).next]; /* 次のタスクへ */
+  }
+}
+
 void addq(TASK_ID_TYPE *q, TASK_ID_TYPE task_id){
     // idとして先頭idを保存
+    *(char*)0x00d0003f = 'a';
     TASK_ID_TYPE id = *q;
+    *(char*)0x00d0003d = 'd';
     if (!id) { // 渡されたqueueの先頭がNULLだった場合
         *q = task_id;
-        task_tab[task_id].next = NULLTASKID;
+        //task_tab[task_id].next = NULLTASKID;
         return;
     }
+    *(char*)0x00d0003b = 'd';
     // task_tabのnextがNULLになるまでたどる
-    while (task_tab[id].next) id = task_tab[id].next;
+    while (task_tab[id].next){
+	id++;
+	}
+    *(char*)0x00d0003f = 'A';
     // 最後尾にタスクidを追加
     task_tab[id].next = task_id;
+    *(char*)0x00d0003d = 'D';
     task_tab[task_id].next = NULLTASKID;
+    *(char*)0x00d0003b = 'D';
+    return;
 }
 
 void sleep(int s_id){

@@ -1,16 +1,3 @@
-***************
-** LEDデバッグ用
-***************
-.equ IOBASE,  0x00d00000
-.equ LED7,  IOBASE+0x000002f | ボード搭載のLED用レジスタ
-.equ LED6,  IOBASE+0x000002d | 使用法については付録 A.4.3.1
-.equ LED5,  IOBASE+0x000002b
-.equ LED4,  IOBASE+0x0000029
-.equ LED3,  IOBASE+0x000003f
-.equ LED2,  IOBASE+0x000003d
-.equ LED1,  IOBASE+0x000003b
-.equ LED0,  IOBASE+0x0000039
-
 .section .bss
 
 .global first_task
@@ -28,8 +15,16 @@
 .extern task_tab
 .extern ready
 
-.equ    SIZE_OF_TCB, 20
-
+.equ    SIZE_OF_TCB, 0x14
+.equ IOBASE,    0x00d00000
+.equ LED7,  IOBASE+0x000002f | ボード搭載のLED用レジスタ
+.equ LED6,  IOBASE+0x000002d | 使用法については付録 A.4.3.1
+.equ LED5,  IOBASE+0x000002b
+.equ LED4,  IOBASE+0x0000029
+.equ LED3,  IOBASE+0x000003f
+.equ LED2,  IOBASE+0x000003d
+.equ LED1,  IOBASE+0x000003b
+.equ LED0,  IOBASE+0x0000039
 .section .text
 .even
 swtch:
@@ -39,23 +34,29 @@ swtch:
 		move.l  %USP, %a0
 		move.l	%a0, -(%SP)
 		jsr     get_tcb_ssp              | %a0 <- TCBのSSPの位置
-		move.l  %SP, %a0                 | SSPをTCBの所定の位置に格納
-		move.l  next_task, curr_task     |
+                move.b	#'1', LED4
+		move.l  %SP, (%a0)                 | SSPをTCBの所定の位置に格納
+        move.l  next_task, curr_task     
 		jsr     get_tcb_ssp              | %a0 <- TCBのSSPの位置
-		move.l  %a0, %SP                 | TCBに記録されているSSPを回復
+                move.b	#'2', LED4
+		move.l  (%a0), %SP                 | TCBに記録されているSSPを回復
 		bra     end_swtch
 get_tcb_ssp:
-		move.l  curr_task, %d0           | %d0 = 現タスクのID
-		move.l  SIZE_OF_TCB, %d1         | %d1 = TCBのサイズ
+		move.l  curr_task, %d0           | %d0 = 現タスクのID 例 d0 = 2
+		move.l  #0x14, %d1		| %d1 = TCBのサイズ voidが４バイトで要素が５個だから4*5
 		mulu.w  %d0, %d1                 | 該当タスクのTCBにアクセスするためのオフセット
 		lea.l   task_tab, %a0            | task_tabの先頭アドレス 
-		add.l   %d1, %a0                 | アドレスとオフセットを加算
-		add.l   #4,  %a0                 | task_tab[ID].stack_ptrの位置を取得
+		adda.l   %d1, %a0                 | アドレスとオフセットを加算= 現
+		adda.l   #4,  %a0                 | task_tab[ID].stack_ptrの位置を取得
 		rts
 end_swtch:	
-		move.l  (%SP)+, %A0
+		move.b	#'3', LED4
+                move.l  (%SP)+, %A0             
 		move.l  %A0, %USP
 		movem.l (%SP)+, %D0-%D7/%A0-%A6 | 各レジスタを復帰
+                move.b	#'4', LED4
+                move.b	#'5', LED4
+                move.b	#'6', LED4
 		rte
 
 pv_handler:
@@ -112,21 +113,29 @@ hard_clock:
         movem.l %D0-%D7/%A0-%A6, -(%sp)         |使用可能性のあるレジスタの退避
         move.w  %SR, %D0                        |%SRを%D0へ
         btst.l  #13, %D0                        |SRの13bit目を見てスーパーバイザか否かを確認
-        bne     end_hard_clock                  |13bit目が1でなければ、スーパーバイザモードでなければ終了
+        beq     end_hard_clock                  |13bit目が1でなければ、スーパーバイザモードでなければ終了
+        move.b	#'h', LED7
+        move.l  curr_task, -(%sp)
+        move.l  #ready,   -(%sp)
         jsr     addq                            |current_taskをreadyの末尾に追加
+        move.b	#'a', LED6
+        add.l   #8, %sp
         jsr     sched                           |schedを起動し、次に実行されるタスクIDがnext_taskにセット
+        move.b	#'r', LED5
         jsr     swtch                           |swtchの起動
+        move.b	#'d', LED4
 
 end_hard_clock:
+        move.b	#'c', LED3
         movem.l (%sp)+, %D0-%D7/%A0-%A6         |レジスタ復帰退避
         rts
 
 init_timer:
         movem.l %D0-%D2, -(%sp)         |使用可能性のあるレジスタの退避
-        move.l  #3, %D3                 |システムコールRESET_TIMERの番号
+        move.l  #3, %D0                 |システムコールRESET_TIMERの番号
         trap    #0                      |RESET_TIMER呼び出し
-        move.l  #4, %D3                 |システムコールSET_TIMERの番号
-        move.l  #10000, %D1             |割り込み発生周期は1秒に設定(p38)
+        move.l  #4, %D0                 |システムコールSET_TIMERの番号
+        move.w  #10000, %D1             |割り込み発生周期は1秒に設定(p38)
         move.l  #hard_clock, %d2        |割り込み時に起動するルーチンの先頭アドレス
         trap    #0                      |SET_TIMER呼び出し
         movem.l (%sp)+,%D0-%D2          |SRの退避
@@ -137,8 +146,13 @@ init_timer:
 *************************
 
 
+**************************
+**first_task
+*************************
+
+
 first_task:
-		move.l curr_task, %d0   /*TCB先頭番地の計算*/
+	move.l curr_task, %d0   /*TCB先頭番地の計算*/
         lea.l  task_tab, %a1    /*見つけたアドレスを%a1に*/
 loop_first_task:
         subq.l #1, %d0          /*配列の何番目なのか計算*/
@@ -149,8 +163,9 @@ loop_first_task:
         add.l   #4, %a1           /*a2にTCBのSSP*/
         move.l  (%a1), %ssp
 
-        move.l  (%SP)+, %a0
-		move.l  %a0, %usp
+        movem.l (%sp)+, %a0
+        move.l  %a0, %usp
         movem.l (%sp)+, %d0-%d7/%a0-%a6
 
 		rte                       /*rte*/
+

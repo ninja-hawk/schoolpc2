@@ -42,7 +42,7 @@ TASK_ID_TYPE ready;
 
 SEMAPHORE_TYPE semaphore[NUMSEMAPHORE];
 
-TCB_TYPE task_tab[NUMTASK + 1];
+TCB_TYPE task_tab[NUMTASK + 2];
 
 STACK_TYPE stacks[NUMTASK];
 
