@@ -1,0 +1,1764 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+                              crt0.o (exit)
+/usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+                              test2.o (printf)
+/usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o) (_vfprintf_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__swsetup_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o) (__call_exitprocs)
+/usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (_dtoa_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (_fflush_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__sinit)
+/usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o) (_free_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o) (_fwalk)
+/usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (_localeconv_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o) (__smakebuf_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o) (_malloc_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (memchr)
+/usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o) (memcpy)
+/usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o) (memset)
+/usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o) (__malloc_lock)
+/usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o) (_Balloc)
+/usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o) (_sbrk_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o) (__sread)
+/usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (strlen)
+/usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__sprint_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o) (_write_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o) (_calloc_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o) (_close_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o) (_fclose_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o) (_fputwc_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o) (_fstat_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o) (__sfvwrite_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o) (_isatty_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o) (__locale_mb_cur_max)
+/usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o) (_lseek_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o) (__ascii_mbtowc)
+/usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o) (memmove)
+/usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o) (_read_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o) (_realloc_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o) (errno)
+/usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o) (strcmp)
+/usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o) (__swbuf_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o) (_wcrtomb_r)
+/usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o) (__ascii_wctomb)
+/usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o) (_ctype_)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__mulsi3)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__udivsi3)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__divsi3)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__umodsi3)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__modsi3)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__adddf3)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+                              /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o) (_fpCCR)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__eqdf2)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__nedf2)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__gtdf2)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__gedf2)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__ltdf2)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__ledf2)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__unorddf2)
+/usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o) (__truncxfdf2)
+/usr/local/m68k-elf/lib/libidp.a(close.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o) (close)
+/usr/local/m68k-elf/lib/libidp.a(fstat.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o) (fstat)
+/usr/local/m68k-elf/lib/libidp.a(isatty.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o) (isatty)
+/usr/local/m68k-elf/lib/libidp.a(lseek.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o) (lseek)
+/usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o) (sbrk)
+/usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+                              /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o) (_exit)
+/usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+                              /usr/local/m68k-elf/lib/libidp.a(lseek.o) (__errno)
+
+Allocating common symbols
+Common symbol       size              file
+
+next_task           0x4               mtk_c.o
+semaphore           0x18              mtk_c.o
+errno               0x4               /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+heap_ptr            0x4               /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+curr_task           0x4               mtk_c.o
+task_tab            0x8c              mtk_c.o
+stacks              0x2800            mtk_c.o
+new_task            0x4               mtk_c.o
+ready               0x4               mtk_c.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000000040000 xrw
+rom0             0x0000000000c00000 0x0000000000080000
+device           0x0000000000fff000 0x0000000000001000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+LOAD mon.o
+LOAD csys68k.o
+LOAD inchrw.o
+LOAD mtk_asm.o
+LOAD mtk_c.o
+LOAD outchr.o
+LOAD test2.o
+START GROUP
+LOAD /usr/local/m68k-elf/lib/libidp.a
+LOAD /usr/local/m68k-elf/lib/libc.a
+LOAD /usr/local/lib/gcc/m68k-elf/5/libgcc.a
+END GROUP
+                0x0000000000000000                __DYNAMIC = 0x0
+                0x000000000003fff0                PROVIDE (__stack = 0x3fff0)
+                0x0000000000000000                PROVIDE (hardware_init_hook = 0x0)
+                [!provide]                        PROVIDE (_hardware_init_hook = 0x0)
+                0x0000000000000000                PROVIDE (software_init_hook = 0x0)
+                [!provide]                        PROVIDE (_software_init_hook = 0x0)
+
+.vector
+ *(.vector)
+
+.text           0x0000000000000400     0xafa1
+                0x0000000000000400                __text_start = .
+ *(.text)
+ .text          0x0000000000000400       0x90 crt0.o
+                0x000000000000043c                start
+ .text          0x0000000000000490      0x438 mon.o
+                0x0000000000000490                monitor_begin
+ .text          0x00000000000008c8      0x106 csys68k.o
+                0x00000000000008c8                read
+                0x0000000000000978                write
+ *fill*         0x00000000000009ce        0x2 
+ .text          0x00000000000009d0       0x26 inchrw.o
+                0x00000000000009d0                inbyte
+ *fill*         0x00000000000009f6        0x2 
+ .text          0x00000000000009f8      0x17e mtk_asm.o
+                0x00000000000009f8                swtch
+                0x0000000000000a70                pv_handler
+                0x0000000000000ab0                P
+                0x0000000000000ac2                V
+                0x0000000000000ad4                hard_clock
+                0x0000000000000b2e                init_timer
+                0x0000000000000b4a                first_task
+ *fill*         0x0000000000000b76        0x2 
+ .text          0x0000000000000b78      0x40c mtk_c.o
+                0x0000000000000b78                init_kernel
+                0x0000000000000b9c                set_task
+                0x0000000000000cc6                init_stack
+                0x0000000000000d0a                begin_sch
+                0x0000000000000d3c                removeq
+                0x0000000000000d5a                sched
+                0x0000000000000d86                addaddq
+                0x0000000000000db6                addq
+                0x0000000000000df2                sleep
+                0x0000000000000e82                wakeup
+                0x0000000000000ee6                p_body
+                0x0000000000000f0c                v_body
+ .text          0x0000000000000f84       0x28 outchr.o
+                0x0000000000000f84                outbyte
+ .text          0x0000000000000fac       0xbe test2.o
+                0x0000000000000fac                task1
+                0x0000000000000fea                task2
+                0x0000000000001028                task3
+ *fill*         0x000000000000106a        0x2 
+ .text          0x000000000000106c       0x34 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+                0x000000000000106c                exit
+ .text          0x00000000000010a0        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .text          0x00000000000010a0       0x42 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+                0x00000000000010a0                _printf_r
+                0x00000000000010c0                printf
+ *fill*         0x00000000000010e2        0x2 
+ .text          0x00000000000010e4     0x1e20 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+                0x00000000000010e4                _vfprintf_r
+                0x0000000000002e48                vfprintf
+ .text          0x0000000000002f04      0x14e /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                0x0000000000002f04                __swsetup_r
+ *fill*         0x0000000000003052        0x2 
+ .text          0x0000000000003054      0x118 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x0000000000003054                __call_exitprocs
+ .text          0x000000000000316c     0x1876 /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                0x0000000000003328                _dtoa_r
+ *fill*         0x00000000000049e2        0x2 
+ .text          0x00000000000049e4      0x238 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                0x00000000000049e4                __sflush_r
+                0x0000000000004b94                _fflush_r
+                0x0000000000004bea                fflush
+ .text          0x0000000000004c1c      0x338 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                0x0000000000004c26                _cleanup_r
+                0x0000000000004d96                __sfmoreglue
+                0x0000000000004dfa                __sfp
+                0x0000000000004ecc                _cleanup
+                0x0000000000004ee8                __sinit
+                0x0000000000004f00                __sfp_lock_acquire
+                0x0000000000004f08                __sfp_lock_release
+                0x0000000000004f10                __sinit_lock_acquire
+                0x0000000000004f18                __sinit_lock_release
+                0x0000000000004f20                __fp_lock_all
+                0x0000000000004f3a                __fp_unlock_all
+ .text          0x0000000000004f54      0x456 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+                0x0000000000004f54                _malloc_trim_r
+                0x000000000000503e                _free_r
+ *fill*         0x00000000000053aa        0x2 
+ .text          0x00000000000053ac       0xc8 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+                0x00000000000053ac                _fwalk
+                0x000000000000540e                _fwalk_reent
+ .text          0x0000000000005474       0x66 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+                0x0000000000005474                __localeconv_l
+                0x0000000000005486                _localeconv_r
+                0x00000000000054b0                localeconv
+ *fill*         0x00000000000054da        0x2 
+ .text          0x00000000000054dc      0x17e /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+                0x00000000000054dc                __swhatbuf_r
+                0x000000000000556e                __smakebuf_r
+ *fill*         0x000000000000565a        0x2 
+ .text          0x000000000000565c      0x80a /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                0x000000000000565c                _malloc_r
+ *fill*         0x0000000000005e66        0x2 
+ .text          0x0000000000005e68       0xbc /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+                0x0000000000005e68                memchr
+ .text          0x0000000000005f24       0x6e /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+                0x0000000000005f24                memcpy
+ *fill*         0x0000000000005f92        0x2 
+ .text          0x0000000000005f94       0x72 /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+                0x0000000000005f94                memset
+ *fill*         0x0000000000006006        0x2 
+ .text          0x0000000000006008       0x10 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+                0x0000000000006008                __malloc_lock
+                0x0000000000006010                __malloc_unlock
+ .text          0x0000000000006018      0xe72 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                0x0000000000006018                _Balloc
+                0x00000000000060b8                _Bfree
+                0x00000000000060e2                __multadd
+                0x00000000000061c6                __s2b
+                0x0000000000006286                __hi0bits
+                0x00000000000062e8                __lo0bits
+                0x000000000000636c                __i2b
+                0x000000000000638e                __multiply
+                0x0000000000006608                __pow5mult
+                0x00000000000066ea                __lshift
+                0x00000000000067ac                __mcmp
+                0x00000000000067fc                __mdiff
+                0x0000000000006a14                __ulp
+                0x0000000000006a76                __b2d
+                0x0000000000006b94                __d2b
+                0x0000000000006cac                __ratio
+                0x0000000000006d44                _mprec_log10
+                0x0000000000006dae                __copybits
+                0x0000000000006e0a                __any_on
+ *fill*         0x0000000000006e8a        0x2 
+ .text          0x0000000000006e8c       0x32 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+                0x0000000000006e8c                _sbrk_r
+ *fill*         0x0000000000006ebe        0x2 
+ .text          0x0000000000006ec0      0x144 /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                0x0000000000006ec0                __sread
+                0x0000000000006f04                __seofread
+                0x0000000000006f0e                __swrite
+                0x0000000000006fa0                __sseek
+                0x0000000000006fec                __sclose
+ .text          0x0000000000007004       0x1a /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+                0x0000000000007004                strlen
+ *fill*         0x000000000000701e        0x2 
+ .text          0x0000000000007020     0x1122 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                0x00000000000070d0                __sprint_r
+                0x00000000000070ee                _vfiprintf_r
+                0x0000000000008086                vfiprintf
+ *fill*         0x0000000000008142        0x2 
+ .text          0x0000000000008144       0x3c /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+                0x0000000000008144                _write_r
+ .text          0x0000000000008180       0xd2 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                0x0000000000008180                _calloc_r
+ *fill*         0x0000000000008252        0x2 
+ .text          0x0000000000008254       0x32 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+                0x0000000000008254                _close_r
+ *fill*         0x0000000000008286        0x2 
+ .text          0x0000000000008288       0xf8 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                0x0000000000008288                _fclose_r
+                0x000000000000836a                fclose
+ .text          0x0000000000008380      0x18c /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                0x0000000000008380                __fputwc
+                0x000000000000846c                _fputwc_r
+                0x00000000000084ac                fputwc
+ .text          0x000000000000850c       0x36 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+                0x000000000000850c                _fstat_r
+ *fill*         0x0000000000008542        0x2 
+ .text          0x0000000000008544      0x40e /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                0x0000000000008544                __sfvwrite_r
+ *fill*         0x0000000000008952        0x2 
+ .text          0x0000000000008954       0x32 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+                0x0000000000008954                _isatty_r
+ *fill*         0x0000000000008986        0x2 
+ .text          0x0000000000008988       0xea /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+                0x0000000000008988                _setlocale_r
+                0x00000000000089ec                __locale_mb_cur_max
+                0x0000000000008a1e                __locale_ctype_ptr_l
+                0x0000000000008a2e                __locale_ctype_ptr
+                0x0000000000008a58                setlocale
+ *fill*         0x0000000000008a72        0x2 
+ .text          0x0000000000008a74       0x3c /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+                0x0000000000008a74                _lseek_r
+ .text          0x0000000000008ab0       0xba /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                0x0000000000008ab0                _mbtowc_r
+                0x0000000000008b22                __ascii_mbtowc
+ *fill*         0x0000000000008b6a        0x2 
+ .text          0x0000000000008b6c       0xec /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+                0x0000000000008b6c                memmove
+ .text          0x0000000000008c58       0x3c /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+                0x0000000000008c58                _read_r
+ .text          0x0000000000008c94      0x622 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                0x0000000000008c94                _realloc_r
+ *fill*         0x00000000000092b6        0x2 
+ .text          0x00000000000092b8      0x112 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+                0x00000000000092b8                cleanup_glue
+                0x00000000000092ee                _reclaim_reent
+ *fill*         0x00000000000093ca        0x2 
+ .text          0x00000000000093cc       0x6c /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+                0x00000000000093cc                strcmp
+ .text          0x0000000000009438      0x14c /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                0x0000000000009438                __swbuf_r
+                0x000000000000956a                __swbuf
+ .text          0x0000000000009584      0x174 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                0x0000000000009584                _wcrtomb_r
+                0x0000000000009640                wcrtomb
+ .text          0x00000000000096f8       0x98 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                0x00000000000096f8                _wctomb_r
+                0x0000000000009758                __ascii_wctomb
+ .text          0x0000000000009790        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .text          0x0000000000009790       0x22 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+                0x0000000000009790                __mulsi3
+ *fill*         0x00000000000097b2        0x2 
+ .text          0x00000000000097b4       0x5c /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+                0x00000000000097b4                __udivsi3
+ .text          0x0000000000009810       0x2e /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+                0x0000000000009810                __divsi3
+ *fill*         0x000000000000983e        0x2 
+ .text          0x0000000000009840       0x2e /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+                0x0000000000009840                __umodsi3
+ *fill*         0x000000000000986e        0x2 
+ .text          0x0000000000009870       0x2e /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+                0x0000000000009870                __modsi3
+ *fill*         0x000000000000989e        0x2 
+ .text          0x00000000000098a0      0x9cc /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                0x00000000000098fa                __subdf3
+                0x0000000000009900                __adddf3
+                0x0000000000009c96                __muldf3
+                0x0000000000009e44                __divdf3
+                0x000000000000a0b8                __negdf2
+                0x000000000000a116                __cmpdf2_internal
+                0x000000000000a1e6                __cmpdf2
+ .text          0x000000000000a26c       0x6a /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+                0x000000000000a26c                __clear_sticky_bit
+                0x000000000000a27a                $_exception_handler
+ *fill*         0x000000000000a2d6        0x2 
+ .text          0x000000000000a2d8       0x22 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+                0x000000000000a2d8                __eqdf2
+ *fill*         0x000000000000a2fa        0x2 
+ .text          0x000000000000a2fc       0x22 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+                0x000000000000a2fc                __nedf2
+ *fill*         0x000000000000a31e        0x2 
+ .text          0x000000000000a320       0x22 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+                0x000000000000a320                __gtdf2
+ *fill*         0x000000000000a342        0x2 
+ .text          0x000000000000a344       0x22 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+                0x000000000000a344                __gedf2
+ *fill*         0x000000000000a366        0x2 
+ .text          0x000000000000a368       0x22 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+                0x000000000000a368                __ltdf2
+ *fill*         0x000000000000a38a        0x2 
+ .text          0x000000000000a38c       0x22 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+                0x000000000000a38c                __ledf2
+ *fill*         0x000000000000a3ae        0x2 
+ .text          0x000000000000a3b0      0x4aa /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                0x000000000000a3b0                __unordsf2
+                0x000000000000a410                __unorddf2
+                0x000000000000a482                __floatunsidf
+                0x000000000000a4ee                __floatsidf
+                0x000000000000a5b8                __floatunsisf
+                0x000000000000a5d2                __floatsisf
+                0x000000000000a5ec                __extendsfdf2
+                0x000000000000a668                __truncdfsf2
+                0x000000000000a7b2                __fixdfsi
+                0x000000000000a840                __fixsfsi
+ *fill*         0x000000000000a85a        0x2 
+ .text          0x000000000000a85c      0x800 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                0x000000000000a85c                __unordxf2
+                0x000000000000a8e0                __extenddfxf2
+                0x000000000000a9fa                __truncxfdf2
+                0x000000000000aac0                __extendsfxf2
+                0x000000000000ab04                __truncxfsf2
+                0x000000000000ab2c                __floatsixf
+                0x000000000000ab72                __floatunsixf
+                0x000000000000abb8                __fixxfsi
+                0x000000000000abe0                __addxf3
+                0x000000000000ac56                __subxf3
+                0x000000000000accc                __mulxf3
+                0x000000000000ad42                __divxf3
+                0x000000000000adb8                __negxf2
+                0x000000000000ae10                __cmpxf2
+                0x000000000000ae64                __eqxf2
+                0x000000000000aeb8                __nexf2
+                0x000000000000af0c                __ltxf2
+                0x000000000000af60                __lexf2
+                0x000000000000afb4                __gtxf2
+                0x000000000000b008                __gexf2
+ .text          0x000000000000b05c        0xa /usr/local/m68k-elf/lib/libidp.a(close.o)
+                0x000000000000b05c                close
+ *fill*         0x000000000000b066        0x2 
+ .text          0x000000000000b068       0x1a /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+                0x000000000000b068                fstat
+ *fill*         0x000000000000b082        0x2 
+ .text          0x000000000000b084        0xa /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+                0x000000000000b084                isatty
+ *fill*         0x000000000000b08e        0x2 
+ .text          0x000000000000b090       0x16 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+                0x000000000000b090                lseek
+ *fill*         0x000000000000b0a6        0x2 
+ .text          0x000000000000b0a8       0x32 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+                0x000000000000b0a8                sbrk
+ *fill*         0x000000000000b0da        0x2 
+ .text          0x000000000000b0dc       0x2a /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+                0x000000000000b0dc                _exit
+                0x000000000000b0e6                delay
+ *fill*         0x000000000000b106        0x2 
+ .text          0x000000000000b108        0xe /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+                0x000000000000b108                __errno
+                0x000000000000b118                . = ALIGN (0x4)
+ *fill*         0x000000000000b116        0x2 
+                0x000000000000b118                __CTOR_LIST__ = .
+                0x000000000000b118                ___CTOR_LIST__ = .
+                0x000000000000b118        0x4 LONG 0x0 (((__CTOR_END__ - __CTOR_LIST__) / 0x4) - 0x2)
+ *(.ctors)
+                0x000000000000b11c        0x4 LONG 0x0
+                0x000000000000b120                __CTOR_END__ = .
+                0x000000000000b120                __DTOR_LIST__ = .
+                0x000000000000b120                ___DTOR_LIST__ = .
+                0x000000000000b120        0x4 LONG 0x0 (((__DTOR_END__ - __DTOR_LIST__) / 0x4) - 0x2)
+ *(.dtors)
+                0x000000000000b124        0x4 LONG 0x0
+                0x000000000000b128                __DTOR_END__ = .
+ *(.rodata)
+ .rodata        0x000000000000b128        0x4 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000000b128                _global_impure_ptr
+ .rodata        0x000000000000b12c       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .rodata        0x000000000000b14c      0x124 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                0x000000000000b158                __mprec_tinytens
+                0x000000000000b180                __mprec_bigtens
+                0x000000000000b1a8                __mprec_tens
+ .rodata        0x000000000000b270       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .rodata        0x000000000000b290      0x101 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+                0x000000000000b290                _ctype_
+ *(.gcc_except_table)
+                0x000000000000b391                __INIT_SECTION__ = .
+                0x000000000000b391        0x4 LONG 0x4e560000
+ *(.init)
+                0x000000000000b395        0x2 SHORT 0x4e5e
+                0x000000000000b397        0x2 SHORT 0x4e75
+                0x000000000000b399                __FINI_SECTION__ = .
+                0x000000000000b399        0x4 LONG 0x4e560000
+ *(.fini)
+                0x000000000000b39d        0x2 SHORT 0x4e5e
+                0x000000000000b39f        0x2 SHORT 0x4e75
+                0x000000000000b3a1                _etext = .
+ *(.lit)
+
+.text.startup   0x000000000000b3a2       0x36
+ .text.startup  0x000000000000b3a2       0x36 test2.o
+                0x000000000000b3a2                main
+
+.rodata.str1.1  0x000000000000b3d8       0x8d
+ .rodata.str1.1
+                0x000000000000b3d8        0xf test2.o
+ .rodata.str1.1
+                0x000000000000b3e7       0x3b /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .rodata.str1.1
+                0x000000000000b422        0xf /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .rodata.str1.1
+                0x000000000000b431       0x29 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .rodata.str1.1
+                0x000000000000b45a        0xb /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+
+.data           0x000000000000b468      0xbe4
+ *(.shdata)
+ *(.data)
+ .data          0x000000000000b468        0x4 crt0.o
+ .data          0x000000000000b46c      0x222 mon.o
+ *fill*         0x000000000000b68e        0x2 
+ .data          0x000000000000b690        0x0 csys68k.o
+ .data          0x000000000000b690        0x0 inchrw.o
+ .data          0x000000000000b690        0x0 mtk_asm.o
+ .data          0x000000000000b690        0x0 mtk_c.o
+ .data          0x000000000000b690        0x0 outchr.o
+ .data          0x000000000000b690        0x0 test2.o
+ .data          0x000000000000b690        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .data          0x000000000000b690      0x426 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000000b690                _impure_ptr
+ *fill*         0x000000000000bab6        0x2 
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .data          0x000000000000bab8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .data          0x000000000000bab8      0x410 /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                0x000000000000bab8                __malloc_sbrk_base
+                0x000000000000babc                __malloc_trim_threshold
+                0x000000000000bac0                __malloc_av_
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .data          0x000000000000bec8        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .data          0x000000000000bec8      0x168 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+                0x000000000000bec8                __global_locale
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .data          0x000000000000c030        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .data          0x000000000000c030        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+ .data          0x000000000000c030        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+ .data          0x000000000000c030        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+ .data          0x000000000000c030        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+ .data          0x000000000000c030        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+ .data          0x000000000000c030        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+ .data          0x000000000000c030       0x1c /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+                0x000000000000c030                _fpCCR
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .data          0x000000000000c04c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .data          0x000000000000c04c        0x0 /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .data          0x000000000000c04c        0x0 /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .data          0x000000000000c04c        0x0 /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .data          0x000000000000c04c        0x0 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .data          0x000000000000c04c        0x0 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .data          0x000000000000c04c        0x0 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .data          0x000000000000c04c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+                0x000000000000c04c                _edata = .
+
+.bss            0x000000000000c04c     0xa9fc
+                0x000000000000c04c                . = ALIGN (0x4)
+                0x000000000000c04c                __bss_start = .
+ *(.shbss)
+ *(.bss)
+ .bss           0x000000000000c04c        0x0 crt0.o
+ .bss           0x000000000000c04c     0x8104 mon.o
+ .bss           0x0000000000014150        0x0 csys68k.o
+ .bss           0x0000000000014150        0x1 inchrw.o
+ *fill*         0x0000000000014151        0x3 
+ .bss           0x0000000000014154        0x0 mtk_asm.o
+ .bss           0x0000000000014154        0x0 mtk_c.o
+ .bss           0x0000000000014154        0x0 outchr.o
+ .bss           0x0000000000014154        0x0 test2.o
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .bss           0x0000000000014154        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .bss           0x0000000000014154       0x34 /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                0x0000000000014154                __malloc_current_mallinfo
+                0x000000000001417c                __malloc_max_total_mem
+                0x0000000000014180                __malloc_max_sbrked_mem
+                0x0000000000014184                __malloc_top_pad
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .bss           0x0000000000014188        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .bss           0x0000000000014188        0x4 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+                0x0000000000014188                _PathLocale
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .bss           0x000000000001418c        0x0 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .bss           0x000000000001418c        0x0 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+ *(COMMON)
+ COMMON         0x000000000001418c     0x28b4 mtk_c.o
+                0x000000000001418c                next_task
+                0x0000000000014190                semaphore
+                0x00000000000141a8                curr_task
+                0x00000000000141ac                task_tab
+                0x0000000000014238                stacks
+                0x0000000000016a38                new_task
+                0x0000000000016a3c                ready
+ COMMON         0x0000000000016a40        0x4 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+                0x0000000000016a40                errno
+ COMMON         0x0000000000016a44        0x4 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+                0x0000000000016a44                heap_ptr
+                0x0000000000016a48                _end = ALIGN (0x8)
+                0x0000000000016a48                __end = _end
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+OUTPUT(test2.hex srec)
+
+.debug_info     0x0000000000000000    0x2019f
+ .debug_info    0x0000000000000000      0x100 csys68k.o
+ .debug_info    0x0000000000000100      0x6b5 mtk_c.o
+ .debug_info    0x00000000000007b5      0xb22 test2.o
+ .debug_info    0x00000000000012d7      0x8dc /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .debug_info    0x0000000000001bb3      0x8b1 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_info    0x0000000000002464      0x970 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .debug_info    0x0000000000002dd4     0x16d2 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_info    0x00000000000044a6      0x927 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_info    0x0000000000004dcd      0x95f /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x000000000000572c     0x144b /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_info    0x0000000000006b77      0xa2c /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_info    0x00000000000075a3      0xd0b /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_info    0x00000000000082ae      0xbb5 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_info    0x0000000000008e63      0x9a5 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_info    0x0000000000009808      0xe4a /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_info    0x000000000000a652      0xc08 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_info    0x000000000000b25a      0xcdd /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_info    0x000000000000bf37      0x12d /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_info    0x000000000000c064       0x26 /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_info    0x000000000000c08a       0x26 /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_info    0x000000000000c0b0      0x8bf /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_info    0x000000000000c96f     0x1a82 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_info    0x000000000000e3f1      0x901 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_info    0x000000000000ecf2      0xae3 /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_info    0x000000000000f7d5       0xd6 /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_info    0x000000000000f8ab     0x17d3 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_info    0x000000000001107e      0x90e /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_info    0x000000000001198c      0x9d3 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_info    0x000000000001235f      0x8e0 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_info    0x0000000000012c3f      0x9e5 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_info    0x0000000000013624      0xae3 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_info    0x0000000000014107      0xac4 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_info    0x0000000000014bcb      0xac9 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_info    0x0000000000015694      0x8e0 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_info    0x0000000000015f74      0xf06 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_info    0x0000000000016e7a      0x8fc /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_info    0x0000000000017776      0xe78 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_info    0x00000000000185ee      0xdfd /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_info    0x00000000000193eb      0x907 /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_info    0x0000000000019cf2      0xc46 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_info    0x000000000001a938      0x993 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_info    0x000000000001b2cb       0xe4 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_info    0x000000000001b3af      0x987 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_info    0x000000000001bd36      0xeb9 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_info    0x000000000001cbef      0xe4a /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_info    0x000000000001da39      0xd83 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_info    0x000000000001e7bc       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+ .debug_info    0x000000000001e7e2       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+ .debug_info    0x000000000001e808       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+ .debug_info    0x000000000001e82e       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+ .debug_info    0x000000000001e854       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+ .debug_info    0x000000000001e87a       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+ .debug_info    0x000000000001e8a0       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+ .debug_info    0x000000000001e8c6       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+ .debug_info    0x000000000001e8ec       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+ .debug_info    0x000000000001e912       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+ .debug_info    0x000000000001e938       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+ .debug_info    0x000000000001e95e       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+ .debug_info    0x000000000001e984       0x26 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+ .debug_info    0x000000000001e9aa      0x44e /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .debug_info    0x000000000001edf8      0x51e /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .debug_info    0x000000000001f316       0x54 /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .debug_info    0x000000000001f36a      0x297 /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .debug_info    0x000000000001f601       0x54 /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .debug_info    0x000000000001f655       0xf9 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .debug_info    0x000000000001f74e       0xe5 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .debug_info    0x000000000001f833       0xc6 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .debug_info    0x000000000001f8f9      0x8a6 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+
+.debug_abbrev   0x0000000000000000     0x65fd
+ .debug_abbrev  0x0000000000000000       0xa2 csys68k.o
+ .debug_abbrev  0x00000000000000a2      0x25b mtk_c.o
+ .debug_abbrev  0x00000000000002fd      0x237 test2.o
+ .debug_abbrev  0x0000000000000534      0x1c6 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .debug_abbrev  0x00000000000006fa      0x189 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000000883      0x214 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .debug_abbrev  0x0000000000000a97      0x3a3 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_abbrev  0x0000000000000e3a      0x1ee /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_abbrev  0x0000000000001028      0x213 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x000000000000123b      0x2af /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_abbrev  0x00000000000014ea      0x280 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_abbrev  0x000000000000176a      0x383 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_abbrev  0x0000000000001aed      0x24d /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_abbrev  0x0000000000001d3a      0x1c7 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_abbrev  0x0000000000001f01      0x235 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_abbrev  0x0000000000002136      0x297 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_abbrev  0x00000000000023cd      0x28e /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_abbrev  0x000000000000265b       0xc9 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_abbrev  0x0000000000002724       0x14 /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000002738       0x14 /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_abbrev  0x000000000000274c      0x1b5 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_abbrev  0x0000000000002901      0x3e1 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_abbrev  0x0000000000002ce2      0x1f8 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_abbrev  0x0000000000002eda      0x22b /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_abbrev  0x0000000000003105       0x7f /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000003184      0x3bd /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_abbrev  0x0000000000003541      0x1d9 /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_abbrev  0x000000000000371a      0x219 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_abbrev  0x0000000000003933      0x1d4 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_abbrev  0x0000000000003b07      0x268 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_abbrev  0x0000000000003d6f      0x2cc /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_abbrev  0x000000000000403b      0x1e3 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_abbrev  0x000000000000421e      0x21b /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_abbrev  0x0000000000004439      0x1d4 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_abbrev  0x000000000000460d      0x26b /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_abbrev  0x0000000000004878      0x1e3 /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_abbrev  0x0000000000004a5b      0x24d /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_abbrev  0x0000000000004ca8      0x1e3 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_abbrev  0x0000000000004e8b      0x1d4 /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_abbrev  0x000000000000505f      0x23c /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_abbrev  0x000000000000529b      0x24a /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_abbrev  0x00000000000054e5       0x74 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_abbrev  0x0000000000005559      0x228 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_abbrev  0x0000000000005781      0x207 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_abbrev  0x0000000000005988      0x237 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_abbrev  0x0000000000005bbf      0x19c /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_abbrev  0x0000000000005d5b       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+ .debug_abbrev  0x0000000000005d6f       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x0000000000005d83       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+ .debug_abbrev  0x0000000000005d97       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+ .debug_abbrev  0x0000000000005dab       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+ .debug_abbrev  0x0000000000005dbf       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+ .debug_abbrev  0x0000000000005dd3       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+ .debug_abbrev  0x0000000000005de7       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+ .debug_abbrev  0x0000000000005dfb       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+ .debug_abbrev  0x0000000000005e0f       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+ .debug_abbrev  0x0000000000005e23       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+ .debug_abbrev  0x0000000000005e37       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+ .debug_abbrev  0x0000000000005e4b       0x14 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+ .debug_abbrev  0x0000000000005e5f      0x1cf /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .debug_abbrev  0x000000000000602e      0x168 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .debug_abbrev  0x0000000000006196       0x4a /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .debug_abbrev  0x00000000000061e0       0x9b /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .debug_abbrev  0x000000000000627b       0x4a /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .debug_abbrev  0x00000000000062c5       0x8d /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .debug_abbrev  0x0000000000006352       0x9b /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .debug_abbrev  0x00000000000063ed       0x78 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .debug_abbrev  0x0000000000006465      0x198 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+
+.debug_loc      0x0000000000000000     0xe3c9
+ .debug_loc     0x0000000000000000      0x102 csys68k.o
+ .debug_loc     0x0000000000000102      0x500 mtk_c.o
+ .debug_loc     0x0000000000000602       0xef test2.o
+ .debug_loc     0x00000000000006f1       0xb7 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .debug_loc     0x00000000000007a8     0x310c /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_loc     0x00000000000038b4       0x1e /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_loc     0x00000000000038d2      0x1c7 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_loc     0x0000000000003a99     0x2566 /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_loc     0x0000000000005fff      0x172 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_loc     0x0000000000006171      0x198 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_loc     0x0000000000006309      0x4dd /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_loc     0x00000000000067e6       0xf8 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_loc     0x00000000000068de       0x24 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_loc     0x0000000000006902       0xb3 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_loc     0x00000000000069b5      0xa3f /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_loc     0x00000000000073f4      0x13c /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_loc     0x0000000000007530     0x1ce9 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_loc     0x0000000000009219      0x14a /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_loc     0x0000000000009363       0x33 /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000009396     0x2094 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_loc     0x000000000000b42a      0x30b /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_loc     0x000000000000b735       0x9a /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_loc     0x000000000000b7cf      0x191 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_loc     0x000000000000b960      0x473 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_loc     0x000000000000bdd3       0x1f /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_loc     0x000000000000bdf2       0xd6 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_loc     0x000000000000bec8      0x322 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_loc     0x000000000000c1ea     0x1618 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_loc     0x000000000000d802       0x6d /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_loc     0x000000000000d86f       0x92 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_loc     0x000000000000d901       0xab /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_loc     0x000000000000d9ac       0xf1 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_loc     0x000000000000da9d       0xcd /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_loc     0x000000000000db6a      0x6f4 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .debug_loc     0x000000000000e25e      0x107 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .debug_loc     0x000000000000e365       0x22 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .debug_loc     0x000000000000e387       0x42 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+
+.debug_aranges  0x0000000000000000      0x878
+ .debug_aranges
+                0x0000000000000000       0x20 csys68k.o
+ .debug_aranges
+                0x0000000000000020       0x20 mtk_c.o
+ .debug_aranges
+                0x0000000000000040       0x28 test2.o
+ .debug_aranges
+                0x0000000000000068       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000088       0x18 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_aranges
+                0x00000000000000a0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .debug_aranges
+                0x00000000000000c0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_aranges
+                0x00000000000000e0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_aranges
+                0x0000000000000100       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x0000000000000120       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_aranges
+                0x0000000000000140       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_aranges
+                0x0000000000000160       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_aranges
+                0x0000000000000180       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_aranges
+                0x00000000000001e0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_aranges
+                0x0000000000000200       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_aranges
+                0x0000000000000220       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_aranges
+                0x0000000000000240       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000260       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_aranges
+                0x0000000000000280       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_aranges
+                0x00000000000002a0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_aranges
+                0x00000000000002c0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_aranges
+                0x00000000000002e0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_aranges
+                0x0000000000000300       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x0000000000000320       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_aranges
+                0x0000000000000340       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_aranges
+                0x0000000000000360       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_aranges
+                0x0000000000000380       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_aranges
+                0x00000000000003a0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_aranges
+                0x00000000000003c0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_aranges
+                0x00000000000003e0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_aranges
+                0x0000000000000400       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_aranges
+                0x0000000000000420       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_aranges
+                0x0000000000000440       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_aranges
+                0x0000000000000460       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_aranges
+                0x0000000000000480       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_aranges
+                0x00000000000004a0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_aranges
+                0x00000000000004c0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_aranges
+                0x00000000000004e0       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_aranges
+                0x0000000000000500       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_aranges
+                0x0000000000000520       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_aranges
+                0x0000000000000540       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_aranges
+                0x0000000000000560       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_aranges
+                0x0000000000000580       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_aranges
+                0x00000000000005a0       0x18 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_aranges
+                0x00000000000005b8       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+ .debug_aranges
+                0x00000000000005d8       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x00000000000005f8       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+ .debug_aranges
+                0x0000000000000618       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+ .debug_aranges
+                0x0000000000000638       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+ .debug_aranges
+                0x0000000000000658       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+ .debug_aranges
+                0x0000000000000678       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+ .debug_aranges
+                0x0000000000000698       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+ .debug_aranges
+                0x00000000000006b8       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+ .debug_aranges
+                0x00000000000006d8       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+ .debug_aranges
+                0x00000000000006f8       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+ .debug_aranges
+                0x0000000000000718       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+ .debug_aranges
+                0x0000000000000738       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+ .debug_aranges
+                0x0000000000000758       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .debug_aranges
+                0x0000000000000778       0x20 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .debug_aranges
+                0x0000000000000798       0x20 /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .debug_aranges
+                0x00000000000007b8       0x20 /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .debug_aranges
+                0x00000000000007d8       0x20 /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .debug_aranges
+                0x00000000000007f8       0x20 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .debug_aranges
+                0x0000000000000818       0x20 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .debug_aranges
+                0x0000000000000838       0x20 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .debug_aranges
+                0x0000000000000858       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+
+.debug_line     0x0000000000000000     0x6b5a
+ .debug_line    0x0000000000000000       0x70 csys68k.o
+ .debug_line    0x0000000000000070       0xe5 mtk_c.o
+ .debug_line    0x0000000000000155       0xf8 test2.o
+ .debug_line    0x000000000000024d      0x157 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .debug_line    0x00000000000003a4       0xee /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000000492      0x14f /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .debug_line    0x00000000000005e1      0x995 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_line    0x0000000000000f76      0x1ba /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_line    0x0000000000001130      0x199 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x00000000000012c9      0x6aa /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_line    0x0000000000001973      0x20b /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_line    0x0000000000001b7e      0x213 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_line    0x0000000000001d91      0x206 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_line    0x0000000000001f97      0x16b /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_line    0x0000000000002102      0x18e /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_line    0x0000000000002290      0x216 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_line    0x00000000000024a6      0x2f5 /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_line    0x000000000000279b      0x115 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_line    0x00000000000028b0       0x99 /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000002949       0x9d /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_line    0x00000000000029e6       0xff /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_line    0x0000000000002ae5      0x540 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_line    0x0000000000003025      0x144 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_line    0x0000000000003169      0x17f /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_line    0x00000000000032e8       0xf3 /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_line    0x00000000000033db      0x6e7 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_line    0x0000000000003ac2      0x151 /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_line    0x0000000000003c13      0x133 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_line    0x0000000000003d46      0x151 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_line    0x0000000000003e97      0x189 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_line    0x0000000000004020      0x1c8 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_line    0x00000000000041e8      0x1b7 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_line    0x000000000000439f      0x27b /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_line    0x000000000000461a      0x152 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_line    0x000000000000476c      0x1c0 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_line    0x000000000000492c      0x151 /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_line    0x0000000000004a7d      0x1e0 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_line    0x0000000000004c5d      0x1e5 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_line    0x0000000000004e42      0x150 /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_line    0x0000000000004f92      0x2a6 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_line    0x0000000000005238      0x16d /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_line    0x00000000000053a5       0xcf /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_line    0x0000000000005474      0x1b7 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_line    0x000000000000562b      0x22a /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_line    0x0000000000005855      0x1d6 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_line    0x0000000000005a2b      0x150 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_line    0x0000000000005b7b       0x6a /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+ .debug_line    0x0000000000005be5       0x83 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+ .debug_line    0x0000000000005c68       0x72 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+ .debug_line    0x0000000000005cda       0x6e /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+ .debug_line    0x0000000000005d48       0x6e /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+ .debug_line    0x0000000000005db6      0x3e1 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+ .debug_line    0x0000000000006197       0x79 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+ .debug_line    0x0000000000006210       0x68 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+ .debug_line    0x0000000000006278       0x68 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+ .debug_line    0x00000000000062e0       0x68 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+ .debug_line    0x0000000000006348       0x68 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+ .debug_line    0x00000000000063b0       0x68 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+ .debug_line    0x0000000000006418       0x68 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+ .debug_line    0x0000000000006480      0x158 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .debug_line    0x00000000000065d8       0xcd /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .debug_line    0x00000000000066a5       0x6b /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .debug_line    0x0000000000006710      0x122 /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .debug_line    0x0000000000006832       0x6c /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .debug_line    0x000000000000689e       0xc5 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .debug_line    0x0000000000006963       0x7e /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .debug_line    0x00000000000069e1       0x71 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .debug_line    0x0000000000006a52      0x108 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+
+.debug_str      0x0000000000000000    0x11bc9
+ .debug_str     0x0000000000000000       0x93 csys68k.o
+ .debug_str     0x0000000000000093      0x20e mtk_c.o
+ .debug_str     0x00000000000002a1      0x5ce test2.o
+ .debug_str     0x000000000000086f      0x53a /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .debug_str     0x0000000000000da9      0x531 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_str     0x00000000000012da      0x558 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .debug_str     0x0000000000001832      0xa76 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_str     0x00000000000022a8      0x550 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_str     0x00000000000027f8      0x569 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_str     0x0000000000002d61      0x96d /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_str     0x00000000000036ce      0x591 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_str     0x0000000000003c5f      0x67b /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_str     0x00000000000042da      0x684 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_str     0x000000000000495e      0x542 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_str     0x0000000000004ea0      0x883 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_str     0x0000000000005723      0x6c7 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_str     0x0000000000005dea      0x73a /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_str     0x0000000000006524      0x167 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_str     0x000000000000668b       0x8e /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_str     0x0000000000006719       0x8e /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_str     0x00000000000067a7      0x530 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_str     0x0000000000006cd7      0x935 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_str     0x000000000000760c      0x527 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_str     0x0000000000007b33      0x588 /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_str     0x00000000000080bb      0x15c /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_str     0x0000000000008217      0x9d4 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_str     0x0000000000008beb      0x522 /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_str     0x000000000000910d      0x576 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_str     0x0000000000009683      0x51b /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_str     0x0000000000009b9e      0x57e /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_str     0x000000000000a11c      0x58c /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_str     0x000000000000a6a8      0x66f /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_str     0x000000000000ad17      0x5c7 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_str     0x000000000000b2de      0x51e /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_str     0x000000000000b7fc      0x8b3 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_str     0x000000000000c0af      0x522 /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_str     0x000000000000c5d1      0x863 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_str     0x000000000000ce34      0x84d /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_str     0x000000000000d681      0x51f /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_str     0x000000000000dba0      0x61e /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_str     0x000000000000e1be      0x550 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_str     0x000000000000e70e      0x146 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_str     0x000000000000e854      0x555 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_str     0x000000000000eda9      0x85d /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_str     0x000000000000f606      0x86a /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_str     0x000000000000fe70      0x819 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_str     0x0000000000010689       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+ .debug_str     0x00000000000106e9       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+ .debug_str     0x0000000000010749       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+ .debug_str     0x00000000000107a9       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+ .debug_str     0x0000000000010809       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+ .debug_str     0x0000000000010869       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+ .debug_str     0x00000000000108c9       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+ .debug_str     0x0000000000010929       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+ .debug_str     0x0000000000010989       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+ .debug_str     0x00000000000109e9       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+ .debug_str     0x0000000000010a49       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+ .debug_str     0x0000000000010aa9       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+ .debug_str     0x0000000000010b09       0x60 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+ .debug_str     0x0000000000010b69      0x1af /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .debug_str     0x0000000000010d18      0x1df /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .debug_str     0x0000000000010ef7       0x9a /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .debug_str     0x0000000000010f91      0x28d /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .debug_str     0x000000000001121e       0x9c /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .debug_str     0x00000000000112ba      0x163 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .debug_str     0x000000000001141d      0x150 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .debug_str     0x000000000001156d      0x143 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .debug_str     0x00000000000116b0      0x519 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+
+.comment        0x0000000000000000      0x3ba
+ .comment       0x0000000000000000       0x12 csys68k.o
+ .comment       0x0000000000000012       0x12 mtk_c.o
+ .comment       0x0000000000000024       0x12 test2.o
+ .comment       0x0000000000000036       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .comment       0x0000000000000048       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .comment       0x000000000000005a       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .comment       0x000000000000006c       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .comment       0x000000000000007e       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .comment       0x0000000000000090       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .comment       0x00000000000000a2       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .comment       0x00000000000000b4       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .comment       0x00000000000000c6       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .comment       0x00000000000000d8       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .comment       0x00000000000000ea       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .comment       0x00000000000000fc       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .comment       0x000000000000010e       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .comment       0x0000000000000120       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .comment       0x0000000000000132       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .comment       0x0000000000000144       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .comment       0x0000000000000156       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .comment       0x0000000000000168       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .comment       0x000000000000017a       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .comment       0x000000000000018c       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .comment       0x000000000000019e       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .comment       0x00000000000001b0       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .comment       0x00000000000001c2       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .comment       0x00000000000001d4       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .comment       0x00000000000001e6       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .comment       0x00000000000001f8       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .comment       0x000000000000020a       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .comment       0x000000000000021c       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .comment       0x000000000000022e       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .comment       0x0000000000000240       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .comment       0x0000000000000252       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .comment       0x0000000000000264       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .comment       0x0000000000000276       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .comment       0x0000000000000288       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .comment       0x000000000000029a       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .comment       0x00000000000002ac       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .comment       0x00000000000002be       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .comment       0x00000000000002d0       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .comment       0x00000000000002e2       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .comment       0x00000000000002f4       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .comment       0x0000000000000306       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .comment       0x0000000000000318       0x12 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .comment       0x000000000000032a       0x12 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .comment       0x000000000000033c       0x12 /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .comment       0x000000000000034e       0x12 /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .comment       0x0000000000000360       0x12 /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .comment       0x0000000000000372       0x12 /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .comment       0x0000000000000384       0x12 /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .comment       0x0000000000000396       0x12 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .comment       0x00000000000003a8       0x12 /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+
+.debug_frame    0x0000000000000000     0x1600
+ .debug_frame   0x0000000000000000       0x88 csys68k.o
+ .debug_frame   0x0000000000000088       0xf0 mtk_c.o
+ .debug_frame   0x0000000000000178       0xc8 test2.o
+ .debug_frame   0x0000000000000240       0x30 /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000270       0x44 /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+ .debug_frame   0x00000000000002b4       0x78 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_frame   0x000000000000032c       0x30 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_frame   0x000000000000035c       0x40 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x000000000000039c       0x6c /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_frame   0x0000000000000408       0x68 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_frame   0x0000000000000470      0x178 /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_frame   0x00000000000005e8       0x54 /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_frame   0x000000000000063c       0x5c /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_frame   0x0000000000000698       0x5c /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_frame   0x00000000000006f4       0x4c /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_frame   0x0000000000000740       0x40 /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000000000000780       0x34 /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_frame   0x00000000000007b4       0x44 /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_frame   0x00000000000007f8      0x298 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_frame   0x0000000000000a90       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000000abc       0x9c /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_frame   0x0000000000000b58       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000b84       0xb8 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_frame   0x0000000000000c3c       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_frame   0x0000000000000c68       0x30 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_frame   0x0000000000000c98       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_frame   0x0000000000000cc4       0x4c /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_frame   0x0000000000000d10       0x70 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_frame   0x0000000000000d80       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_frame   0x0000000000000dac       0x40 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000000000000dec       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_frame   0x0000000000000e18       0x90 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_frame   0x0000000000000ea8       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_frame   0x0000000000000ed4       0x48 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x0000000000000f1c       0x38 /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000000f54       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_frame   0x0000000000000f80       0x3c /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_frame   0x0000000000000fbc       0x50 /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_frame   0x000000000000100c       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_frame   0x0000000000001038       0x4c /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_frame   0x0000000000001084       0x4c /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_frame   0x00000000000010d0       0x48 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x0000000000001118      0x134 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+ .debug_frame   0x000000000000124c      0x268 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+ .debug_frame   0x00000000000014b4       0x2c /usr/local/m68k-elf/lib/libidp.a(close.o)
+ .debug_frame   0x00000000000014e0       0x2c /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+ .debug_frame   0x000000000000150c       0x2c /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+ .debug_frame   0x0000000000001538       0x2c /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+ .debug_frame   0x0000000000001564       0x2c /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+ .debug_frame   0x0000000000001590       0x44 /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+ .debug_frame   0x00000000000015d4       0x2c /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+
+.debug_ranges   0x0000000000000000      0x7e8
+ .debug_ranges  0x0000000000000000       0x50 mtk_c.o
+ .debug_ranges  0x0000000000000050       0x18 test2.o
+ .debug_ranges  0x0000000000000068      0x168 /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+ .debug_ranges  0x00000000000001d0       0x18 /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_ranges  0x00000000000001e8       0x28 /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_ranges  0x0000000000000210       0x38 /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_ranges  0x0000000000000248       0x30 /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_ranges  0x0000000000000278       0x18 /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_ranges  0x0000000000000290       0x38 /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_ranges  0x00000000000002c8       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_ranges  0x00000000000002e8      0x170 /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_ranges  0x0000000000000458       0x48 /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_ranges  0x00000000000004a0       0x30 /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_ranges  0x00000000000004d0       0x38 /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_ranges  0x0000000000000508       0x20 /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_ranges  0x0000000000000528       0x48 /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_ranges  0x0000000000000570       0x18 /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_ranges  0x0000000000000588      0x1a8 /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_ranges  0x0000000000000730       0x18 /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_ranges  0x0000000000000748       0x70 /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_ranges  0x00000000000007b8       0x18 /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_ranges  0x00000000000007d0       0x18 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+
+Cross Reference Table
+
+Symbol                                            File
+$_exception_handler                               /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+P                                                 mtk_asm.o
+V                                                 mtk_asm.o
+_Balloc                                           /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+_Bfree                                            /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+_PathLocale                                       /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+__adddf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__addxf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__any_on                                          /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__ascii_mbtowc                                    /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+__ascii_wctomb                                    /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+__b2d                                             /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__bss_start                                       crt0.o
+__call_exitprocs                                  /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+__clear_sticky_bit                                /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+__cmpdf2                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__cmpdf2_internal                                 /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+__cmpxf2                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__copybits                                        /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__d2b                                             /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__divdf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__divsi3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__divxf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__eqdf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_eqdf2.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__eqxf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__errno                                           /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+                                                  /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+__extenddfxf2                                     /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__extendsfdf2                                     /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__extendsfxf2                                     /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__fixdfsi                                         /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__fixsfsi                                         /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+__fixxfsi                                         /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__floatsidf                                       /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__floatsisf                                       /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+__floatsixf                                       /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__floatunsidf                                     /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__floatunsisf                                     /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+__floatunsixf                                     /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__fp_lock_all                                     /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__fp_unlock_all                                   /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__fputwc                                          /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+__gedf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gedf2.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__gexf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__global_locale                                   /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+__gtdf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_gtdf2.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__gtxf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__hi0bits                                         /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__i2b                                             /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__ledf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ledf2.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__lexf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__lo0bits                                         /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__locale_ctype_ptr                                /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+__locale_ctype_ptr_l                              /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+__locale_mb_cur_max                               /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+__localeconv_l                                    /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+__lshift                                          /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__ltdf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_ltdf2.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__ltxf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__malloc_av_                                      /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+__malloc_current_mallinfo                         /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+__malloc_lock                                     /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+__malloc_max_sbrked_mem                           /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+__malloc_max_total_mem                            /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+__malloc_sbrk_base                                /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+__malloc_top_pad                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+__malloc_trim_threshold                           /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+__malloc_unlock                                   /usr/local/m68k-elf/lib/libc.a(lib_a-mlock.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+__mcmp                                            /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__mdiff                                           /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__modsi3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__mprec_bigtens                                   /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__mprec_tens                                      /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__mprec_tinytens                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__muldf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__mulsi3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_mulsi3.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_modsi3.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__multadd                                         /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__multiply                                        /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__mulxf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__nedf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_nedf2.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__negdf2                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+__negxf2                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__nexf2                                           /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__pow5mult                                        /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__ratio                                           /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__s2b                                             /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__sclose                                          /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__seofread                                        /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+__sflush_r                                        /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+__sfmoreglue                                      /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__sfp                                             /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__sfp_lock_acquire                                /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+__sfp_lock_release                                /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+__sfvwrite_r                                      /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+__sinit                                           /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__sinit_lock_acquire                              /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__sinit_lock_release                              /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__smakebuf_r                                      /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+__sprint_r                                        /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__sread                                           /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__sseek                                           /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__stack                                           crt0.o
+__subdf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+__subxf3                                          /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__swbuf                                           /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+__swbuf_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+__swhatbuf_r                                      /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+__swrite                                          /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+__swsetup_r                                       /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__truncdfsf2                                      /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__truncxfdf2                                      /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__truncxfsf2                                      /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+__udivsi3                                         /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_udivsi3.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_divsi3.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__ulp                                             /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+__umodsi3                                         /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_umodsi3.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__unorddf2                                        /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+__unordsf2                                        /usr/local/lib/gcc/m68k-elf/5/libgcc.a(fpgnulib.o)
+__unordxf2                                        /usr/local/lib/gcc/m68k-elf/5/libgcc.a(xfgnulib.o)
+_calloc_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+_cleanup                                          /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+_cleanup_r                                        /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+_close_r                                          /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+_ctype_                                           /usr/local/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+_dtoa_r                                           /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+_end                                              /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+                                                  crt0.o
+_exit                                             /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+_fclose_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+_fflush_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+_fpCCR                                            /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_floatex.o)
+                                                  /usr/local/lib/gcc/m68k-elf/5/libgcc.a(_double.o)
+_fputwc_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+_free_r                                           /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+_fstat_r                                          /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+_fwalk                                            /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+_fwalk_reent                                      /usr/local/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+_global_impure_ptr                                /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+_impure_ptr                                       /usr/local/m68k-elf/lib/libc.a(lib_a-impure.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-errno.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+_isatty_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+_localeconv_r                                     /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+_lseek_r                                          /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+_malloc_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+_malloc_trim_r                                    /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+_mbtowc_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+_mprec_log10                                      /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+_printf_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+_read_r                                           /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+_realloc_r                                        /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+_reclaim_reent                                    /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+_sbrk_r                                           /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-freer.o)
+_setlocale_r                                      /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+_vfiprintf_r                                      /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+_vfprintf_r                                       /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+_wcrtomb_r                                        /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+_wctomb_r                                         /usr/local/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+_write_r                                          /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-stdio.o)
+addaddq                                           mtk_c.o
+addq                                              mtk_c.o
+                                                  mtk_asm.o
+begin_sch                                         mtk_c.o
+                                                  test2.o
+cleanup_glue                                      /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+close                                             /usr/local/m68k-elf/lib/libidp.a(close.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+curr_task                                         test2.o
+                                                  mtk_c.o
+                                                  mtk_asm.o
+delay                                             /usr/local/m68k-elf/lib/libidp.a(mc68ec.o)
+errno                                             /usr/local/m68k-elf/lib/libc.a(lib_a-reent.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-closer.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+exit                                              /usr/local/m68k-elf/lib/libc.a(lib_a-exit.o)
+                                                  crt0.o
+fclose                                            /usr/local/m68k-elf/lib/libc.a(lib_a-fclose.o)
+fflush                                            /usr/local/m68k-elf/lib/libc.a(lib_a-fflush.o)
+first_task                                        mtk_asm.o
+                                                  mtk_c.o
+fputwc                                            /usr/local/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+free                                              /usr/local/m68k-elf/lib/libc.a(lib_a-__call_atexit.o)
+fstat                                             /usr/local/m68k-elf/lib/libidp.a(fstat.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+hard_clock                                        mtk_asm.o
+hardware_init_hook                                crt0.o
+heap_ptr                                          /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+inbyte                                            inchrw.o
+                                                  csys68k.o
+init_kernel                                       mtk_c.o
+                                                  test2.o
+init_stack                                        mtk_c.o
+init_timer                                        mtk_asm.o
+                                                  mtk_c.o
+isatty                                            /usr/local/m68k-elf/lib/libidp.a(isatty.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+localeconv                                        /usr/local/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+lseek                                             /usr/local/m68k-elf/lib/libidp.a(lseek.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+main                                              test2.o
+                                                  crt0.o
+memchr                                            /usr/local/m68k-elf/lib/libc.a(lib_a-memchr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+memcpy                                            /usr/local/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+memmove                                           /usr/local/m68k-elf/lib/libc.a(lib_a-memmove.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+memset                                            /usr/local/m68k-elf/lib/libc.a(lib_a-memset.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-findfp.o)
+monitor_begin                                     mon.o
+                                                  crt0.o
+new_task                                          test2.o
+                                                  mtk_c.o
+next_task                                         test2.o
+                                                  mtk_c.o
+                                                  mtk_asm.o
+outbyte                                           outchr.o
+                                                  csys68k.o
+p_body                                            mtk_c.o
+                                                  mtk_asm.o
+printf                                            /usr/local/m68k-elf/lib/libc.a(lib_a-printf.o)
+                                                  test2.o
+pv_handler                                        mtk_asm.o
+                                                  mtk_c.o
+read                                              csys68k.o
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-readr.o)
+ready                                             test2.o
+                                                  mtk_c.o
+                                                  mtk_asm.o
+removeq                                           mtk_c.o
+sbrk                                              /usr/local/m68k-elf/lib/libidp.a(sbrk.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+sched                                             mtk_c.o
+                                                  mtk_asm.o
+semaphore                                         test2.o
+                                                  mtk_c.o
+set_task                                          mtk_c.o
+                                                  test2.o
+setlocale                                         /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+sleep                                             mtk_c.o
+software_init_hook                                crt0.o
+stacks                                            test2.o
+                                                  mtk_c.o
+start                                             crt0.o
+                                                  mon.o
+strcmp                                            /usr/local/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-locale.o)
+strlen                                            /usr/local/m68k-elf/lib/libc.a(lib_a-strlen.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+swtch                                             mtk_asm.o
+                                                  mtk_c.o
+task1                                             test2.o
+task2                                             test2.o
+task3                                             test2.o
+task_tab                                          test2.o
+                                                  mtk_c.o
+                                                  mtk_asm.o
+v_body                                            mtk_c.o
+                                                  mtk_asm.o
+vfiprintf                                         /usr/local/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+vfprintf                                          /usr/local/m68k-elf/lib/libc.a(lib_a-vfprintf.o)
+wakeup                                            mtk_c.o
+wcrtomb                                           /usr/local/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+write                                             csys68k.o
+                                                  /usr/local/m68k-elf/lib/libc.a(lib_a-writer.o)
