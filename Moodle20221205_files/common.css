@@ -1,0 +1,34 @@
+/* Equal-height card images, cf. https://stackoverflow.com/a/47698201/1375163*/
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 0;
+}
+.embed-responsive{
+  object-fit: cover;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-img-top {
+      height: 15vw;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-img-top {
+      height: 15vw;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-img-top {
+      height: 10vw;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) {
+  .card-img-top {
+      height: 20vw;
+  }
+}
