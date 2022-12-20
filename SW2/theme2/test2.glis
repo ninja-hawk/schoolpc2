@@ -1,4 +1,4 @@
-68K GAS  /tmp/cchYSbxF.s 			page 1
+68K GAS  /tmp/ccq9bfh0.s 			page 1
 
 
    1               	#NO_APP
@@ -58,7 +58,7 @@
   39               		.cfi_def_cfa_offset 16
   40 0018 4879 0000 		pea .LC0
   40      0000 
-68K GAS  /tmp/cchYSbxF.s 			page 2
+68K GAS  /tmp/ccq9bfh0.s 			page 2
 
 
   41               		.cfi_def_cfa_offset 20
@@ -118,7 +118,7 @@
   86               		.cfi_def_cfa_offset 12
   87               		.cfi_offset 2, -12
   88 0042 45F9 0000 		lea printf,%a2
-68K GAS  /tmp/cchYSbxF.s 			page 3
+68K GAS  /tmp/ccq9bfh0.s 			page 3
 
 
   88      0000 
@@ -178,7 +178,7 @@
  132               		.cfi_endproc
  133               	.LFE4:
  134               		.size	task2, .-task2
-68K GAS  /tmp/cchYSbxF.s 			page 4
+68K GAS  /tmp/ccq9bfh0.s 			page 4
 
 
  135               		.section	.rodata.str1.1
@@ -238,7 +238,7 @@
  174               		.cfi_def_cfa_offset 12
  175 009e 0C82 0000 		cmp.l #150,%d2
  175      0096 
-68K GAS  /tmp/cchYSbxF.s 			page 5
+68K GAS  /tmp/ccq9bfh0.s 			page 5
 
 
  176 00a4 67E0      		jeq .L17
@@ -298,7 +298,7 @@
  216               	.LVL19:
   42:test2.c       **** 	set_task(task2);
  217               		.loc 1 42 0
-68K GAS  /tmp/cchYSbxF.s 			page 6
+68K GAS  /tmp/ccq9bfh0.s 			page 6
 
 
  218 0016 4879 0000 		pea task2
@@ -358,7 +358,7 @@
  265 001d 0000 0000 		.long	0
  266 0021 0000 0000 		.long	.Ldebug_line0
  267 0025 02        		.uleb128 0x2
-68K GAS  /tmp/cchYSbxF.s 			page 7
+68K GAS  /tmp/ccq9bfh0.s 			page 7
 
 
  268 0026 01        		.byte	0x1
@@ -418,7 +418,7 @@
  322 008c 04        		.uleb128 0x4
  323 008d 0000 0000 		.long	.LASF12
  324 0091 03        		.byte	0x3
-68K GAS  /tmp/cchYSbxF.s 			page 8
+68K GAS  /tmp/ccq9bfh0.s 			page 8
 
 
  325 0092 91        		.byte	0x91
@@ -478,7 +478,7 @@
  379 00ff 04        		.byte	0x4
  380 0100 00        		.byte	0
  381 0101 04        		.uleb128 0x4
-68K GAS  /tmp/cchYSbxF.s 			page 9
+68K GAS  /tmp/ccq9bfh0.s 			page 9
 
 
  382 0102 0000 0000 		.long	.LASF20
@@ -538,7 +538,7 @@
  436 016f 05        		.byte	0x5
  437 0170 33        		.byte	0x33
  438 0171 0000 017D 		.long	0x17d
-68K GAS  /tmp/cchYSbxF.s 			page 10
+68K GAS  /tmp/ccq9bfh0.s 			page 10
 
 
  439 0175 14        		.byte	0x14
@@ -598,7 +598,7 @@
  493 01e1 0B        		.uleb128 0xb
  494 01e2 0000 0000 		.long	.LASF35
  495 01e6 05        		.byte	0x5
-68K GAS  /tmp/cchYSbxF.s 			page 11
+68K GAS  /tmp/ccq9bfh0.s 			page 11
 
 
  496 01e7 3F        		.byte	0x3f
@@ -658,7 +658,7 @@
  550 0256 10        		.uleb128 0x10
  551 0257 0000 0000 		.long	.LASF43
  552 025b 0190      		.word	0x190
-68K GAS  /tmp/cchYSbxF.s 			page 12
+68K GAS  /tmp/ccq9bfh0.s 			page 12
 
 
  553 025d 05        		.byte	0x5
@@ -718,7 +718,7 @@
  607 02c9 0B        		.uleb128 0xb
  608 02ca 0000 0000 		.long	.LASF48
  609 02ce 05        		.byte	0x5
-68K GAS  /tmp/cchYSbxF.s 			page 13
+68K GAS  /tmp/ccq9bfh0.s 			page 13
 
 
  610 02cf 77        		.byte	0x77
@@ -778,7 +778,7 @@
  664 0338 18        		.byte	0x18
  665 0339 0B        		.uleb128 0xb
  666 033a 0000 0000 		.long	.LASF53
-68K GAS  /tmp/cchYSbxF.s 			page 14
+68K GAS  /tmp/ccq9bfh0.s 			page 14
 
 
  667 033e 05        		.byte	0x5
@@ -838,7 +838,7 @@
  721 03aa 05        		.byte	0x5
  722 03ab D4        		.byte	0xd4
  723 03ac 0000 05EC 		.long	0x5ec
-68K GAS  /tmp/cchYSbxF.s 			page 15
+68K GAS  /tmp/ccq9bfh0.s 			page 15
 
 
  724 03b0 43        		.byte	0x43
@@ -898,7 +898,7 @@
  778 041f 0000 0064 		.long	0x64
  779 0423 00        		.byte	0
  780 0424 0F        		.uleb128 0xf
-68K GAS  /tmp/cchYSbxF.s 			page 16
+68K GAS  /tmp/ccq9bfh0.s 			page 16
 
 
  781 0425 04        		.byte	0x4
@@ -958,7 +958,7 @@
  835 049b 0000 083A 		.long	0x83a
  836 049f 32        		.byte	0x32
  837 04a0 16        		.uleb128 0x16
-68K GAS  /tmp/cchYSbxF.s 			page 17
+68K GAS  /tmp/ccq9bfh0.s 			page 17
 
 
  838 04a1 0000 0000 		.long	.LASF75
@@ -1018,7 +1018,7 @@
  892 0516 0000 0000 		.long	.LASF43
  893 051a 05        		.byte	0x5
  894 051b 027C      		.word	0x27c
-68K GAS  /tmp/cchYSbxF.s 			page 18
+68K GAS  /tmp/ccq9bfh0.s 			page 18
 
 
  895 051d 0000 0294 		.long	0x294
@@ -1078,7 +1078,7 @@
  949 0598 0F        		.uleb128 0xf
  950 0599 04        		.byte	0x4
  951 059a 0000 056F 		.long	0x56f
-68K GAS  /tmp/cchYSbxF.s 			page 19
+68K GAS  /tmp/ccq9bfh0.s 			page 19
 
 
  952 059e 13        		.uleb128 0x13
@@ -1138,7 +1138,7 @@
  1006 061b 0125      		.word	0x125
  1007 061d 0000 063D 		.long	0x63d
  1008 0621 00        		.byte	0
-68K GAS  /tmp/cchYSbxF.s 			page 20
+68K GAS  /tmp/ccq9bfh0.s 			page 20
 
 
  1009 0622 16        		.uleb128 0x16
@@ -1198,7 +1198,7 @@
  1063 0691 0259      		.word	0x259
  1064 0693 0000 078F 		.long	0x78f
  1065 0697 16        		.uleb128 0x16
-68K GAS  /tmp/cchYSbxF.s 			page 21
+68K GAS  /tmp/ccq9bfh0.s 			page 21
 
 
  1066 0698 0000 0000 		.long	.LASF97
@@ -1258,7 +1258,7 @@
  1120 070d 0000 0000 		.long	.LASF106
  1121 0711 05        		.byte	0x5
  1122 0712 0264      		.word	0x264
-68K GAS  /tmp/cchYSbxF.s 			page 22
+68K GAS  /tmp/ccq9bfh0.s 			page 22
 
 
  1123 0714 0000 0101 		.long	0x101
@@ -1318,7 +1318,7 @@
  1177 0789 0000 0064 		.long	0x64
  1178 078d C4        		.byte	0xc4
  1179 078e 00        		.byte	0
-68K GAS  /tmp/cchYSbxF.s 			page 23
+68K GAS  /tmp/ccq9bfh0.s 			page 23
 
 
  1180 078f 08        		.uleb128 0x8
@@ -1378,7 +1378,7 @@
  1234 0804 F0        		.byte	0xf0
  1235 0805 05        		.byte	0x5
  1236 0806 0257      		.word	0x257
-68K GAS  /tmp/cchYSbxF.s 			page 24
+68K GAS  /tmp/ccq9bfh0.s 			page 24
 
 
  1237 0808 0000 0825 		.long	0x825
@@ -1438,7 +1438,7 @@
  1291 087f 0000 0000 		.long	.LASF119
  1292 0883 06        		.byte	0x6
  1293 0884 10        		.byte	0x10
-68K GAS  /tmp/cchYSbxF.s 			page 25
+68K GAS  /tmp/ccq9bfh0.s 			page 25
 
 
  1294 0885 0000 0064 		.long	0x64
@@ -1498,7 +1498,7 @@
  1348 08ee 0000 0000 		.long	.LASF127
  1349 08f2 06        		.byte	0x6
  1350 08f3 1D        		.byte	0x1d
-68K GAS  /tmp/cchYSbxF.s 			page 26
+68K GAS  /tmp/ccq9bfh0.s 			page 26
 
 
  1351 08f4 0000 087E 		.long	0x87e
@@ -1558,7 +1558,7 @@
  1405 0966 24        		.uleb128 0x24
  1406 0967 0000 0000 		.long	.LBB2
  1407 096b 0000 0034 		.long	.LBE2-.LBB2
-68K GAS  /tmp/cchYSbxF.s 			page 27
+68K GAS  /tmp/ccq9bfh0.s 			page 27
 
 
  1408 096f 25        		.uleb128 0x25
@@ -1618,7 +1618,7 @@
  1462 09e2 01        		.uleb128 0x1
  1463 09e3 9C        		.byte	0x9c
  1464 09e4 0000 0A14 		.long	0xa14
-68K GAS  /tmp/cchYSbxF.s 			page 28
+68K GAS  /tmp/ccq9bfh0.s 			page 28
 
 
  1465 09e8 24        		.uleb128 0x24
@@ -1678,7 +1678,7 @@
  1519 0a59 0000 0000 		.long	.LASF135
  1520 0a5d 05        		.byte	0x5
  1521 0a5e 0307      		.word	0x307
-68K GAS  /tmp/cchYSbxF.s 			page 29
+68K GAS  /tmp/ccq9bfh0.s 			page 29
 
 
  1522 0a60 0000 0424 		.long	0x424
@@ -1738,7 +1738,7 @@
  1576 0ad8 00        		.byte	0
  1577 0ad9 2B        		.uleb128 0x2b
  1578 0ada 0000 0000 		.long	.LASF141
-68K GAS  /tmp/cchYSbxF.s 			page 30
+68K GAS  /tmp/ccq9bfh0.s 			page 30
 
 
  1579 0ade 06        		.byte	0x6
@@ -1798,7 +1798,7 @@
  1633 0014 24        		.uleb128 0x24
  1634 0015 00        		.byte	0
  1635 0016 0B        		.uleb128 0xb
-68K GAS  /tmp/cchYSbxF.s 			page 31
+68K GAS  /tmp/ccq9bfh0.s 			page 31
 
 
  1636 0017 0B        		.uleb128 0xb
@@ -1858,7 +1858,7 @@
  1690 004d 13        		.uleb128 0x13
  1691 004e 00        		.byte	0
  1692 004f 00        		.byte	0
-68K GAS  /tmp/cchYSbxF.s 			page 32
+68K GAS  /tmp/ccq9bfh0.s 			page 32
 
 
  1693 0050 07        		.uleb128 0x7
@@ -1918,7 +1918,7 @@
  1747 0086 13        		.uleb128 0x13
  1748 0087 38        		.uleb128 0x38
  1749 0088 0B        		.uleb128 0xb
-68K GAS  /tmp/cchYSbxF.s 			page 33
+68K GAS  /tmp/ccq9bfh0.s 			page 33
 
 
  1750 0089 00        		.byte	0
@@ -1978,7 +1978,7 @@
  1804 00bf 05        		.uleb128 0x5
  1805 00c0 3A        		.uleb128 0x3a
  1806 00c1 0B        		.uleb128 0xb
-68K GAS  /tmp/cchYSbxF.s 			page 34
+68K GAS  /tmp/ccq9bfh0.s 			page 34
 
 
  1807 00c2 3B        		.uleb128 0x3b
@@ -2038,7 +2038,7 @@
  1861 00f8 0B        		.uleb128 0xb
  1862 00f9 3B        		.uleb128 0x3b
  1863 00fa 05        		.uleb128 0x5
-68K GAS  /tmp/cchYSbxF.s 			page 35
+68K GAS  /tmp/ccq9bfh0.s 			page 35
 
 
  1864 00fb 01        		.uleb128 0x1
@@ -2098,7 +2098,7 @@
  1918 0131 00        		.byte	0
  1919 0132 00        		.byte	0
  1920 0133 1A        		.uleb128 0x1a
-68K GAS  /tmp/cchYSbxF.s 			page 36
+68K GAS  /tmp/ccq9bfh0.s 			page 36
 
 
  1921 0134 13        		.uleb128 0x13
@@ -2158,7 +2158,7 @@
  1975 016a 00        		.byte	0
  1976 016b 00        		.byte	0
  1977 016c 1F        		.uleb128 0x1f
-68K GAS  /tmp/cchYSbxF.s 			page 37
+68K GAS  /tmp/ccq9bfh0.s 			page 37
 
 
  1978 016d 15        		.uleb128 0x15
@@ -2218,7 +2218,7 @@
  2032 01a5 01        		.uleb128 0x1
  2033 01a6 13        		.uleb128 0x13
  2034 01a7 00        		.byte	0
-68K GAS  /tmp/cchYSbxF.s 			page 38
+68K GAS  /tmp/ccq9bfh0.s 			page 38
 
 
  2035 01a8 00        		.byte	0
@@ -2278,7 +2278,7 @@
  2089 01de 13        		.uleb128 0x13
  2090 01df 11        		.uleb128 0x11
  2091 01e0 01        		.uleb128 0x1
-68K GAS  /tmp/cchYSbxF.s 			page 39
+68K GAS  /tmp/ccq9bfh0.s 			page 39
 
 
  2092 01e1 12        		.uleb128 0x12
@@ -2338,7 +2338,7 @@
  2146 021d 49        		.uleb128 0x49
  2147 021e 13        		.uleb128 0x13
  2148 021f 3F        		.uleb128 0x3f
-68K GAS  /tmp/cchYSbxF.s 			page 40
+68K GAS  /tmp/ccq9bfh0.s 			page 40
 
 
  2149 0220 19        		.uleb128 0x19
@@ -2398,7 +2398,7 @@
  2203 0046 52        		.byte	0x52
  2204 0047 0000 0000 		.long	0
  2205 004b 0000 0000 		.long	0
-68K GAS  /tmp/cchYSbxF.s 			page 41
+68K GAS  /tmp/ccq9bfh0.s 			page 41
 
 
  2206               	.LLST1:
@@ -2458,7 +2458,7 @@
  2260 00cf 0000 0000 		.long	.LVL16
  2261 00d3 0000 0000 		.long	.LVL17
  2262 00d7 0003      		.word	0x3
-68K GAS  /tmp/cchYSbxF.s 			page 42
+68K GAS  /tmp/ccq9bfh0.s 			page 42
 
 
  2263 00d9 72        		.byte	0x72
@@ -2518,7 +2518,7 @@
  2306      6379 00
  2307               	.LASF142:
  2308 002b 7374 6163 		.string	"stacks"
-68K GAS  /tmp/cchYSbxF.s 			page 43
+68K GAS  /tmp/ccq9bfh0.s 			page 43
 
 
  2308      6B73 00
@@ -2578,7 +2578,7 @@
  2333               	.LASF6:
  2334 00c4 6C6F 6E67 		.string	"long long int"
  2334      206C 6F6E 
-68K GAS  /tmp/cchYSbxF.s 			page 44
+68K GAS  /tmp/ccq9bfh0.s 			page 44
 
 
  2334      6720 696E 
@@ -2638,7 +2638,7 @@
  2366 014e 5F6F 6666 		.string	"_offset"
  2366      7365 7400 
  2367               	.LASF130:
-68K GAS  /tmp/cchYSbxF.s 			page 45
+68K GAS  /tmp/ccq9bfh0.s 			page 45
 
 
  2368 0156 7373 7461 		.string	"sstack"
@@ -2698,7 +2698,7 @@
  2395               	.LASF28:
  2396 0214 5F5F 746D 		.string	"__tm"
  2396      00
-68K GAS  /tmp/cchYSbxF.s 			page 46
+68K GAS  /tmp/ccq9bfh0.s 			page 46
 
 
  2397               	.LASF14:
@@ -2758,7 +2758,7 @@
  2426      7369 676E 
  2426      6564 2069 
  2426      6E74 00
-68K GAS  /tmp/cchYSbxF.s 			page 47
+68K GAS  /tmp/ccq9bfh0.s 			page 47
 
 
  2427               	.LASF84:
@@ -2818,7 +2818,7 @@
  2456      6C6C 6F63 
  2456      00
  2457               	.LASF128:
-68K GAS  /tmp/cchYSbxF.s 			page 48
+68K GAS  /tmp/ccq9bfh0.s 			page 48
 
 
  2458 0334 5443 425F 		.string	"TCB_TYPE"
@@ -2878,7 +2878,7 @@
  2483               	.LASF83:
  2484 03e0 5F6E 6577 		.string	"_new"
  2484      00
-68K GAS  /tmp/cchYSbxF.s 			page 49
+68K GAS  /tmp/ccq9bfh0.s 			page 49
 
 
  2485               	.LASF115:
@@ -2938,7 +2938,7 @@
  2516      6561 6E75 
  2516      7000 
  2517               	.LASF73:
-68K GAS  /tmp/cchYSbxF.s 			page 50
+68K GAS  /tmp/ccq9bfh0.s 			page 50
 
 
  2518 0469 5F75 6E73 		.string	"_unspecified_locale_info"
@@ -2998,7 +2998,7 @@
  2549               	.LASF98:
  2550 04f9 5F73 7472 		.string	"_strtok_last"
  2550      746F 6B5F 
-68K GAS  /tmp/cchYSbxF.s 			page 51
+68K GAS  /tmp/ccq9bfh0.s 			page 51
 
 
  2550      6C61 7374 
@@ -3058,7 +3058,7 @@
  2580 057d 5F5F 746D 		.string	"__tm_isdst"
  2580      5F69 7364 
  2580      7374 00
-68K GAS  /tmp/cchYSbxF.s 			page 52
+68K GAS  /tmp/ccq9bfh0.s 			page 52
 
 
  2581               	.LASF100:
@@ -3092,15 +3092,15 @@
  2596      5F6D 6461 
  2596      7900 
  2597               		.ident	"GCC: (GNU) 5.5.0"
-68K GAS  /tmp/cchYSbxF.s 			page 53
+68K GAS  /tmp/ccq9bfh0.s 			page 53
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 test2.c
-     /tmp/cchYSbxF.s:13     .text:0000000000000000 task1
-     /tmp/cchYSbxF.s:78     .text:000000000000003e task2
-     /tmp/cchYSbxF.s:142    .text:000000000000007c task3
-     /tmp/cchYSbxF.s:201    .text.startup:0000000000000000 main
+     /tmp/ccq9bfh0.s:13     .text:0000000000000000 task1
+     /tmp/ccq9bfh0.s:78     .text:000000000000003e task2
+     /tmp/ccq9bfh0.s:142    .text:000000000000007c task3
+     /tmp/ccq9bfh0.s:201    .text.startup:0000000000000000 main
                             *COM*:0000000000002800 stacks
                             *COM*:000000000000008c task_tab
                             *COM*:0000000000000018 semaphore

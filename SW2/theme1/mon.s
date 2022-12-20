@@ -61,7 +61,7 @@
 .global monitor_begin   | 大域変数（関数）の宣言	
 monitor_begin:
 		* スーパーバイザ & 各種設定を行っている最中の割込禁止
-		move.w #0x2000,%SR
+		move.w #0x2700,%SR
 		lea.l SYS_STK_TOP, %SP | Set SSP
 		****************
 		** 割り込みコントローラの初期化
@@ -97,7 +97,7 @@ monitor_begin:
 		move.l %a3, in1
 		move.l #0, s0
 		move.l #0, s1
-	
+		move.w #0x2000,%SR
 		jmp start
 	
 ****************************************************************
