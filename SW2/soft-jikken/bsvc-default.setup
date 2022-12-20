@@ -1,0 +1,10 @@
+BSVC Simulator Setup File
+
+UI_VERSION {2.2}
+SIMULATOR {sim68000}
+COMMAND {AttachDevice 0 RAM {BaseAddress = 000000 Size = 040000}}
+#COMMAND {AttachDevice 0 RAM {BaseAddress = fffc00 Size = 000400}}
+#COMMAND {AttachDevice 0 RAM {BaseAddress = 100000 Size = 100000}}
+COMMAND {AttachDevice 0 RAM {BaseAddress = D00000 Size = 020000}}
+COMMAND {AttachDevice 0 RAM {BaseAddress = fff000 Size = 001000}}
+
