@@ -1635,24 +1635,24 @@
  641               	.LASF5:
  642 004a 7265 6164 		.string	"read"
  642      00
- 643               	.LASF1:
- 644 004f 6368 6172 		.string	"char"
- 644      00
+ 643               	.LASF4:
+ 644 004f 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/theme1"
+ 644      652F 7374 
+ 644      7564 656E 
+ 644      7473 2F32 
+ 644      3032 3038 
  645               	.LASF3:
- 646 0054 6373 7973 		.string	"csys68k.c"
+ 646 007e 6373 7973 		.string	"csys68k.c"
  646      3638 6B2E 
+
+
  646      6300 
- 647               	.LASF4:
- 648 005e 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/mtk"
-
-
- 648      652F 7374 
- 648      7564 656E 
- 648      7473 2F32 
- 648      3032 3038 
- 649               	.LASF6:
- 650 008a 7772 6974 		.string	"write"
- 650      6500 
+ 647               	.LASF6:
+ 648 0088 7772 6974 		.string	"write"
+ 648      6500 
+ 649               	.LASF1:
+ 650 008e 6368 6172 		.string	"char"
+ 650      00
  651               		.ident	"GCC: (GNU) 5.5.0"
 
 
@@ -3588,261 +3588,261 @@
  1733               	.LASF65:
  1734 026c 5F66 6C61 		.string	"_flags2"
  1734      6773 3200 
- 1735               	.LASF121:
- 1736 0274 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/mtk"
- 1736      652F 7374 
- 1736      7564 656E 
- 1736      7473 2F32 
- 1736      3032 3038 
- 1737               	.LASF55:
- 1738 02a0 5F77 7269 		.string	"_write"
- 1738      7465 00
- 1739               	.LASF34:
- 1740 02a7 5F5F 746D 		.string	"__tm_year"
- 1740      5F79 6561 
- 1740      7200 
- 1741               	.LASF117:
- 1742 02b1 5F6E 6D61 		.string	"_nmalloc"
-
-
- 1742      6C6C 6F63 
+ 1735               	.LASF55:
+ 1736 0274 5F77 7269 		.string	"_write"
+ 1736      7465 00
+ 1737               	.LASF34:
+ 1738 027b 5F5F 746D 		.string	"__tm_year"
+ 1738      5F79 6561 
+ 1738      7200 
+ 1739               	.LASF117:
+ 1740 0285 5F6E 6D61 		.string	"_nmalloc"
+ 1740      6C6C 6F63 
+ 1740      00
+ 1741               	.LASF17:
+ 1742 028e 7369 7A65 		.string	"sizetype"
+ 1742      7479 7065 
  1742      00
- 1743               	.LASF17:
- 1744 02ba 7369 7A65 		.string	"sizetype"
- 1744      7479 7065 
- 1744      00
- 1745               	.LASF120:
- 1746 02c3 7465 7374 		.string	"test1.c"
- 1746      312E 6300 
- 1747               	.LASF116:
- 1748 02cb 5F6E 6578 		.string	"_nextf"
- 1748      7466 00
- 1749               	.LASF33:
- 1750 02d2 5F5F 746D 		.string	"__tm_mon"
- 1750      5F6D 6F6E 
- 1750      00
- 1751               	.LASF43:
- 1752 02db 5F61 7465 		.string	"_atexit"
- 1752      7869 7400 
- 1753               	.LASF75:
- 1754 02e3 5F5F 7364 		.string	"__sdidinit"
- 1754      6964 696E 
- 1754      6974 00
- 1755               	.LASF10:
- 1756 02ee 5F6F 6666 		.string	"_off_t"
- 1756      5F74 00
+
+
+ 1743               	.LASF120:
+ 1744 0297 7465 7374 		.string	"test1.c"
+ 1744      312E 6300 
+ 1745               	.LASF116:
+ 1746 029f 5F6E 6578 		.string	"_nextf"
+ 1746      7466 00
+ 1747               	.LASF33:
+ 1748 02a6 5F5F 746D 		.string	"__tm_mon"
+ 1748      5F6D 6F6E 
+ 1748      00
+ 1749               	.LASF43:
+ 1750 02af 5F61 7465 		.string	"_atexit"
+ 1750      7869 7400 
+ 1751               	.LASF75:
+ 1752 02b7 5F5F 7364 		.string	"__sdidinit"
+ 1752      6964 696E 
+ 1752      6974 00
+ 1753               	.LASF10:
+ 1754 02c2 5F6F 6666 		.string	"_off_t"
+ 1754      5F74 00
+ 1755               	.LASF121:
+ 1756 02c9 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/theme1"
+ 1756      652F 7374 
+ 1756      7564 656E 
+ 1756      7473 2F32 
+ 1756      3032 3038 
  1757               	.LASF80:
- 1758 02f5 5F66 7265 		.string	"_freelist"
+ 1758 02f8 5F66 7265 		.string	"_freelist"
  1758      656C 6973 
  1758      7400 
  1759               	.LASF9:
- 1760 02ff 5F4C 4F43 		.string	"_LOCK_RECURSIVE_T"
+ 1760 0302 5F4C 4F43 		.string	"_LOCK_RECURSIVE_T"
  1760      4B5F 5245 
  1760      4355 5253 
  1760      4956 455F 
  1760      5400 
  1761               	.LASF1:
- 1762 0311 756E 7369 		.string	"unsigned char"
+ 1762 0314 756E 7369 		.string	"unsigned char"
  1762      676E 6564 
  1762      2063 6861 
  1762      7200 
  1763               	.LASF83:
- 1764 031f 5F6E 6577 		.string	"_new"
+ 1764 0322 5F6E 6577 		.string	"_new"
  1764      00
  1765               	.LASF115:
- 1766 0324 5F68 5F65 		.string	"_h_errno"
+ 1766 0327 5F68 5F65 		.string	"_h_errno"
  1766      7272 6E6F 
  1766      00
  1767               	.LASF2:
- 1768 032d 7368 6F72 		.string	"short int"
+ 1768 0330 7368 6F72 		.string	"short int"
  1768      7420 696E 
  1768      7400 
  1769               	.LASF36:
- 1770 0337 5F5F 746D 		.string	"__tm_yday"
+ 1770 033a 5F5F 746D 		.string	"__tm_yday"
  1770      5F79 6461 
  1770      7900 
  1771               	.LASF46:
 
 
- 1772 0341 5F5F 7362 		.string	"__sbuf"
+ 1772 0344 5F5F 7362 		.string	"__sbuf"
  1772      7566 00
  1773               	.LASF92:
- 1774 0348 5F69 6F62 		.string	"_iobs"
+ 1774 034b 5F69 6F62 		.string	"_iobs"
  1774      7300 
  1775               	.LASF89:
- 1776 034e 5F5F 4649 		.string	"__FILE"
+ 1776 0351 5F5F 4649 		.string	"__FILE"
  1776      4C45 00
  1777               	.LASF20:
- 1778 0355 5F6D 6273 		.string	"_mbstate_t"
+ 1778 0358 5F6D 6273 		.string	"_mbstate_t"
  1778      7461 7465 
  1778      5F74 00
  1779               	.LASF49:
- 1780 0360 5F5F 7346 		.string	"__sFILE"
+ 1780 0363 5F5F 7346 		.string	"__sFILE"
  1780      494C 4500 
  1781               	.LASF64:
- 1782 0368 5F6D 6273 		.string	"_mbstate"
+ 1782 036b 5F6D 6273 		.string	"_mbstate"
  1782      7461 7465 
  1782      00
  1783               	.LASF102:
- 1784 0371 5F72 616E 		.string	"_rand_next"
+ 1784 0374 5F72 616E 		.string	"_rand_next"
  1784      645F 6E65 
  1784      7874 00
  1785               	.LASF104:
- 1786 037c 5F6D 626C 		.string	"_mblen_state"
+ 1786 037f 5F6D 626C 		.string	"_mblen_state"
  1786      656E 5F73 
  1786      7461 7465 
  1786      00
  1787               	.LASF71:
- 1788 0389 5F69 6E63 		.string	"_inc"
+ 1788 038c 5F69 6E63 		.string	"_inc"
  1788      00
  1789               	.LASF44:
- 1790 038e 5F69 6E64 		.string	"_ind"
+ 1790 0391 5F69 6E64 		.string	"_ind"
  1790      00
  1791               	.LASF74:
- 1792 0393 5F6C 6F63 		.string	"_locale"
+ 1792 0396 5F6C 6F63 		.string	"_locale"
  1792      616C 6500 
  1793               	.LASF76:
- 1794 039b 5F5F 636C 		.string	"__cleanup"
+ 1794 039e 5F5F 636C 		.string	"__cleanup"
  1794      6561 6E75 
  1794      7000 
  1795               	.LASF73:
- 1796 03a5 5F75 6E73 		.string	"_unspecified_locale_info"
+ 1796 03a8 5F75 6E73 		.string	"_unspecified_locale_info"
  1796      7065 6369 
  1796      6669 6564 
  1796      5F6C 6F63 
  1796      616C 655F 
  1797               	.LASF24:
- 1798 03be 5F6D 6178 		.string	"_maxwds"
+ 1798 03c1 5F6D 6178 		.string	"_maxwds"
  1798      7764 7300 
  1799               	.LASF66:
- 1800 03c6 5F72 6565 		.string	"_reent"
+ 1800 03c9 5F72 6565 		.string	"_reent"
  1800      6E74 00
  1801               	.LASF94:
- 1802 03cd 5F73 6565 		.string	"_seed"
+ 1802 03d0 5F73 6565 		.string	"_seed"
  1802      6400 
  1803               	.LASF18:
 
 
- 1804 03d3 5F5F 636F 		.string	"__count"
+ 1804 03d6 5F5F 636F 		.string	"__count"
  1804      756E 7400 
  1805               	.LASF19:
- 1806 03db 5F5F 7661 		.string	"__value"
+ 1806 03de 5F5F 7661 		.string	"__value"
  1806      6C75 6500 
  1807               	.LASF56:
- 1808 03e3 5F73 6565 		.string	"_seek"
+ 1808 03e6 5F73 6565 		.string	"_seek"
  1808      6B00 
  1809               	.LASF124:
- 1810 03e9 5F69 6D70 		.string	"_impure_ptr"
+ 1810 03ec 5F69 6D70 		.string	"_impure_ptr"
  1810      7572 655F 
  1810      7074 7200 
  1811               	.LASF11:
- 1812 03f5 5F66 706F 		.string	"_fpos_t"
+ 1812 03f8 5F66 706F 		.string	"_fpos_t"
  1812      735F 7400 
  1813               	.LASF8:
- 1814 03fd 6C6F 6E67 		.string	"long double"
+ 1814 0400 6C6F 6E67 		.string	"long double"
  1814      2064 6F75 
  1814      626C 6500 
  1815               	.LASF67:
- 1816 0409 5F65 7272 		.string	"_errno"
+ 1816 040c 5F65 7272 		.string	"_errno"
  1816      6E6F 00
  1817               	.LASF88:
- 1818 0410 6368 6172 		.string	"char"
+ 1818 0413 6368 6172 		.string	"char"
  1818      00
  1819               	.LASF30:
- 1820 0415 5F5F 746D 		.string	"__tm_min"
+ 1820 0418 5F5F 746D 		.string	"__tm_min"
  1820      5F6D 696E 
  1820      00
  1821               	.LASF95:
- 1822 041e 5F6D 756C 		.string	"_mult"
+ 1822 0421 5F6D 756C 		.string	"_mult"
  1822      7400 
  1823               	.LASF23:
- 1824 0424 5F6E 6578 		.string	"_next"
+ 1824 0427 5F6E 6578 		.string	"_next"
  1824      7400 
  1825               	.LASF98:
- 1826 042a 5F73 7472 		.string	"_strtok_last"
+ 1826 042d 5F73 7472 		.string	"_strtok_last"
  1826      746F 6B5F 
  1826      6C61 7374 
  1826      00
  1827               	.LASF41:
- 1828 0437 5F66 6E74 		.string	"_fntypes"
+ 1828 043a 5F66 6E74 		.string	"_fntypes"
  1828      7970 6573 
  1828      00
  1829               	.LASF96:
- 1830 0440 5F61 6464 		.string	"_add"
+ 1830 0443 5F61 6464 		.string	"_add"
  1830      00
  1831               	.LASF22:
- 1832 0445 5F5F 554C 		.string	"__ULong"
+ 1832 0448 5F5F 554C 		.string	"__ULong"
  1832      6F6E 6700 
  1833               	.LASF109:
- 1834 044d 5F67 6574 		.string	"_getdate_err"
+ 1834 0450 5F67 6574 		.string	"_getdate_err"
  1834      6461 7465 
  1834      5F65 7272 
  1834      00
  1835               	.LASF97:
- 1836 045a 5F75 6E75 		.string	"_unused_rand"
+ 1836 045d 5F75 6E75 		.string	"_unused_rand"
 
 
  1836      7365 645F 
  1836      7261 6E64 
  1836      00
  1837               	.LASF26:
- 1838 0467 5F77 6473 		.string	"_wds"
+ 1838 046a 5F77 6473 		.string	"_wds"
  1838      00
  1839               	.LASF35:
- 1840 046c 5F5F 746D 		.string	"__tm_wday"
+ 1840 046f 5F5F 746D 		.string	"__tm_wday"
  1840      5F77 6461 
  1840      7900 
  1841               	.LASF90:
- 1842 0476 5F67 6C75 		.string	"_glue"
+ 1842 0479 5F67 6C75 		.string	"_glue"
  1842      6500 
  1843               	.LASF12:
- 1844 047c 5F73 7369 		.string	"_ssize_t"
+ 1844 047f 5F73 7369 		.string	"_ssize_t"
  1844      7A65 5F74 
  1844      00
  1845               	.LASF107:
- 1846 0485 5F6C 3634 		.string	"_l64a_buf"
+ 1846 0488 5F6C 3634 		.string	"_l64a_buf"
  1846      615F 6275 
  1846      6600 
  1847               	.LASF85:
- 1848 048f 5F73 6967 		.string	"_sig_func"
+ 1848 0492 5F73 6967 		.string	"_sig_func"
  1848      5F66 756E 
  1848      6300 
  1849               	.LASF59:
- 1850 0499 5F6E 6275 		.string	"_nbuf"
+ 1850 049c 5F6E 6275 		.string	"_nbuf"
  1850      6600 
  1851               	.LASF118:
- 1852 049f 5F75 6E75 		.string	"_unused"
+ 1852 04a2 5F75 6E75 		.string	"_unused"
  1852      7365 6400 
  1853               	.LASF37:
- 1854 04a7 5F5F 746D 		.string	"__tm_isdst"
+ 1854 04aa 5F5F 746D 		.string	"__tm_isdst"
  1854      5F69 7364 
  1854      7374 00
  1855               	.LASF100:
- 1856 04b2 5F6C 6F63 		.string	"_localtime_buf"
+ 1856 04b5 5F6C 6F63 		.string	"_localtime_buf"
  1856      616C 7469 
  1856      6D65 5F62 
  1856      7566 00
  1857               	.LASF57:
- 1858 04c1 5F63 6C6F 		.string	"_close"
+ 1858 04c4 5F63 6C6F 		.string	"_close"
  1858      7365 00
  1859               	.LASF103:
- 1860 04c8 5F72 3438 		.string	"_r48"
+ 1860 04cb 5F72 3438 		.string	"_r48"
  1860      00
  1861               	.LASF105:
- 1862 04cd 5F6D 6274 		.string	"_mbtowc_state"
+ 1862 04d0 5F6D 6274 		.string	"_mbtowc_state"
  1862      6F77 635F 
  1862      7374 6174 
  1862      6500 
  1863               	.LASF79:
- 1864 04db 5F70 3573 		.string	"_p5s"
+ 1864 04de 5F70 3573 		.string	"_p5s"
  1864      00
  1865               	.LASF123:
- 1866 04e0 6D61 696E 		.string	"main"
+ 1866 04e3 6D61 696E 		.string	"main"
  1866      00
 
 
  1867               	.LASF32:
- 1868 04e5 5F5F 746D 		.string	"__tm_mday"
+ 1868 04e8 5F5F 746D 		.string	"__tm_mday"
  1868      5F6D 6461 
  1868      7900 
  1869               		.ident	"GCC: (GNU) 5.5.0"
