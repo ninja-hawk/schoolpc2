@@ -1,4 +1,4 @@
-68K GAS  /tmp/ccXi4447.s 			page 1
+68K GAS  /tmp/ccO900DI.s 			page 1
 
 
    1               	#NO_APP
@@ -58,7 +58,7 @@
   23:csys68k.c     **** 	i--;
   24:csys68k.c     ****       }
   25:csys68k.c     ****       i--;
-68K GAS  /tmp/ccXi4447.s 			page 2
+68K GAS  /tmp/ccO900DI.s 			page 2
 
 
   26:csys68k.c     ****       continue;
@@ -118,7 +118,7 @@
   25:csys68k.c     ****       continue;
   72               		.loc 1 25 0
   73 0054 5382      		subq.l #1,%d2
-68K GAS  /tmp/ccXi4447.s 			page 3
+68K GAS  /tmp/ccO900DI.s 			page 3
 
 
   74               	.LVL8:
@@ -178,7 +178,7 @@
  112 008a 4E75      		rts
  113               	.LVL15:
  114               	.L5:
-68K GAS  /tmp/ccXi4447.s 			page 4
+68K GAS  /tmp/ccO900DI.s 			page 4
 
 
   29:csys68k.c     ****       *(buf + i) = c;
@@ -238,7 +238,7 @@
  161 00c0 D483      		add.l %d3,%d2
  162 00c2 47F9 0000 		lea outbyte,%a3
  162      0000 
-68K GAS  /tmp/ccXi4447.s 			page 5
+68K GAS  /tmp/ccO900DI.s 			page 5
 
 
  163               	.LVL21:
@@ -298,7 +298,7 @@
  203               		.loc 1 43 0
  204 00fe 588F      		addq.l #4,%sp
  205               		.cfi_def_cfa_offset 20
-68K GAS  /tmp/ccXi4447.s 			page 6
+68K GAS  /tmp/ccO900DI.s 			page 6
 
 
  206 0100 B48A      		cmp.l %a2,%d2
@@ -358,7 +358,7 @@
  260 0066 08        		.sleb128 8
  261 0067 05        		.uleb128 0x5
  262 0068 6300      		.string	"c"
-68K GAS  /tmp/ccXi4447.s 			page 7
+68K GAS  /tmp/ccO900DI.s 			page 7
 
 
  263 006a 01        		.byte	0x1
@@ -418,7 +418,7 @@
  317 00d3 02        		.uleb128 0x2
  318 00d4 91        		.byte	0x91
  319 00d5 04        		.sleb128 4
-68K GAS  /tmp/ccXi4447.s 			page 8
+68K GAS  /tmp/ccO900DI.s 			page 8
 
 
  320 00d6 04        		.uleb128 0x4
@@ -478,7 +478,7 @@
  374 001e 27        		.uleb128 0x27
  375 001f 19        		.uleb128 0x19
  376 0020 49        		.uleb128 0x49
-68K GAS  /tmp/ccXi4447.s 			page 9
+68K GAS  /tmp/ccO900DI.s 			page 9
 
 
  377 0021 13        		.uleb128 0x13
@@ -538,7 +538,7 @@
  431 0058 02        		.uleb128 0x2
  432 0059 17        		.uleb128 0x17
  433 005a 00        		.byte	0
-68K GAS  /tmp/ccXi4447.s 			page 10
+68K GAS  /tmp/ccO900DI.s 			page 10
 
 
  434 005b 00        		.byte	0
@@ -598,7 +598,7 @@
  488 0094 49        		.uleb128 0x49
  489 0095 13        		.uleb128 0x13
  490 0096 11        		.uleb128 0x11
-68K GAS  /tmp/ccXi4447.s 			page 11
+68K GAS  /tmp/ccO900DI.s 			page 11
 
 
  491 0097 01        		.uleb128 0x1
@@ -658,7 +658,7 @@
  545 006d 30        		.byte	0x30
  546 006e 9F        		.byte	0x9f
  547 006f 0000 0000 		.long	0
-68K GAS  /tmp/ccXi4447.s 			page 12
+68K GAS  /tmp/ccO900DI.s 			page 12
 
 
  548 0073 0000 0000 		.long	0
@@ -718,7 +718,7 @@
  602 00d5 91        		.byte	0x91
  603 00d6 74        		.sleb128 -12
  604 00d7 06        		.byte	0x6
-68K GAS  /tmp/ccXi4447.s 			page 13
+68K GAS  /tmp/ccO900DI.s 			page 13
 
 
  605 00d8 1C        		.byte	0x1c
@@ -778,7 +778,7 @@
  646      7564 656E 
  646      7473 2F32 
  646      3032 3038 
-68K GAS  /tmp/ccXi4447.s 			page 14
+68K GAS  /tmp/ccO900DI.s 			page 14
 
 
  647               	.LASF3:
@@ -789,13 +789,13 @@
  650 008d 7772 6974 		.string	"write"
  650      6500 
  651               		.ident	"GCC: (GNU) 5.5.0"
-68K GAS  /tmp/ccXi4447.s 			page 15
+68K GAS  /tmp/ccO900DI.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 csys68k.c
-     /tmp/ccXi4447.s:9      .text:0000000000000000 read
-     /tmp/ccXi4447.s:144    .text:00000000000000b0 write
+     /tmp/ccO900DI.s:9      .text:0000000000000000 read
+     /tmp/ccO900DI.s:144    .text:00000000000000b0 write
 
 UNDEFINED SYMBOLS
 inbyte

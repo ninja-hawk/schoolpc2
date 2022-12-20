@@ -67,7 +67,7 @@
   61               	.global monitor_begin   | 大域変数（関数）の宣言	
   62               	monitor_begin:
   63               			* スーパーバイザ & 各種設定を行っている最中の割込禁止
-  64 0000 46FC 2000 			move.w #0x2000,%SR
+  64 0000 46FC 2300 			move.w #0x2300,%SR
   65 0004 4FF9 0000 			lea.l SYS_STK_TOP, %SP | Set SSP
   65      0000 
   66               			****************
