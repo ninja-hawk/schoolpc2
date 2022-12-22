@@ -9,7 +9,6 @@
 * In the future, these functions will be included into mtk_c.c 
 */
 #include "mtk_c.h"
-#include <stdio.h>
 
 void init_kernel() {
 	ready = 0;                  //readyの初期化
@@ -84,7 +83,7 @@ TASK_ID_TYPE removeq(TASK_ID_TYPE *q){
 }
 
 void sched(void) {
-    printf("\n\n timer ---------\n\n");
+    print("\n\n TIMER!!!! \n\n");
     // readyキューの先頭タスクを取り出してnext_taskへ
     next_task = removeq(&ready);
     // next_taskがNULLの場合はタイマ割り込みが来るまでループ
@@ -122,9 +121,9 @@ void sleep(int s_id){
 
 void wakeup(int s_id){
     // セマフォの待ち行列の先頭タスクを取得
-    TASK_ID_TYPE* head_sem = &(semaphore[s_id].task_list);
+    TASK_ID_TYPE head_sem = semaphore[s_id].task_list;
     // セマフォの待ち行列の先頭タスクをキューから除去
-    TASK_ID_TYPE head_task = removeq(head_sem);
+    TASK_ID_TYPE head_task = removeq(&head_sem);
     // readyキューにその先頭タスクを追加
     addq(&ready, head_task);
 }
@@ -148,7 +147,6 @@ void v_body(int s_id){
 
 }
 }
-
 
 
 

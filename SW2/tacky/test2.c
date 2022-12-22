@@ -6,7 +6,7 @@ extern void set_task(void *a);
 extern void begin_sch();
 #define L  500
 #define M  1000
-#define N  2000
+#define N  4000
 void task1(){
 while(1){
 	// task1-a
@@ -22,7 +22,6 @@ while(1){
 	}
 	V(0);
 	P(1);
-	// task2-c
 	for (int i = 0;i<M;i++){
 		printf("task1-c %d \n", i);
 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
@@ -46,7 +45,6 @@ while(1){
 		/* N: 3 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
 	}
 	V(1);
-	// task2-c
 	for (int i = 0;i<M;i++){
 		printf("task2-c %d \n", i);
 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */

@@ -84,7 +84,7 @@ end_pv_handler:
 P:
      movem.l %D0-%D1, -(%sp)
      move.l #0, %D0        |PシステムコールのID＝０をD0レジスタに
-     move.l  12(%sp) ,%D1   |スタックに入っている引数をD1に（d0-d1+戻り番地のPC= 12）
+     move.l  0x0c(%sp) ,%D1   |スタックに入っている引数をD1に（d0-d1+戻り番地のPC= 12）
      trap #1
      movem.l (%sp)+, %D0-%d1
      rts
@@ -92,7 +92,7 @@ P:
 V:
      movem.l %D0-%D1, -(%sp)
      move.l #1, %D0        |VシステムコールのID＝1をD0レジスタに
-     move.l  12(%sp) ,%D1  |スタックに入っている引数をD1に（d0-d1+戻り番地のPC= 12）
+     move.l  0x0c(%sp) ,%D1  |スタックに入っている引数をD1に（d0-d1+戻り番地のPC= 12）
      trap #1
      movem.l (%sp)+, %D0-%d1
      rts
@@ -156,5 +156,4 @@ loop_first_task:
         movem.l (%sp)+, %d0-%d7/%a0-%a6
 
 		rte                       /*rte*/
-
 
