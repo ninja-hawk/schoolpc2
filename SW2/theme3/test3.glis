@@ -1,8 +1,8 @@
-68K GAS  /tmp/ccFshAR2.s 			page 1
+68K GAS  /tmp/cceTXlzw.s 			page 1
 
 
    1               	#NO_APP
-   2               		.file	"test2.c"
+   2               		.file	"test3.c"
    3               		.text
    4               	.Ltext0:
    5               		.cfi_sections	.debug_frame
@@ -28,17 +28,17 @@
   16               		.type	task1, @function
   17               	task1:
   18               	.LFB3:
-  19               		.file 1 "test2.c"
-   1:test2.c       **** #include <stdio.h>
-   2:test2.c       **** #include "mtk_c.h"
-   3:test2.c       **** 
-   4:test2.c       **** extern void init_kernel();
-   5:test2.c       **** extern void set_task(void *a);
-   6:test2.c       **** extern void begin_sch();
-   7:test2.c       **** #define L  500
-   8:test2.c       **** #define M  1000
-   9:test2.c       **** #define N  2000
-  10:test2.c       **** void task1(){
+  19               		.file 1 "test3.c"
+   1:test3.c       **** #include <stdio.h>
+   2:test3.c       **** #include "mtk_c.h"
+   3:test3.c       **** 
+   4:test3.c       **** extern void init_kernel();
+   5:test3.c       **** extern void set_task(void *a);
+   6:test3.c       **** extern void begin_sch();
+   7:test3.c       **** #define L  500
+   8:test3.c       **** #define M  1000
+   9:test3.c       **** #define N  2000
+  10:test3.c       **** void task1(){
   20               		.loc 1 10 0
   21               		.cfi_startproc
   22 0000 48E7 2038 		movem.l #8248,-(%sp)
@@ -55,17 +55,17 @@
   30      0000 
   31               	.LVL0:
   32               	.LBB2:
-  11:test2.c       **** while(1){
-  12:test2.c       **** 	// task1-a
-  13:test2.c       **** 	for (int j = 0;j<L;j++){
-68K GAS  /tmp/ccFshAR2.s 			page 2
+  11:test3.c       **** while(1){
+  12:test3.c       **** 	// task1-a
+  13:test3.c       **** 	for (int j = 0;j<L;j++){
+68K GAS  /tmp/cceTXlzw.s 			page 2
 
 
   33               		.loc 1 13 0
   34 0016 7400      		moveq #0,%d2
   35               	.LVL1:
   36               	.L2:
-  14:test2.c       **** 		printf("task1-a %d \n", j);
+  14:test3.c       **** 		printf("task1-a %d \n", j);
   37               		.loc 1 14 0 discriminator 3
   38 0018 2F02      		move.l %d2,-(%sp)
   39               		.cfi_def_cfa_offset 24
@@ -74,7 +74,7 @@
   41               		.cfi_def_cfa_offset 28
   42 0020 4E92      		jsr (%a2)
   43               	.LVL2:
-  13:test2.c       **** 		printf("task1-a %d \n", j);
+  13:test3.c       **** 		printf("task1-a %d \n", j);
   44               		.loc 1 13 0 discriminator 3
   45 0022 5282      		addq.l #1,%d2
   46               	.LVL3:
@@ -84,9 +84,9 @@
   49      01F4 
   50 002c 66EA      		jne .L2
   51               	.LBE2:
-  15:test2.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
-  16:test2.c       **** 	}
-  17:test2.c       **** 	P(0);
+  15:test3.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
+  16:test3.c       **** 	}
+  17:test3.c       **** 	P(0);
   52               		.loc 1 17 0
   53 002e 42A7      		clr.l -(%sp)
   54               		.cfi_def_cfa_offset 24
@@ -95,13 +95,13 @@
   57 0032 588F      		addq.l #4,%sp
   58               		.cfi_def_cfa_offset 20
   59               	.LBB3:
-  18:test2.c       **** 	// task1-b
-  19:test2.c       **** 	for (int j = 0;j<L;j++){
+  18:test3.c       **** 	// task1-b
+  19:test3.c       **** 	for (int j = 0;j<L;j++){
   60               		.loc 1 19 0
   61 0034 7400      		moveq #0,%d2
   62               	.LVL5:
   63               	.L3:
-  20:test2.c       **** 		printf("task1-b %d \n", j);
+  20:test3.c       **** 		printf("task1-b %d \n", j);
   64               		.loc 1 20 0 discriminator 3
   65 0036 2F02      		move.l %d2,-(%sp)
   66               		.cfi_def_cfa_offset 24
@@ -110,7 +110,7 @@
   68               		.cfi_def_cfa_offset 28
   69 003e 4E92      		jsr (%a2)
   70               	.LVL6:
-  19:test2.c       **** 		printf("task1-b %d \n", j);
+  19:test3.c       **** 		printf("task1-b %d \n", j);
   71               		.loc 1 19 0 discriminator 3
   72 0040 5282      		addq.l #1,%d2
   73               	.LVL7:
@@ -118,20 +118,20 @@
   75               		.cfi_def_cfa_offset 20
   76 0044 0C82 0000 		cmp.l #500,%d2
   76      01F4 
-68K GAS  /tmp/ccFshAR2.s 			page 3
+68K GAS  /tmp/cceTXlzw.s 			page 3
 
 
   77 004a 66EA      		jne .L3
   78               	.LBE3:
-  21:test2.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
-  22:test2.c       **** 	}
-  23:test2.c       **** 	V(0);
+  21:test3.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
+  22:test3.c       **** 	}
+  23:test3.c       **** 	V(0);
   79               		.loc 1 23 0
   80 004c 42A7      		clr.l -(%sp)
   81               		.cfi_def_cfa_offset 24
   82 004e 4E93      		jsr (%a3)
   83               	.LVL8:
-  24:test2.c       **** 	P(1);
+  24:test3.c       **** 	P(1);
   84               		.loc 1 24 0
   85 0050 4878 0001 		pea 1.w
   86               		.cfi_def_cfa_offset 28
@@ -140,13 +140,13 @@
   89 0056 508F      		addq.l #8,%sp
   90               		.cfi_def_cfa_offset 20
   91               	.LBB4:
-  25:test2.c       **** 	// task2-c
-  26:test2.c       **** 	for (int i = 0;i<M;i++){
+  25:test3.c       **** 	// task2-c
+  26:test3.c       **** 	for (int i = 0;i<M;i++){
   92               		.loc 1 26 0
   93 0058 7400      		moveq #0,%d2
   94               	.LVL10:
   95               	.L4:
-  27:test2.c       **** 		printf("task1-c %d \n", i);
+  27:test3.c       **** 		printf("task1-c %d \n", i);
   96               		.loc 1 27 0 discriminator 3
   97 005a 2F02      		move.l %d2,-(%sp)
   98               		.cfi_def_cfa_offset 24
@@ -155,7 +155,7 @@
  100               		.cfi_def_cfa_offset 28
  101 0062 4E92      		jsr (%a2)
  102               	.LVL11:
-  26:test2.c       **** 		printf("task1-c %d \n", i);
+  26:test3.c       **** 		printf("task1-c %d \n", i);
  103               		.loc 1 26 0 discriminator 3
  104 0064 5282      		addq.l #1,%d2
  105               	.LVL12:
@@ -165,24 +165,24 @@
  108      03E8 
  109 006e 66EA      		jne .L4
  110               	.LBE4:
-  28:test2.c       **** 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
-  29:test2.c       **** 	}
-  30:test2.c       **** 	V(1);
+  28:test3.c       **** 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
+  29:test3.c       **** 	}
+  30:test3.c       **** 	V(1);
  111               		.loc 1 30 0
  112 0070 4878 0001 		pea 1.w
  113               		.cfi_def_cfa_offset 24
  114 0074 4E93      		jsr (%a3)
  115               	.LVL13:
-  31:test2.c       **** }}
+  31:test3.c       **** }}
  116               		.loc 1 31 0
  117 0076 588F      		addq.l #4,%sp
  118               		.cfi_def_cfa_offset 20
  119               	.LVL14:
-68K GAS  /tmp/ccFshAR2.s 			page 4
+68K GAS  /tmp/cceTXlzw.s 			page 4
 
 
  120               	.LBB5:
-  13:test2.c       **** 		printf("task1-a %d \n", j);
+  13:test3.c       **** 		printf("task1-a %d \n", j);
  121               		.loc 1 13 0
  122 0078 7400      		moveq #0,%d2
  123               	.LVL15:
@@ -213,8 +213,8 @@
  139               		.type	task2, @function
  140               	task2:
  141               	.LFB4:
-  32:test2.c       **** 
-  33:test2.c       **** void task2(){
+  32:test3.c       **** 
+  33:test3.c       **** void task2(){
  142               		.loc 1 33 0
  143               		.cfi_startproc
  144 007c 48E7 2038 		movem.l #8248,-(%sp)
@@ -230,26 +230,26 @@
  152 008c 47F9 0000 		lea V,%a3
  152      0000 
  153               	.L15:
-  34:test2.c       **** while(1){
-  35:test2.c       **** 	P(0);
+  34:test3.c       **** while(1){
+  35:test3.c       **** 	P(0);
  154               		.loc 1 35 0
  155 0092 42A7      		clr.l -(%sp)
  156               		.cfi_def_cfa_offset 24
  157 0094 4E94      		jsr (%a4)
  158               	.LVL16:
  159 0096 588F      		addq.l #4,%sp
-68K GAS  /tmp/ccFshAR2.s 			page 5
+68K GAS  /tmp/cceTXlzw.s 			page 5
 
 
  160               		.cfi_def_cfa_offset 20
  161               	.LBB6:
-  36:test2.c       **** 	// task2-a
-  37:test2.c       **** 	for (int i = 0;i<M;i++){
+  36:test3.c       **** 	// task2-a
+  37:test3.c       **** 	for (int i = 0;i<M;i++){
  162               		.loc 1 37 0
  163 0098 7400      		moveq #0,%d2
  164               	.LVL17:
  165               	.L12:
-  38:test2.c       **** 		printf("task2-a %d \n", i);
+  38:test3.c       **** 		printf("task2-a %d \n", i);
  166               		.loc 1 38 0 discriminator 3
  167 009a 2F02      		move.l %d2,-(%sp)
  168               		.cfi_def_cfa_offset 24
@@ -258,7 +258,7 @@
  170               		.cfi_def_cfa_offset 28
  171 00a2 4E92      		jsr (%a2)
  172               	.LVL18:
-  37:test2.c       **** 		printf("task2-a %d \n", i);
+  37:test3.c       **** 		printf("task2-a %d \n", i);
  173               		.loc 1 37 0 discriminator 3
  174 00a4 5282      		addq.l #1,%d2
  175               	.LVL19:
@@ -268,15 +268,15 @@
  178      03E8 
  179 00ae 66EA      		jne .L12
  180               	.LBE6:
-  39:test2.c       **** 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
-  40:test2.c       **** 	}
-  41:test2.c       **** 	V(0);
+  39:test3.c       **** 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
+  40:test3.c       **** 	}
+  41:test3.c       **** 	V(0);
  181               		.loc 1 41 0
  182 00b0 42A7      		clr.l -(%sp)
  183               		.cfi_def_cfa_offset 24
  184 00b2 4E93      		jsr (%a3)
  185               	.LVL20:
-  42:test2.c       **** 	P(1);
+  42:test3.c       **** 	P(1);
  186               		.loc 1 42 0
  187 00b4 4878 0001 		pea 1.w
  188               		.cfi_def_cfa_offset 28
@@ -285,25 +285,25 @@
  191 00ba 508F      		addq.l #8,%sp
  192               		.cfi_def_cfa_offset 20
  193               	.LBB7:
-  43:test2.c       **** 	// task2-b
-  44:test2.c       **** 	for (int i = 0;i<N;i++){
+  43:test3.c       **** 	// task2-b
+  44:test3.c       **** 	for (int i = 0;i<N;i++){
  194               		.loc 1 44 0
  195 00bc 7400      		moveq #0,%d2
  196               	.LVL22:
  197               	.L13:
-  45:test2.c       **** 		printf("task2-b %d \n", i);
+  45:test3.c       **** 		printf("task2-b %d \n", i);
  198               		.loc 1 45 0 discriminator 3
  199 00be 2F02      		move.l %d2,-(%sp)
  200               		.cfi_def_cfa_offset 24
  201 00c0 4879 0000 		pea .LC4
  201      0000 
  202               		.cfi_def_cfa_offset 28
-68K GAS  /tmp/ccFshAR2.s 			page 6
+68K GAS  /tmp/cceTXlzw.s 			page 6
 
 
  203 00c6 4E92      		jsr (%a2)
  204               	.LVL23:
-  44:test2.c       **** 		printf("task2-b %d \n", i);
+  44:test3.c       **** 		printf("task2-b %d \n", i);
  205               		.loc 1 44 0 discriminator 3
  206 00c8 5282      		addq.l #1,%d2
  207               	.LVL24:
@@ -313,9 +313,9 @@
  210      07D0 
  211 00d2 66EA      		jne .L13
  212               	.LBE7:
-  46:test2.c       **** 		/* N: 3 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
-  47:test2.c       **** 	}
-  48:test2.c       **** 	V(1);
+  46:test3.c       **** 		/* N: 3 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
+  47:test3.c       **** 	}
+  48:test3.c       **** 	V(1);
  213               		.loc 1 48 0
  214 00d4 4878 0001 		pea 1.w
  215               		.cfi_def_cfa_offset 24
@@ -324,13 +324,13 @@
  218 00da 588F      		addq.l #4,%sp
  219               		.cfi_def_cfa_offset 20
  220               	.LBB8:
-  49:test2.c       **** 	// task2-c
-  50:test2.c       **** 	for (int i = 0;i<M;i++){
+  49:test3.c       **** 	// task2-c
+  50:test3.c       **** 	for (int i = 0;i<M;i++){
  221               		.loc 1 50 0
  222 00dc 7400      		moveq #0,%d2
  223               	.LVL26:
  224               	.L14:
-  51:test2.c       **** 		printf("task2-c %d \n", i);
+  51:test3.c       **** 		printf("task2-c %d \n", i);
  225               		.loc 1 51 0 discriminator 3
  226 00de 2F02      		move.l %d2,-(%sp)
  227               		.cfi_def_cfa_offset 24
@@ -339,7 +339,7 @@
  229               		.cfi_def_cfa_offset 28
  230 00e6 4E92      		jsr (%a2)
  231               	.LVL27:
-  50:test2.c       **** 		printf("task2-c %d \n", i);
+  50:test3.c       **** 		printf("task2-c %d \n", i);
  232               		.loc 1 50 0 discriminator 3
  233 00e8 5282      		addq.l #1,%d2
  234               	.LVL28:
@@ -356,9 +356,9 @@
  243               		.cfi_def_cfa_offset 28
  244 00fc 4E92      		jsr (%a2)
  245               	.LVL29:
-  50:test2.c       **** 		printf("task2-c %d \n", i);
+  50:test3.c       **** 		printf("task2-c %d \n", i);
  246               		.loc 1 50 0
-68K GAS  /tmp/ccFshAR2.s 			page 7
+68K GAS  /tmp/cceTXlzw.s 			page 7
 
 
  247 00fe 5282      		addq.l #1,%d2
@@ -395,11 +395,11 @@
  268               		.type	task3, @function
  269               	task3:
  270               	.LFB5:
-  52:test2.c       **** 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
-  53:test2.c       **** 	}
-  54:test2.c       **** }}
-  55:test2.c       **** 
-  56:test2.c       **** void task3(){
+  52:test3.c       **** 		/* M: 2 秒間ループ、この待機ループの間にタイマ割込みが必ず生じる */
+  53:test3.c       **** 	}
+  54:test3.c       **** }}
+  55:test3.c       **** 
+  56:test3.c       **** void task3(){
  271               		.loc 1 56 0
  272               		.cfi_startproc
  273 010c 48E7 2038 		movem.l #8248,-(%sp)
@@ -414,11 +414,11 @@
  280      0000 
  281 011c 47F9 0000 		lea V,%a3
  281      0000 
-  57:test2.c       **** while(1){
-  58:test2.c       **** 	// task3-a
-  59:test2.c       **** 	P(0);
+  57:test3.c       **** while(1){
+  58:test3.c       **** 	// task3-a
+  59:test3.c       **** 	P(0);
  282               		.loc 1 59 0
-68K GAS  /tmp/ccFshAR2.s 			page 8
+68K GAS  /tmp/cceTXlzw.s 			page 8
 
 
  283 0122 42A7      		clr.l -(%sp)
@@ -428,12 +428,12 @@
  287 0126 588F      		addq.l #4,%sp
  288               		.cfi_def_cfa_offset 20
  289               	.LBB9:
-  60:test2.c       **** 	for (int i = 0;i<M;i++){
+  60:test3.c       **** 	for (int i = 0;i<M;i++){
  290               		.loc 1 60 0
  291 0128 7400      		moveq #0,%d2
  292               	.LVL32:
  293               	.L23:
-  61:test2.c       **** 		printf("task3-a %d \n", i);
+  61:test3.c       **** 		printf("task3-a %d \n", i);
  294               		.loc 1 61 0 discriminator 3
  295 012a 2F02      		move.l %d2,-(%sp)
  296               		.cfi_def_cfa_offset 24
@@ -442,7 +442,7 @@
  298               		.cfi_def_cfa_offset 28
  299 0132 4E92      		jsr (%a2)
  300               	.LVL33:
-  60:test2.c       **** 	for (int i = 0;i<M;i++){
+  60:test3.c       **** 	for (int i = 0;i<M;i++){
  301               		.loc 1 60 0 discriminator 3
  302 0134 5282      		addq.l #1,%d2
  303               	.LVL34:
@@ -452,10 +452,10 @@
  306      03E8 
  307 013e 66EA      		jne .L23
  308               	.LBE9:
-  62:test2.c       **** 		/* M: タスクループ1回につき、この待機ループで 1 回タイマ割込みが必ず
-  63:test2.c       **** 		じる */
-  64:test2.c       **** 	}
-  65:test2.c       **** 	V(0);
+  62:test3.c       **** 		/* M: タスクループ1回につき、この待機ループで 1 回タイマ割込みが必ず
+  63:test3.c       **** 		じる */
+  64:test3.c       **** 	}
+  65:test3.c       **** 	V(0);
  309               		.loc 1 65 0
  310 0140 42A7      		clr.l -(%sp)
  311               		.cfi_def_cfa_offset 24
@@ -464,13 +464,13 @@
  314 0144 588F      		addq.l #4,%sp
  315               		.cfi_def_cfa_offset 20
  316               	.LBB10:
-  66:test2.c       **** 	// task3-b
-  67:test2.c       **** 	for (int j = 0;j<L;j++){
+  66:test3.c       **** 	// task3-b
+  67:test3.c       **** 	for (int j = 0;j<L;j++){
  317               		.loc 1 67 0
  318 0146 7400      		moveq #0,%d2
  319               	.LVL36:
  320               	.L24:
-  68:test2.c       **** 		printf("task3-b %d \n", j);
+  68:test3.c       **** 		printf("task3-b %d \n", j);
  321               		.loc 1 68 0 discriminator 3
  322 0148 2F02      		move.l %d2,-(%sp)
  323               		.cfi_def_cfa_offset 24
@@ -478,11 +478,11 @@
  324      0000 
  325               		.cfi_def_cfa_offset 28
  326 0150 4E92      		jsr (%a2)
-68K GAS  /tmp/ccFshAR2.s 			page 9
+68K GAS  /tmp/cceTXlzw.s 			page 9
 
 
  327               	.LVL37:
-  67:test2.c       **** 		printf("task3-b %d \n", j);
+  67:test3.c       **** 		printf("task3-b %d \n", j);
  328               		.loc 1 67 0 discriminator 3
  329 0152 5282      		addq.l #1,%d2
  330               	.LVL38:
@@ -492,9 +492,9 @@
  333      01F4 
  334 015c 66EA      		jne .L24
  335               	.LBE10:
-  69:test2.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
-  70:test2.c       **** 	}
-  71:test2.c       **** 	P(1);
+  69:test3.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
+  70:test3.c       **** 	}
+  71:test3.c       **** 	P(1);
  336               		.loc 1 71 0
  337 015e 4878 0001 		pea 1.w
  338               		.cfi_def_cfa_offset 24
@@ -503,13 +503,13 @@
  341 0164 588F      		addq.l #4,%sp
  342               		.cfi_def_cfa_offset 20
  343               	.LBB11:
-  72:test2.c       **** 	// taask3-c
-  73:test2.c       **** 	for (int j = 0;j<L;j++){
+  72:test3.c       **** 	// taask3-c
+  73:test3.c       **** 	for (int j = 0;j<L;j++){
  344               		.loc 1 73 0
  345 0166 7400      		moveq #0,%d2
  346               	.LVL40:
  347               	.L25:
-  74:test2.c       **** 		printf("task3-c %d \n", j);
+  74:test3.c       **** 		printf("task3-c %d \n", j);
  348               		.loc 1 74 0 discriminator 3
  349 0168 2F02      		move.l %d2,-(%sp)
  350               		.cfi_def_cfa_offset 24
@@ -518,7 +518,7 @@
  352               		.cfi_def_cfa_offset 28
  353 0170 4E92      		jsr (%a2)
  354               	.LVL41:
-  73:test2.c       **** 		printf("task3-c %d \n", j);
+  73:test3.c       **** 		printf("task3-c %d \n", j);
  355               		.loc 1 73 0 discriminator 3
  356 0172 5282      		addq.l #1,%d2
  357               	.LVL42:
@@ -528,22 +528,22 @@
  360      01F4 
  361 017c 66EA      		jne .L25
  362               	.LBE11:
-  75:test2.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
-  76:test2.c       **** 	}
-  77:test2.c       **** 	V(1);
+  75:test3.c       **** 		/* L: 1 秒間ループ、この待機ループの間にタイマ割込みは生じない */
+  76:test3.c       **** 	}
+  77:test3.c       **** 	V(1);
  363               		.loc 1 77 0
  364 017e 4878 0001 		pea 1.w
  365               		.cfi_def_cfa_offset 24
  366 0182 4E93      		jsr (%a3)
  367               	.LVL43:
-  78:test2.c       **** }}
+  78:test3.c       **** }}
  368               		.loc 1 78 0
-68K GAS  /tmp/ccFshAR2.s 			page 10
+68K GAS  /tmp/cceTXlzw.s 			page 10
 
 
  369 0184 588F      		addq.l #4,%sp
  370               		.cfi_def_cfa_offset 20
-  59:test2.c       **** 	for (int i = 0;i<M;i++){
+  59:test3.c       **** 	for (int i = 0;i<M;i++){
  371               		.loc 1 59 0
  372 0186 42A7      		clr.l -(%sp)
  373               		.cfi_def_cfa_offset 24
@@ -552,7 +552,7 @@
  376 018a 588F      		addq.l #4,%sp
  377               		.cfi_def_cfa_offset 20
  378               	.LBB12:
-  60:test2.c       **** 		printf("task3-a %d \n", i);
+  60:test3.c       **** 		printf("task3-a %d \n", i);
  379               		.loc 1 60 0
  380 018c 7400      		moveq #0,%d2
  381               	.LVL45:
@@ -567,19 +567,19 @@
  390               		.type	main, @function
  391               	main:
  392               	.LFB6:
-  79:test2.c       **** 
-  80:test2.c       **** int main(void){
+  79:test3.c       **** 
+  80:test3.c       **** int main(void){
  393               		.loc 1 80 0
  394               		.cfi_startproc
  395 0000 2F0A      		move.l %a2,-(%sp)
  396               		.cfi_def_cfa_offset 8
  397               		.cfi_offset 10, -8
-  81:test2.c       **** init_kernel();
+  81:test3.c       **** init_kernel();
  398               		.loc 1 81 0
  399 0002 4EB9 0000 		jsr init_kernel
  399      0000 
  400               	.LVL46:
-  82:test2.c       **** set_task(task1);
+  82:test3.c       **** set_task(task1);
  401               		.loc 1 82 0
  402 0008 4879 0000 		pea task1
  402      0000 
@@ -588,32 +588,32 @@
  404      0000 
  405 0014 4E92      		jsr (%a2)
  406               	.LVL47:
-  83:test2.c       **** set_task(task2);
+  83:test3.c       **** set_task(task2);
  407               		.loc 1 83 0
  408 0016 4879 0000 		pea task2
  408      0000 
  409               		.cfi_def_cfa_offset 16
  410 001c 4E92      		jsr (%a2)
  411               	.LVL48:
-  84:test2.c       **** set_task(task3);
+  84:test3.c       **** set_task(task3);
  412               		.loc 1 84 0
  413 001e 4879 0000 		pea task3
-68K GAS  /tmp/ccFshAR2.s 			page 11
+68K GAS  /tmp/cceTXlzw.s 			page 11
 
 
  413      0000 
  414               		.cfi_def_cfa_offset 20
  415 0024 4E92      		jsr (%a2)
  416               	.LVL49:
-  85:test2.c       **** begin_sch();
+  85:test3.c       **** begin_sch();
  417               		.loc 1 85 0
  418 0026 4EB9 0000 		jsr begin_sch
  418      0000 
  419               	.LVL50:
  420 002c 4FEF 000C 		lea (12,%sp),%sp
  421               		.cfi_def_cfa_offset 8
-  86:test2.c       **** return 0;
-  87:test2.c       **** }
+  86:test3.c       **** return 0;
+  87:test3.c       **** }
  422               		.loc 1 87 0
  423 0030 7000      		moveq #0,%d0
  424 0032 245F      		move.l (%sp)+,%a2
@@ -658,7 +658,7 @@
  463 002e 08        		.byte	0x8
  464 002f 0000 0000 		.long	.LASF1
  465 0033 02        		.uleb128 0x2
-68K GAS  /tmp/ccFshAR2.s 			page 12
+68K GAS  /tmp/cceTXlzw.s 			page 12
 
 
  466 0034 02        		.byte	0x2
@@ -718,7 +718,7 @@
  520 009d 0165      		.word	0x165
  521 009f 0000 00A3 		.long	0xa3
  522 00a3 02        		.uleb128 0x2
-68K GAS  /tmp/ccFshAR2.s 			page 13
+68K GAS  /tmp/cceTXlzw.s 			page 13
 
 
  523 00a4 04        		.byte	0x4
@@ -778,7 +778,7 @@
  577 010d 0000 0000 		.long	.LASF21
  578 0111 03        		.byte	0x3
  579 0112 AF        		.byte	0xaf
-68K GAS  /tmp/ccFshAR2.s 			page 14
+68K GAS  /tmp/cceTXlzw.s 			page 14
 
 
  580 0113 0000 006B 		.long	0x6b
@@ -838,7 +838,7 @@
  634 017d 08        		.uleb128 0x8
  635 017e 0000 0119 		.long	0x119
  636 0182 0000 018D 		.long	0x18d
-68K GAS  /tmp/ccFshAR2.s 			page 15
+68K GAS  /tmp/cceTXlzw.s 			page 15
 
 
  637 0186 09        		.uleb128 0x9
@@ -898,7 +898,7 @@
  691 01f2 05        		.byte	0x5
  692 01f3 40        		.byte	0x40
  693 01f4 0000 0064 		.long	0x64
-68K GAS  /tmp/ccFshAR2.s 			page 16
+68K GAS  /tmp/cceTXlzw.s 			page 16
 
 
  694 01f8 1C        		.byte	0x1c
@@ -958,7 +958,7 @@
  748 0268 05        		.byte	0x5
  749 0269 5E        		.byte	0x5e
  750 026a 0000 0294 		.long	0x294
-68K GAS  /tmp/ccFshAR2.s 			page 17
+68K GAS  /tmp/cceTXlzw.s 			page 17
 
 
  751 026e 00        		.byte	0
@@ -1018,7 +1018,7 @@
  805 02d7 04        		.byte	0x4
  806 02d8 0000 002C 		.long	0x2c
  807 02dc 0D        		.uleb128 0xd
-68K GAS  /tmp/ccFshAR2.s 			page 18
+68K GAS  /tmp/cceTXlzw.s 			page 18
 
 
  808 02dd 0000 0000 		.long	.LASF49
@@ -1078,7 +1078,7 @@
  862 0346 0000 0000 		.long	.LASF54
  863 034a 05        		.byte	0x5
  864 034b C5        		.byte	0xc5
-68K GAS  /tmp/ccFshAR2.s 			page 19
+68K GAS  /tmp/cceTXlzw.s 			page 19
 
 
  865 034c 0000 0569 		.long	0x569
@@ -1138,7 +1138,7 @@
  919 03b8 0000 02B1 		.long	0x2b1
  920 03bc 44        		.byte	0x44
  921 03bd 0B        		.uleb128 0xb
-68K GAS  /tmp/ccFshAR2.s 			page 20
+68K GAS  /tmp/cceTXlzw.s 			page 20
 
 
  922 03be 0000 0000 		.long	.LASF60
@@ -1198,7 +1198,7 @@
  976 0431 05        		.byte	0x5
  977 0432 0239      		.word	0x239
  978 0434 0000 055C 		.long	0x55c
-68K GAS  /tmp/ccFshAR2.s 			page 21
+68K GAS  /tmp/cceTXlzw.s 			page 21
 
 
  979 0438 16        		.uleb128 0x16
@@ -1258,7 +1258,7 @@
  1033 04ad 16        		.uleb128 0x16
  1034 04ae 0000 0000 		.long	.LASF76
  1035 04b2 05        		.byte	0x5
-68K GAS  /tmp/ccFshAR2.s 			page 22
+68K GAS  /tmp/cceTXlzw.s 			page 22
 
 
  1036 04b3 024B      		.word	0x24b
@@ -1318,7 +1318,7 @@
  1090 0529 027D      		.word	0x27d
  1091 052b 0000 0256 		.long	0x256
  1092 052f 014A      		.word	0x14a
-68K GAS  /tmp/ccFshAR2.s 			page 23
+68K GAS  /tmp/cceTXlzw.s 			page 23
 
 
  1093 0531 17        		.uleb128 0x17
@@ -1378,7 +1378,7 @@
  1147 05ac 14        		.uleb128 0x14
  1148 05ad 0000 0117 		.long	0x117
  1149 05b1 14        		.uleb128 0x14
-68K GAS  /tmp/ccFshAR2.s 			page 24
+68K GAS  /tmp/cceTXlzw.s 			page 24
 
 
  1150 05b2 0000 0081 		.long	0x81
@@ -1438,7 +1438,7 @@
  1204 062e 04        		.byte	0x4
  1205 062f 16        		.uleb128 0x16
  1206 0630 0000 0000 		.long	.LASF92
-68K GAS  /tmp/ccFshAR2.s 			page 25
+68K GAS  /tmp/cceTXlzw.s 			page 25
 
 
  1207 0634 05        		.byte	0x5
@@ -1498,7 +1498,7 @@
  1261 06a4 16        		.uleb128 0x16
  1262 06a5 0000 0000 		.long	.LASF98
  1263 06a9 05        		.byte	0x5
-68K GAS  /tmp/ccFshAR2.s 			page 26
+68K GAS  /tmp/cceTXlzw.s 			page 26
 
 
  1264 06aa 025C      		.word	0x25c
@@ -1558,7 +1558,7 @@
  1318 071f 0265      		.word	0x265
  1319 0721 0000 079F 		.long	0x79f
  1320 0725 78        		.byte	0x78
-68K GAS  /tmp/ccFshAR2.s 			page 27
+68K GAS  /tmp/cceTXlzw.s 			page 27
 
 
  1321 0726 16        		.uleb128 0x16
@@ -1618,7 +1618,7 @@
  1375 079d 19        		.byte	0x19
  1376 079e 00        		.byte	0
  1377 079f 08        		.uleb128 0x8
-68K GAS  /tmp/ccFshAR2.s 			page 28
+68K GAS  /tmp/cceTXlzw.s 			page 28
 
 
  1378 07a0 0000 0562 		.long	0x562
@@ -1678,7 +1678,7 @@
  1432 0814 0000 068E 		.long	0x68e
  1433 0818 1C        		.uleb128 0x1c
  1434 0819 0000 0000 		.long	.LASF118
-68K GAS  /tmp/ccFshAR2.s 			page 29
+68K GAS  /tmp/cceTXlzw.s 			page 29
 
 
  1435 081d 05        		.byte	0x5
@@ -1738,7 +1738,7 @@
  1489 088d 0000 08AA 		.long	0x8aa
  1490 0891 0B        		.uleb128 0xb
  1491 0892 0000 0000 		.long	.LASF120
-68K GAS  /tmp/ccFshAR2.s 			page 30
+68K GAS  /tmp/cceTXlzw.s 			page 30
 
 
  1492 0896 06        		.byte	0x6
@@ -1798,7 +1798,7 @@
  1546 08ff 20        		.uleb128 0x20
  1547 0900 00        		.byte	0
  1548 0901 0F        		.uleb128 0xf
-68K GAS  /tmp/ccFshAR2.s 			page 31
+68K GAS  /tmp/cceTXlzw.s 			page 31
 
 
  1549 0902 04        		.byte	0x4
@@ -1858,7 +1858,7 @@
  1603 0978 0000 0000 		.long	.LLST0
  1604 097c 00        		.byte	0
  1605 097d 26        		.uleb128 0x26
-68K GAS  /tmp/ccFshAR2.s 			page 32
+68K GAS  /tmp/cceTXlzw.s 			page 32
 
 
  1606 097e 0000 0000 		.long	.LBB3
@@ -1918,7 +1918,7 @@
  1660 0a00 0000 0030 		.long	.LBE8-.LBB8
  1661 0a04 25        		.uleb128 0x25
  1662 0a05 6900      		.string	"i"
-68K GAS  /tmp/ccFshAR2.s 			page 33
+68K GAS  /tmp/cceTXlzw.s 			page 33
 
 
  1663 0a07 01        		.byte	0x1
@@ -1978,7 +1978,7 @@
  1717 0a7f 0000 0000 		.long	.LASF149
  1718 0a83 01        		.byte	0x1
  1719 0a84 50        		.byte	0x50
-68K GAS  /tmp/ccFshAR2.s 			page 34
+68K GAS  /tmp/cceTXlzw.s 			page 34
 
 
  1720 0a85 0000 0064 		.long	0x64
@@ -2038,7 +2038,7 @@
  1774 0afb 05        		.uleb128 0x5
  1775 0afc 03        		.byte	0x3
  1776 0afd 0000 0000 		.long	next_task
-68K GAS  /tmp/ccFshAR2.s 			page 35
+68K GAS  /tmp/cceTXlzw.s 			page 35
 
 
  1777 0b01 2C        		.uleb128 0x2c
@@ -2098,7 +2098,7 @@
  1831 0b76 0000 0000 		.long	.LASF143
  1832 0b7a 0000 0000 		.long	.LASF143
  1833 0b7e 06        		.byte	0x6
-68K GAS  /tmp/ccFshAR2.s 			page 36
+68K GAS  /tmp/cceTXlzw.s 			page 36
 
 
  1834 0b7f 31        		.byte	0x31
@@ -2158,7 +2158,7 @@
  1888 002d 0E        		.uleb128 0xe
  1889 002e 3A        		.uleb128 0x3a
  1890 002f 0B        		.uleb128 0xb
-68K GAS  /tmp/ccFshAR2.s 			page 37
+68K GAS  /tmp/cceTXlzw.s 			page 37
 
 
  1891 0030 3B        		.uleb128 0x3b
@@ -2218,7 +2218,7 @@
  1945 0066 09        		.uleb128 0x9
  1946 0067 21        		.uleb128 0x21
  1947 0068 00        		.byte	0
-68K GAS  /tmp/ccFshAR2.s 			page 38
+68K GAS  /tmp/cceTXlzw.s 			page 38
 
 
  1948 0069 49        		.uleb128 0x49
@@ -2278,7 +2278,7 @@
  2002 009f 00        		.byte	0
  2003 00a0 00        		.byte	0
  2004 00a1 0E        		.uleb128 0xe
-68K GAS  /tmp/ccFshAR2.s 			page 39
+68K GAS  /tmp/cceTXlzw.s 			page 39
 
 
  2005 00a2 0D        		.uleb128 0xd
@@ -2338,7 +2338,7 @@
  2059 00d8 15        		.uleb128 0x15
  2060 00d9 00        		.byte	0
  2061 00da 27        		.uleb128 0x27
-68K GAS  /tmp/ccFshAR2.s 			page 40
+68K GAS  /tmp/cceTXlzw.s 			page 40
 
 
  2062 00db 19        		.uleb128 0x19
@@ -2398,7 +2398,7 @@
  2116 0111 03        		.uleb128 0x3
  2117 0112 0E        		.uleb128 0xe
  2118 0113 3A        		.uleb128 0x3a
-68K GAS  /tmp/ccFshAR2.s 			page 41
+68K GAS  /tmp/cceTXlzw.s 			page 41
 
 
  2119 0114 0B        		.uleb128 0xb
@@ -2458,7 +2458,7 @@
  2173 014a 13        		.uleb128 0x13
  2174 014b 00        		.byte	0
  2175 014c 00        		.byte	0
-68K GAS  /tmp/ccFshAR2.s 			page 42
+68K GAS  /tmp/cceTXlzw.s 			page 42
 
 
  2176 014d 1C        		.uleb128 0x1c
@@ -2518,7 +2518,7 @@
  2230 0183 00        		.byte	0
  2231 0184 00        		.byte	0
  2232 0185 22        		.uleb128 0x22
-68K GAS  /tmp/ccFshAR2.s 			page 43
+68K GAS  /tmp/cceTXlzw.s 			page 43
 
 
  2233 0186 21        		.uleb128 0x21
@@ -2578,7 +2578,7 @@
  2287 01be 17        		.uleb128 0x17
  2288 01bf 00        		.byte	0
  2289 01c0 00        		.byte	0
-68K GAS  /tmp/ccFshAR2.s 			page 44
+68K GAS  /tmp/cceTXlzw.s 			page 44
 
 
  2290 01c1 26        		.uleb128 0x26
@@ -2638,7 +2638,7 @@
  2344 01fb 00        		.byte	0
  2345 01fc 00        		.byte	0
  2346 01fd 2A        		.uleb128 0x2a
-68K GAS  /tmp/ccFshAR2.s 			page 45
+68K GAS  /tmp/cceTXlzw.s 			page 45
 
 
  2347 01fe 8982 01   		.uleb128 0x4109
@@ -2698,7 +2698,7 @@
  2401 0236 0B        		.uleb128 0xb
  2402 0237 3B        		.uleb128 0x3b
  2403 0238 0B        		.uleb128 0xb
-68K GAS  /tmp/ccFshAR2.s 			page 46
+68K GAS  /tmp/cceTXlzw.s 			page 46
 
 
  2404 0239 00        		.byte	0
@@ -2758,7 +2758,7 @@
  2458 007d 0001      		.word	0x1
  2459 007f 52        		.byte	0x52
  2460 0080 0000 0000 		.long	0
-68K GAS  /tmp/ccFshAR2.s 			page 47
+68K GAS  /tmp/cceTXlzw.s 			page 47
 
 
  2461 0084 0000 0000 		.long	0
@@ -2818,7 +2818,7 @@
  2515               	.LLST8:
  2516 0110 0000 0000 		.long	.LVL39
  2517 0114 0000 0000 		.long	.LVL40
-68K GAS  /tmp/ccFshAR2.s 			page 48
+68K GAS  /tmp/cceTXlzw.s 			page 48
 
 
  2518 0118 0002      		.word	0x2
@@ -2878,7 +2878,7 @@
  2566               	.LASF120:
  2567 000c 636F 756E 		.string	"count"
  2567      7400 
-68K GAS  /tmp/ccFshAR2.s 			page 49
+68K GAS  /tmp/cceTXlzw.s 			page 49
 
 
  2568               	.LASF48:
@@ -2938,7 +2938,7 @@
  2594               	.LASF127:
  2595 00a8 6E65 7874 		.string	"next"
  2595      00
-68K GAS  /tmp/ccFshAR2.s 			page 50
+68K GAS  /tmp/cceTXlzw.s 			page 50
 
 
  2596               	.LASF106:
@@ -2962,135 +2962,135 @@
  2604               	.LASF58:
  2605 00de 5F75 6275 		.string	"_ubuf"
  2605      6600 
- 2606               	.LASF47:
- 2607 00e4 5F62 6173 		.string	"_base"
- 2607      6500 
- 2608               	.LASF31:
- 2609 00ea 5F5F 746D 		.string	"__tm_hour"
- 2609      5F68 6F75 
- 2609      7200 
- 2610               	.LASF87:
- 2611 00f4 5F5F 7366 		.string	"__sf"
- 2611      00
- 2612               	.LASF38:
- 2613 00f9 5F6F 6E5F 		.string	"_on_exit_args"
- 2613      6578 6974 
- 2613      5F61 7267 
- 2613      7300 
- 2614               	.LASF53:
- 2615 0107 5F63 6F6F 		.string	"_cookie"
- 2615      6B69 6500 
- 2616               	.LASF86:
- 2617 010f 5F5F 7367 		.string	"__sglue"
- 2617      6C75 6500 
- 2618               	.LASF4:
- 2619 0117 6C6F 6E67 		.string	"long int"
- 2619      2069 6E74 
- 2619      00
- 2620               	.LASF50:
- 2621 0120 5F66 6C61 		.string	"_flags"
- 2621      6773 00
- 2622               	.LASF42:
- 2623 0127 5F69 735F 		.string	"_is_cxa"
- 2623      6378 6100 
- 2624               	.LASF68:
- 2625 012f 5F73 7464 		.string	"_stdin"
- 2625      696E 00
- 2626               	.LASF129:
- 2627 0136 7573 7461 		.string	"ustack"
-68K GAS  /tmp/ccFshAR2.s 			page 51
+ 2606               	.LASF146:
+ 2607 00e4 7465 7374 		.string	"test3.c"
+ 2607      332E 6300 
+ 2608               	.LASF47:
+ 2609 00ec 5F62 6173 		.string	"_base"
+ 2609      6500 
+ 2610               	.LASF31:
+ 2611 00f2 5F5F 746D 		.string	"__tm_hour"
+ 2611      5F68 6F75 
+ 2611      7200 
+ 2612               	.LASF87:
+ 2613 00fc 5F5F 7366 		.string	"__sf"
+ 2613      00
+ 2614               	.LASF38:
+ 2615 0101 5F6F 6E5F 		.string	"_on_exit_args"
+ 2615      6578 6974 
+ 2615      5F61 7267 
+ 2615      7300 
+ 2616               	.LASF53:
+ 2617 010f 5F63 6F6F 		.string	"_cookie"
+ 2617      6B69 6500 
+ 2618               	.LASF86:
+ 2619 0117 5F5F 7367 		.string	"__sglue"
+ 2619      6C75 6500 
+ 2620               	.LASF4:
+ 2621 011f 6C6F 6E67 		.string	"long int"
+ 2621      2069 6E74 
+ 2621      00
+ 2622               	.LASF50:
+ 2623 0128 5F66 6C61 		.string	"_flags"
+ 2623      6773 00
+ 2624               	.LASF42:
+ 2625 012f 5F69 735F 		.string	"_is_cxa"
+ 2625      6378 6100 
+ 2626               	.LASF68:
+ 2627 0137 5F73 7464 		.string	"_stdin"
+68K GAS  /tmp/cceTXlzw.s 			page 51
 
 
- 2627      636B 00
- 2628               	.LASF60:
- 2629 013d 5F62 6C6B 		.string	"_blksize"
- 2629      7369 7A65 
- 2629      00
- 2630               	.LASF82:
- 2631 0146 5F63 7674 		.string	"_cvtbuf"
- 2631      6275 6600 
- 2632               	.LASF61:
- 2633 014e 5F6F 6666 		.string	"_offset"
- 2633      7365 7400 
- 2634               	.LASF130:
- 2635 0156 7373 7461 		.string	"sstack"
- 2635      636B 00
- 2636               	.LASF112:
- 2637 015d 5F6D 6273 		.string	"_mbsrtowcs_state"
- 2637      7274 6F77 
- 2637      6373 5F73 
- 2637      7461 7465 
- 2637      00
- 2638               	.LASF110:
- 2639 016e 5F6D 6272 		.string	"_mbrlen_state"
- 2639      6C65 6E5F 
- 2639      7374 6174 
- 2639      6500 
- 2640               	.LASF39:
- 2641 017c 5F66 6E61 		.string	"_fnargs"
- 2641      7267 7300 
- 2642               	.LASF145:
- 2643 0184 474E 5520 		.string	"GNU C11 5.5.0 -mcpu=68000 -msoft-float -g -O2 -fomit-frame-pointer"
- 2643      4331 3120 
- 2643      352E 352E 
- 2643      3020 2D6D 
- 2643      6370 753D 
- 2644               	.LASF121:
- 2645 01c7 7461 736B 		.string	"task_list"
- 2645      5F6C 6973 
- 2645      7400 
- 2646               	.LASF45:
- 2647 01d1 5F66 6E73 		.string	"_fns"
- 2647      00
- 2648               	.LASF25:
- 2649 01d6 5F73 6967 		.string	"_sign"
- 2649      6E00 
- 2650               	.LASF21:
- 2651 01dc 5F66 6C6F 		.string	"_flock_t"
- 2651      636B 5F74 
- 2651      00
- 2652               	.LASF70:
- 2653 01e5 5F73 7464 		.string	"_stderr"
- 2653      6572 7200 
- 2654               	.LASF27:
- 2655 01ed 5F42 6967 		.string	"_Bigint"
- 2655      696E 7400 
- 2656               	.LASF101:
- 2657 01f5 5F67 616D 		.string	"_gamma_signgam"
- 2657      6D61 5F73 
-68K GAS  /tmp/ccFshAR2.s 			page 52
+ 2627      696E 00
+ 2628               	.LASF129:
+ 2629 013e 7573 7461 		.string	"ustack"
+ 2629      636B 00
+ 2630               	.LASF60:
+ 2631 0145 5F62 6C6B 		.string	"_blksize"
+ 2631      7369 7A65 
+ 2631      00
+ 2632               	.LASF82:
+ 2633 014e 5F63 7674 		.string	"_cvtbuf"
+ 2633      6275 6600 
+ 2634               	.LASF61:
+ 2635 0156 5F6F 6666 		.string	"_offset"
+ 2635      7365 7400 
+ 2636               	.LASF130:
+ 2637 015e 7373 7461 		.string	"sstack"
+ 2637      636B 00
+ 2638               	.LASF112:
+ 2639 0165 5F6D 6273 		.string	"_mbsrtowcs_state"
+ 2639      7274 6F77 
+ 2639      6373 5F73 
+ 2639      7461 7465 
+ 2639      00
+ 2640               	.LASF110:
+ 2641 0176 5F6D 6272 		.string	"_mbrlen_state"
+ 2641      6C65 6E5F 
+ 2641      7374 6174 
+ 2641      6500 
+ 2642               	.LASF39:
+ 2643 0184 5F66 6E61 		.string	"_fnargs"
+ 2643      7267 7300 
+ 2644               	.LASF145:
+ 2645 018c 474E 5520 		.string	"GNU C11 5.5.0 -mcpu=68000 -msoft-float -g -O2 -fomit-frame-pointer"
+ 2645      4331 3120 
+ 2645      352E 352E 
+ 2645      3020 2D6D 
+ 2645      6370 753D 
+ 2646               	.LASF121:
+ 2647 01cf 7461 736B 		.string	"task_list"
+ 2647      5F6C 6973 
+ 2647      7400 
+ 2648               	.LASF45:
+ 2649 01d9 5F66 6E73 		.string	"_fns"
+ 2649      00
+ 2650               	.LASF25:
+ 2651 01de 5F73 6967 		.string	"_sign"
+ 2651      6E00 
+ 2652               	.LASF21:
+ 2653 01e4 5F66 6C6F 		.string	"_flock_t"
+ 2653      636B 5F74 
+ 2653      00
+ 2654               	.LASF70:
+ 2655 01ed 5F73 7464 		.string	"_stderr"
+ 2655      6572 7200 
+ 2656               	.LASF27:
+ 2657 01f5 5F42 6967 		.string	"_Bigint"
+ 2657      696E 7400 
+68K GAS  /tmp/cceTXlzw.s 			page 52
 
 
- 2657      6967 6E67 
- 2657      616D 00
- 2658               	.LASF54:
- 2659 0204 5F72 6561 		.string	"_read"
- 2659      6400 
- 2660               	.LASF78:
- 2661 020a 5F72 6573 		.string	"_result_k"
- 2661      756C 745F 
- 2661      6B00 
- 2662               	.LASF28:
- 2663 0214 5F5F 746D 		.string	"__tm"
- 2663      00
- 2664               	.LASF14:
- 2665 0219 756E 7369 		.string	"unsigned int"
- 2665      676E 6564 
- 2665      2069 6E74 
+ 2658               	.LASF101:
+ 2659 01fd 5F67 616D 		.string	"_gamma_signgam"
+ 2659      6D61 5F73 
+ 2659      6967 6E67 
+ 2659      616D 00
+ 2660               	.LASF54:
+ 2661 020c 5F72 6561 		.string	"_read"
+ 2661      6400 
+ 2662               	.LASF78:
+ 2663 0212 5F72 6573 		.string	"_result_k"
+ 2663      756C 745F 
+ 2663      6B00 
+ 2664               	.LASF28:
+ 2665 021c 5F5F 746D 		.string	"__tm"
  2665      00
- 2666               	.LASF141:
- 2667 0226 7461 736B 		.string	"task_tab"
- 2667      5F74 6162 
+ 2666               	.LASF14:
+ 2667 0221 756E 7369 		.string	"unsigned int"
+ 2667      676E 6564 
+ 2667      2069 6E74 
  2667      00
- 2668               	.LASF16:
- 2669 022f 5F5F 7763 		.string	"__wchb"
- 2669      6862 00
- 2670               	.LASF69:
- 2671 0236 5F73 7464 		.string	"_stdout"
- 2671      6F75 7400 
- 2672               	.LASF146:
- 2673 023e 7465 7374 		.string	"test2.c"
- 2673      322E 6300 
+ 2668               	.LASF141:
+ 2669 022e 7461 736B 		.string	"task_tab"
+ 2669      5F74 6162 
+ 2669      00
+ 2670               	.LASF16:
+ 2671 0237 5F5F 7763 		.string	"__wchb"
+ 2671      6862 00
+ 2672               	.LASF69:
+ 2673 023e 5F73 7464 		.string	"_stdout"
+ 2673      6F75 7400 
  2674               	.LASF81:
  2675 0246 5F63 7674 		.string	"_cvtlen"
  2675      6C65 6E00 
@@ -3118,7 +3118,7 @@
  2686               	.LASF133:
  2687 0285 7461 736B 		.string	"task2"
  2687      3200 
-68K GAS  /tmp/ccFshAR2.s 			page 53
+68K GAS  /tmp/cceTXlzw.s 			page 53
 
 
  2688               	.LASF134:
@@ -3178,7 +3178,7 @@
  2717 0310 7461 736B 		.string	"task_addr"
  2717      5F61 6464 
  2717      7200 
-68K GAS  /tmp/ccFshAR2.s 			page 54
+68K GAS  /tmp/cceTXlzw.s 			page 54
 
 
  2718               	.LASF55:
@@ -3217,88 +3217,88 @@
  2736               	.LASF10:
  2737 0369 5F6F 6666 		.string	"_off_t"
  2737      5F74 00
- 2738               	.LASF147:
- 2739 0370 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/theme2"
- 2739      652F 7374 
- 2739      7564 656E 
- 2739      7473 2F32 
- 2739      3032 3038 
- 2740               	.LASF9:
- 2741 039f 5F4C 4F43 		.string	"_LOCK_RECURSIVE_T"
- 2741      4B5F 5245 
- 2741      4355 5253 
- 2741      4956 455F 
- 2741      5400 
- 2742               	.LASF144:
- 2743 03b1 6265 6769 		.string	"begin_sch"
- 2743      6E5F 7363 
- 2743      6800 
- 2744               	.LASF104:
- 2745 03bb 5F6D 626C 		.string	"_mblen_state"
- 2745      656E 5F73 
- 2745      7461 7465 
- 2745      00
-68K GAS  /tmp/ccFshAR2.s 			page 55
-
-
+ 2738               	.LASF80:
+ 2739 0370 5F66 7265 		.string	"_freelist"
+ 2739      656C 6973 
+ 2739      7400 
+ 2740               	.LASF147:
+ 2741 037a 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/theme3"
+ 2741      652F 7374 
+ 2741      7564 656E 
+ 2741      7473 2F32 
+ 2741      3032 3038 
+ 2742               	.LASF9:
+ 2743 03a9 5F4C 4F43 		.string	"_LOCK_RECURSIVE_T"
+ 2743      4B5F 5245 
+ 2743      4355 5253 
+ 2743      4956 455F 
+ 2743      5400 
+ 2744               	.LASF144:
+ 2745 03bb 6265 6769 		.string	"begin_sch"
+ 2745      6E5F 7363 
+ 2745      6800 
  2746               	.LASF140:
- 2747 03c8 7365 6D61 		.string	"semaphore"
+68K GAS  /tmp/cceTXlzw.s 			page 55
+
+
+ 2747 03c5 7365 6D61 		.string	"semaphore"
  2747      7068 6F72 
  2747      6500 
  2748               	.LASF1:
- 2749 03d2 756E 7369 		.string	"unsigned char"
+ 2749 03cf 756E 7369 		.string	"unsigned char"
  2749      676E 6564 
  2749      2063 6861 
  2749      7200 
  2750               	.LASF83:
- 2751 03e0 5F6E 6577 		.string	"_new"
+ 2751 03dd 5F6E 6577 		.string	"_new"
  2751      00
  2752               	.LASF115:
- 2753 03e5 5F68 5F65 		.string	"_h_errno"
+ 2753 03e2 5F68 5F65 		.string	"_h_errno"
  2753      7272 6E6F 
  2753      00
  2754               	.LASF2:
- 2755 03ee 7368 6F72 		.string	"short int"
+ 2755 03eb 7368 6F72 		.string	"short int"
  2755      7420 696E 
  2755      7400 
  2756               	.LASF36:
- 2757 03f8 5F5F 746D 		.string	"__tm_yday"
+ 2757 03f5 5F5F 746D 		.string	"__tm_yday"
  2757      5F79 6461 
  2757      7900 
  2758               	.LASF46:
- 2759 0402 5F5F 7362 		.string	"__sbuf"
+ 2759 03ff 5F5F 7362 		.string	"__sbuf"
  2759      7566 00
- 2760               	.LASF80:
- 2761 0409 5F66 7265 		.string	"_freelist"
- 2761      656C 6973 
- 2761      7400 
+ 2760               	.LASF92:
+ 2761 0406 5F69 6F62 		.string	"_iobs"
+ 2761      7300 
  2762               	.LASF89:
- 2763 0413 5F5F 4649 		.string	"__FILE"
+ 2763 040c 5F5F 4649 		.string	"__FILE"
  2763      4C45 00
  2764               	.LASF20:
- 2765 041a 5F6D 6273 		.string	"_mbstate_t"
+ 2765 0413 5F6D 6273 		.string	"_mbstate_t"
  2765      7461 7465 
  2765      5F74 00
  2766               	.LASF49:
- 2767 0425 5F5F 7346 		.string	"__sFILE"
+ 2767 041e 5F5F 7346 		.string	"__sFILE"
  2767      494C 4500 
  2768               	.LASF64:
- 2769 042d 5F6D 6273 		.string	"_mbstate"
+ 2769 0426 5F6D 6273 		.string	"_mbstate"
  2769      7461 7465 
  2769      00
  2770               	.LASF102:
- 2771 0436 5F72 616E 		.string	"_rand_next"
+ 2771 042f 5F72 616E 		.string	"_rand_next"
  2771      645F 6E65 
  2771      7874 00
- 2772               	.LASF92:
- 2773 0441 5F69 6F62 		.string	"_iobs"
- 2773      7300 
+ 2772               	.LASF104:
+ 2773 043a 5F6D 626C 		.string	"_mblen_state"
+ 2773      656E 5F73 
+ 2773      7461 7465 
+ 2773      00
  2774               	.LASF71:
  2775 0447 5F69 6E63 		.string	"_inc"
  2775      00
  2776               	.LASF44:
  2777 044c 5F69 6E64 		.string	"_ind"
-68K GAS  /tmp/ccFshAR2.s 			page 56
+68K GAS  /tmp/cceTXlzw.s 			page 56
 
 
  2777      00
@@ -3358,7 +3358,7 @@
  2809      5F6D 696E 
  2809      00
  2810               	.LASF95:
-68K GAS  /tmp/ccFshAR2.s 			page 57
+68K GAS  /tmp/cceTXlzw.s 			page 57
 
 
  2811 04e2 5F6D 756C 		.string	"_mult"
@@ -3418,7 +3418,7 @@
  2839      6600 
  2840               	.LASF85:
  2841 0565 5F73 6967 		.string	"_sig_func"
-68K GAS  /tmp/ccFshAR2.s 			page 58
+68K GAS  /tmp/cceTXlzw.s 			page 58
 
 
  2841      5F66 756E 
@@ -3464,15 +3464,15 @@
  2863      5F6D 6461 
  2863      7900 
  2864               		.ident	"GCC: (GNU) 5.5.0"
-68K GAS  /tmp/ccFshAR2.s 			page 59
+68K GAS  /tmp/cceTXlzw.s 			page 59
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 test2.c
-     /tmp/ccFshAR2.s:17     .text:0000000000000000 task1
-     /tmp/ccFshAR2.s:140    .text:000000000000007c task2
-     /tmp/ccFshAR2.s:269    .text:000000000000010c task3
-     /tmp/ccFshAR2.s:391    .text.startup:0000000000000000 main
+                            *ABS*:0000000000000000 test3.c
+     /tmp/cceTXlzw.s:17     .text:0000000000000000 task1
+     /tmp/cceTXlzw.s:140    .text:000000000000007c task2
+     /tmp/cceTXlzw.s:269    .text:000000000000010c task3
+     /tmp/cceTXlzw.s:391    .text.startup:0000000000000000 main
                             *COM*:0000000000003800 stacks
                             *COM*:00000000000000a0 task_tab
                             *COM*:0000000000000018 semaphore

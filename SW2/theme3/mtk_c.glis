@@ -1,4 +1,4 @@
-68K GAS  /tmp/cc9NmUTM.s 			page 1
+68K GAS  /tmp/ccofjRxk.s 			page 1
 
 
    1               	#NO_APP
@@ -58,7 +58,7 @@
   29      0000 
   30               	.LVL2:
   18:mtk_c.c       ****             semaphore[i].task_list=0;
-68K GAS  /tmp/cc9NmUTM.s 			page 2
+68K GAS  /tmp/ccofjRxk.s 			page 2
 
 
   31               		.loc 1 18 0
@@ -118,7 +118,7 @@
   68               	.LVL5:
   69 005a 48E7 3820 		movem.l #14368,-(%sp)
   70               		.cfi_def_cfa_offset 20
-68K GAS  /tmp/cc9NmUTM.s 			page 3
+68K GAS  /tmp/ccofjRxk.s 			page 3
 
 
   71               		.cfi_offset 2, -20
@@ -178,7 +178,7 @@
  111 00a0 D3C8      		add.l %a0,%a1
  112 00a2 D3C9      		add.l %a1,%a1
  113 00a4 D3C9      		add.l %a1,%a1
-68K GAS  /tmp/cc9NmUTM.s 			page 4
+68K GAS  /tmp/ccofjRxk.s 			page 4
 
 
  114 00a6 45F9 0000 		lea task_tab,%a2
@@ -238,7 +238,7 @@
  145               	.LBE30:
  146               	.LBE29:
  147               	.LBB31:
-68K GAS  /tmp/cc9NmUTM.s 			page 5
+68K GAS  /tmp/ccofjRxk.s 			page 5
 
 
  148               	.LBB32:
@@ -298,7 +298,7 @@
  103:mtk_c.c       ****     *(char *)0x00d0002d = 'a';
  158               		.loc 1 103 0
  159 00f4 13FC 0061 		move.b #97,13631533
-68K GAS  /tmp/cc9NmUTM.s 			page 6
+68K GAS  /tmp/ccofjRxk.s 			page 6
 
 
  159      00D0 002D 
@@ -358,7 +358,7 @@
  200 013a 42A9 0010 		clr.l 16(%a1)
  201               	.LBE33:
  202               	.LBE34:
-68K GAS  /tmp/cc9NmUTM.s 			page 7
+68K GAS  /tmp/ccofjRxk.s 			page 7
 
 
   45:mtk_c.c       **** 
@@ -418,7 +418,7 @@
  247               		.loc 1 60 0
  248 017c 700B      		moveq #11,%d0
  249 017e E1AA      		lsl.l %d0,%d2
-68K GAS  /tmp/cc9NmUTM.s 			page 8
+68K GAS  /tmp/ccofjRxk.s 			page 8
 
 
  250 0180 0682 0000 		add.l #stacks-1024,%d2
@@ -478,7 +478,7 @@
  292               	.LVL38:
   73:mtk_c.c       ****     return;
  293               		.loc 1 73 0
-68K GAS  /tmp/cc9NmUTM.s 			page 9
+68K GAS  /tmp/ccofjRxk.s 			page 9
 
 
  294 01be 4EF9 0000 		jra first_task
@@ -538,7 +538,7 @@
   87:mtk_c.c       ****     // readyキューの先頭タスクを取り出してnext_taskへ
  337               		.loc 1 87 0
  338 01e2 4879 0000 		pea .LC0
-68K GAS  /tmp/cc9NmUTM.s 			page 10
+68K GAS  /tmp/ccofjRxk.s 			page 10
 
 
  338      0000 
@@ -598,7 +598,7 @@
  382 0220 206F 0008 		move.l 8(%sp),%a0
   96:mtk_c.c       ****     *(char *)0x00d0002f = 'a';
  383               		.loc 1 96 0
-68K GAS  /tmp/cc9NmUTM.s 			page 11
+68K GAS  /tmp/ccofjRxk.s 			page 11
 
 
  384 0224 2011      		move.l (%a1),%d0
@@ -658,7 +658,7 @@
  427               		.globl	sleep
  428               		.type	sleep, @function
  429               	sleep:
-68K GAS  /tmp/cc9NmUTM.s 			page 12
+68K GAS  /tmp/ccofjRxk.s 			page 12
 
 
  430               	.LFB10:
@@ -718,7 +718,7 @@
  467 02b0 2010      		move.l (%a0),%d0
  468 02b2 66E8      		jne .L37
  106:mtk_c.c       ****     // 最後尾にタスクidを追加
-68K GAS  /tmp/cc9NmUTM.s 			page 13
+68K GAS  /tmp/ccofjRxk.s 			page 13
 
 
  469               		.loc 1 106 0
@@ -778,7 +778,7 @@
  511               	.LBE43:
   89:mtk_c.c       ****     // next_taskがNULLの場合はタイマ割り込みが来るまでループ
  512               		.loc 1 89 0
-68K GAS  /tmp/cc9NmUTM.s 			page 14
+68K GAS  /tmp/ccofjRxk.s 			page 14
 
 
  513 02fe 23C1 0000 		move.l %d1,next_task
@@ -838,7 +838,7 @@
  554               		.loc 1 81 0
  555 0324 2409      		move.l %a1,%d2
  556 0326 D489      		add.l %a1,%d2
-68K GAS  /tmp/cc9NmUTM.s 			page 15
+68K GAS  /tmp/ccofjRxk.s 			page 15
 
 
  557 0328 2002      		move.l %d2,%d0
@@ -898,7 +898,7 @@
  598 0376 2089      		move.l %a1,(%a0)
  109:mtk_c.c       ****     
  599               		.loc 1 109 0
-68K GAS  /tmp/cc9NmUTM.s 			page 16
+68K GAS  /tmp/ccofjRxk.s 			page 16
 
 
  600 0378 D482      		add.l %d2,%d2
@@ -958,7 +958,7 @@
  641               		.cfi_def_cfa_offset 8
  642               		.cfi_offset 2, -8
  643 039e 242F 0008 		move.l 8(%sp),%d2
-68K GAS  /tmp/cc9NmUTM.s 			page 17
+68K GAS  /tmp/ccofjRxk.s 			page 17
 
 
  133:mtk_c.c       ****    
@@ -1018,7 +1018,7 @@
  683 03d6 5281      		addq.l #1,%d1
  684 03d8 2181 0800 		move.l %d1,(%a0,%d0.l)
  145:mtk_c.c       **** 
-68K GAS  /tmp/cc9NmUTM.s 			page 18
+68K GAS  /tmp/ccofjRxk.s 			page 18
 
 
  146:mtk_c.c       ****    if (semaphore[s_id].count <= 0){
@@ -1078,7 +1078,7 @@
  725 0414 4A80      		tst.l %d0
  726 0416 6742      		jeq .L65
  103:mtk_c.c       ****     // task_tabのnextがNULLになるまでたどる
-68K GAS  /tmp/cc9NmUTM.s 			page 19
+68K GAS  /tmp/ccofjRxk.s 			page 19
 
 
  727               		.loc 1 103 0
@@ -1138,7 +1138,7 @@
  100:mtk_c.c       ****         return;
  771               		.loc 1 100 0
  772 0460 4291      		clr.l (%a1)
-68K GAS  /tmp/cc9NmUTM.s 			page 20
+68K GAS  /tmp/ccofjRxk.s 			page 20
 
 
  773               	.LBE57:
@@ -1198,7 +1198,7 @@
  827 0040 0000 0000 		.long	.LASF0
  828 0044 02        		.byte	0x2
  829 0045 14        		.byte	0x14
-68K GAS  /tmp/cc9NmUTM.s 			page 21
+68K GAS  /tmp/ccofjRxk.s 			page 21
 
 
  830 0046 0000 0030 		.long	0x30
@@ -1258,7 +1258,7 @@
  884 00af 08        		.uleb128 0x8
  885 00b0 04        		.byte	0x4
  886 00b1 0000 00A8 		.long	0xa8
-68K GAS  /tmp/cc9NmUTM.s 			page 22
+68K GAS  /tmp/ccofjRxk.s 			page 22
 
 
  887 00b5 09        		.uleb128 0x9
@@ -1318,7 +1318,7 @@
  941 011e 02        		.byte	0x2
  942 011f 05        		.byte	0x5
  943 0120 0000 0000 		.long	.LASF17
-68K GAS  /tmp/cc9NmUTM.s 			page 23
+68K GAS  /tmp/ccofjRxk.s 			page 23
 
 
  944 0124 0E        		.uleb128 0xe
@@ -1378,7 +1378,7 @@
  998 018e 04        		.byte	0x4
  999 018f 04        		.byte	0x4
  1000 0190 A6        		.byte	0xa6
-68K GAS  /tmp/cc9NmUTM.s 			page 24
+68K GAS  /tmp/ccofjRxk.s 			page 24
 
 
  1001 0191 0000 01AC 		.long	0x1ac
@@ -1438,7 +1438,7 @@
  1055 0203 18        		.byte	0x18
  1056 0204 06        		.byte	0x6
  1057 0205 2F        		.byte	0x2f
-68K GAS  /tmp/cc9NmUTM.s 			page 25
+68K GAS  /tmp/ccofjRxk.s 			page 25
 
 
  1058 0206 0000 0251 		.long	0x251
@@ -1498,7 +1498,7 @@
  1112 0273 05        		.uleb128 0x5
  1113 0274 0000 0000 		.long	.LASF43
  1114 0278 06        		.byte	0x6
-68K GAS  /tmp/cc9NmUTM.s 			page 26
+68K GAS  /tmp/ccofjRxk.s 			page 26
 
 
  1115 0279 39        		.byte	0x39
@@ -1558,7 +1558,7 @@
  1169 02e5 0108      		.word	0x108
  1170 02e7 06        		.byte	0x6
  1171 02e8 4A        		.byte	0x4a
-68K GAS  /tmp/cc9NmUTM.s 			page 27
+68K GAS  /tmp/ccofjRxk.s 			page 27
 
 
  1172 02e9 0000 0320 		.long	0x320
@@ -1618,7 +1618,7 @@
  1226 035b 61        		.byte	0x61
  1227 035c 0000 0374 		.long	0x374
  1228 0360 08        		.byte	0x8
-68K GAS  /tmp/cc9NmUTM.s 			page 28
+68K GAS  /tmp/ccofjRxk.s 			page 28
 
 
  1229 0361 05        		.uleb128 0x5
@@ -1678,7 +1678,7 @@
  1283 03cc 00        		.byte	0
  1284 03cd 14        		.uleb128 0x14
  1285 03ce 5F72 00   		.string	"_r"
-68K GAS  /tmp/cc9NmUTM.s 			page 29
+68K GAS  /tmp/ccofjRxk.s 			page 29
 
 
  1286 03d1 06        		.byte	0x6
@@ -1738,7 +1738,7 @@
  1340 043c 06        		.byte	0x6
  1341 043d CA        		.byte	0xca
  1342 043e 0000 068F 		.long	0x68f
-68K GAS  /tmp/cc9NmUTM.s 			page 30
+68K GAS  /tmp/ccofjRxk.s 			page 30
 
 
  1343 0442 28        		.byte	0x28
@@ -1798,7 +1798,7 @@
  1397 04ae 50        		.byte	0x50
  1398 04af 05        		.uleb128 0x5
  1399 04b0 0000 0000 		.long	.LASF76
-68K GAS  /tmp/cc9NmUTM.s 			page 31
+68K GAS  /tmp/ccofjRxk.s 			page 31
 
 
  1400 04b4 06        		.byte	0x6
@@ -1858,7 +1858,7 @@
  1454 0527 0000 0716 		.long	0x716
  1455 052b 04        		.byte	0x4
  1456 052c 1A        		.uleb128 0x1a
-68K GAS  /tmp/cc9NmUTM.s 			page 32
+68K GAS  /tmp/ccofjRxk.s 			page 32
 
 
  1457 052d 0000 0000 		.long	.LASF83
@@ -1918,7 +1918,7 @@
  1511 05a2 0000 0000 		.long	.LASF92
  1512 05a6 06        		.byte	0x6
  1513 05a7 024F      		.word	0x24f
-68K GAS  /tmp/cc9NmUTM.s 			page 33
+68K GAS  /tmp/ccofjRxk.s 			page 33
 
 
  1514 05a9 0000 0030 		.long	0x30
@@ -1978,7 +1978,7 @@
  1568 0621 0000 06DB 		.long	0x6db
  1569 0625 02DE      		.word	0x2de
  1570 0627 1B        		.uleb128 0x1b
-68K GAS  /tmp/cc9NmUTM.s 			page 34
+68K GAS  /tmp/ccofjRxk.s 			page 34
 
 
  1571 0628 0000 0000 		.long	.LASF101
@@ -2038,7 +2038,7 @@
  1625 06a8 00        		.byte	0
  1626 06a9 08        		.uleb128 0x8
  1627 06aa 04        		.byte	0x4
-68K GAS  /tmp/cc9NmUTM.s 			page 35
+68K GAS  /tmp/ccofjRxk.s 			page 35
 
 
  1628 06ab 0000 0695 		.long	0x695
@@ -2098,7 +2098,7 @@
  1682 0722 06        		.byte	0x6
  1683 0723 013F      		.word	0x13f
  1684 0725 0000 0751 		.long	0x751
-68K GAS  /tmp/cc9NmUTM.s 			page 36
+68K GAS  /tmp/ccofjRxk.s 			page 36
 
 
  1685 0729 1A        		.uleb128 0x1a
@@ -2158,7 +2158,7 @@
  1739 079d 22        		.byte	0x22
  1740 079e 1A        		.uleb128 0x1a
  1741 079f 0000 0000 		.long	.LASF114
-68K GAS  /tmp/cc9NmUTM.s 			page 37
+68K GAS  /tmp/ccofjRxk.s 			page 37
 
 
  1742 07a3 06        		.byte	0x6
@@ -2218,7 +2218,7 @@
  1796 0818 06        		.byte	0x6
  1797 0819 0268      		.word	0x268
  1798 081b 0000 01DD 		.long	0x1dd
-68K GAS  /tmp/cc9NmUTM.s 			page 38
+68K GAS  /tmp/ccofjRxk.s 			page 38
 
 
  1799 081f 9C        		.byte	0x9c
@@ -2278,7 +2278,7 @@
  1853 0893 F0        		.byte	0xf0
  1854 0894 06        		.byte	0x6
  1855 0895 0272      		.word	0x272
-68K GAS  /tmp/cc9NmUTM.s 			page 39
+68K GAS  /tmp/ccofjRxk.s 			page 39
 
 
  1856 0897 0000 08B6 		.long	0x8b6
@@ -2338,7 +2338,7 @@
  1910 090e 04        		.byte	0x4
  1911 090f 0000 0908 		.long	0x908
  1912 0913 22        		.uleb128 0x22
-68K GAS  /tmp/cc9NmUTM.s 			page 40
+68K GAS  /tmp/ccofjRxk.s 			page 40
 
 
  1913 0914 0000 091E 		.long	0x91e
@@ -2398,7 +2398,7 @@
  1967 0984 0000 09A7 		.long	0x9a7
  1968 0988 24        		.uleb128 0x24
  1969 0989 7100      		.string	"q"
-68K GAS  /tmp/cc9NmUTM.s 			page 41
+68K GAS  /tmp/ccofjRxk.s 			page 41
 
 
  1970 098b 01        		.byte	0x1
@@ -2458,7 +2458,7 @@
  2024 09f6 0000 0124 		.long	0x124
  2025 09fa 2A        		.uleb128 0x2a
  2026 09fb 0000 0000 		.long	.LASF166
-68K GAS  /tmp/cc9NmUTM.s 			page 42
+68K GAS  /tmp/ccofjRxk.s 			page 42
 
 
  2027 09ff 01        		.byte	0x1
@@ -2518,7 +2518,7 @@
  2081 0a76 00        		.byte	0
  2082 0a77 00        		.byte	0
  2083 0a78 2B        		.uleb128 0x2b
-68K GAS  /tmp/cc9NmUTM.s 			page 43
+68K GAS  /tmp/ccofjRxk.s 			page 43
 
 
  2084 0a79 0000 0000 		.long	.LASF145
@@ -2578,7 +2578,7 @@
  2138 0b02 0000 0000 		.long	.LLST8
  2139 0b06 35        		.uleb128 0x35
  2140 0b07 0000 0000 		.long	.Ldebug_ranges0+0
-68K GAS  /tmp/cc9NmUTM.s 			page 44
+68K GAS  /tmp/ccofjRxk.s 			page 44
 
 
  2141 0b0b 32        		.uleb128 0x32
@@ -2638,7 +2638,7 @@
  2195 0b81 31        		.uleb128 0x31
  2196 0b82 0000 0961 		.long	0x961
  2197 0b86 0000 0000 		.long	.LLST12
-68K GAS  /tmp/cc9NmUTM.s 			page 45
+68K GAS  /tmp/ccofjRxk.s 			page 45
 
 
  2198 0b8a 2E        		.uleb128 0x2e
@@ -2698,7 +2698,7 @@
  2252 0c11 0000 0000 		.long	.LLST15
  2253 0c15 00        		.byte	0
  2254 0c16 00        		.byte	0
-68K GAS  /tmp/cc9NmUTM.s 			page 46
+68K GAS  /tmp/ccofjRxk.s 			page 46
 
 
  2255 0c17 3A        		.uleb128 0x3a
@@ -2758,7 +2758,7 @@
  2309 0ca4 0000 0000 		.long	.LLST22
  2310 0ca8 2E        		.uleb128 0x2e
  2311 0ca9 0000 0000 		.long	.LBB40
-68K GAS  /tmp/cc9NmUTM.s 			page 47
+68K GAS  /tmp/ccofjRxk.s 			page 47
 
 
  2312 0cad 0000 005A 		.long	.LBE40-.LBB40
@@ -2818,7 +2818,7 @@
  2366 0d3d 01        		.uleb128 0x1
  2367 0d3e 59        		.byte	0x59
  2368 0d3f 30        		.uleb128 0x30
-68K GAS  /tmp/cc9NmUTM.s 			page 48
+68K GAS  /tmp/ccofjRxk.s 			page 48
 
 
  2369 0d40 0000 0951 		.long	0x951
@@ -2878,7 +2878,7 @@
  2423 0dc1 0000 0000 		.long	.LVL77
  2424 0dc5 0000 0C50 		.long	0xc50
  2425 0dc9 00        		.byte	0
-68K GAS  /tmp/cc9NmUTM.s 			page 49
+68K GAS  /tmp/ccofjRxk.s 			page 49
 
 
  2426 0dca 2B        		.uleb128 0x2b
@@ -2938,7 +2938,7 @@
  2480 0e4e 3E        		.uleb128 0x3e
  2481 0e4f 0000 0991 		.long	0x991
  2482 0e53 37        		.uleb128 0x37
-68K GAS  /tmp/cc9NmUTM.s 			page 50
+68K GAS  /tmp/ccofjRxk.s 			page 50
 
 
  2483 0e54 0000 0988 		.long	0x988
@@ -2998,7 +2998,7 @@
  2537 0ec6 40        		.uleb128 0x40
  2538 0ec7 0000 0000 		.long	.LASF155
  2539 0ecb 02        		.byte	0x2
-68K GAS  /tmp/cc9NmUTM.s 			page 51
+68K GAS  /tmp/ccofjRxk.s 			page 51
 
 
  2540 0ecc 2C        		.byte	0x2c
@@ -3058,7 +3058,7 @@
  2594 0f45 00        		.byte	0
  2595 0f46 0000 0000 		.long	.LASF167
  2596 0f4a 42        		.uleb128 0x42
-68K GAS  /tmp/cc9NmUTM.s 			page 52
+68K GAS  /tmp/ccofjRxk.s 			page 52
 
 
  2597 0f4b 0000 0000 		.long	.LASF161
@@ -3118,7 +3118,7 @@
  2651 002f 0B        		.uleb128 0xb
  2652 0030 3A        		.uleb128 0x3a
  2653 0031 0B        		.uleb128 0xb
-68K GAS  /tmp/cc9NmUTM.s 			page 53
+68K GAS  /tmp/ccofjRxk.s 			page 53
 
 
  2654 0032 3B        		.uleb128 0x3b
@@ -3178,7 +3178,7 @@
  2708 0068 3A        		.uleb128 0x3a
  2709 0069 0B        		.uleb128 0xb
  2710 006a 3B        		.uleb128 0x3b
-68K GAS  /tmp/cc9NmUTM.s 			page 54
+68K GAS  /tmp/ccofjRxk.s 			page 54
 
 
  2711 006b 0B        		.uleb128 0xb
@@ -3238,7 +3238,7 @@
  2765 00a1 3A        		.uleb128 0x3a
  2766 00a2 0B        		.uleb128 0xb
  2767 00a3 3B        		.uleb128 0x3b
-68K GAS  /tmp/cc9NmUTM.s 			page 55
+68K GAS  /tmp/ccofjRxk.s 			page 55
 
 
  2768 00a4 05        		.uleb128 0x5
@@ -3298,7 +3298,7 @@
  2822 00da 00        		.byte	0
  2823 00db 14        		.uleb128 0x14
  2824 00dc 0D        		.uleb128 0xd
-68K GAS  /tmp/cc9NmUTM.s 			page 56
+68K GAS  /tmp/ccofjRxk.s 			page 56
 
 
  2825 00dd 00        		.byte	0
@@ -3358,7 +3358,7 @@
  2879 0113 13        		.uleb128 0x13
  2880 0114 01        		.byte	0x1
  2881 0115 03        		.uleb128 0x3
-68K GAS  /tmp/cc9NmUTM.s 			page 57
+68K GAS  /tmp/ccofjRxk.s 			page 57
 
 
  2882 0116 0E        		.uleb128 0xe
@@ -3418,7 +3418,7 @@
  2936 014c 0B        		.uleb128 0xb
  2937 014d 3A        		.uleb128 0x3a
  2938 014e 0B        		.uleb128 0xb
-68K GAS  /tmp/cc9NmUTM.s 			page 58
+68K GAS  /tmp/ccofjRxk.s 			page 58
 
 
  2939 014f 3B        		.uleb128 0x3b
@@ -3478,7 +3478,7 @@
  2993 0185 22        		.uleb128 0x22
  2994 0186 15        		.uleb128 0x15
  2995 0187 01        		.byte	0x1
-68K GAS  /tmp/cc9NmUTM.s 			page 59
+68K GAS  /tmp/ccofjRxk.s 			page 59
 
 
  2996 0188 27        		.uleb128 0x27
@@ -3538,7 +3538,7 @@
  3050 01be 2E        		.uleb128 0x2e
  3051 01bf 01        		.byte	0x1
  3052 01c0 3F        		.uleb128 0x3f
-68K GAS  /tmp/cc9NmUTM.s 			page 60
+68K GAS  /tmp/ccofjRxk.s 			page 60
 
 
  3053 01c1 19        		.uleb128 0x19
@@ -3598,7 +3598,7 @@
  3107 01f7 0B        		.uleb128 0xb
  3108 01f8 3B        		.uleb128 0x3b
  3109 01f9 0B        		.uleb128 0xb
-68K GAS  /tmp/cc9NmUTM.s 			page 61
+68K GAS  /tmp/ccofjRxk.s 			page 61
 
 
  3110 01fa 27        		.uleb128 0x27
@@ -3658,7 +3658,7 @@
  3164 0231 17        		.uleb128 0x17
  3165 0232 00        		.byte	0
  3166 0233 00        		.byte	0
-68K GAS  /tmp/cc9NmUTM.s 			page 62
+68K GAS  /tmp/ccofjRxk.s 			page 62
 
 
  3167 0234 2E        		.uleb128 0x2e
@@ -3718,7 +3718,7 @@
  3221 026a 13        		.uleb128 0x13
  3222 026b 02        		.uleb128 0x2
  3223 026c 17        		.uleb128 0x17
-68K GAS  /tmp/cc9NmUTM.s 			page 63
+68K GAS  /tmp/ccofjRxk.s 			page 63
 
 
  3224 026d 00        		.byte	0
@@ -3778,7 +3778,7 @@
  3278 02a4 18        		.uleb128 0x18
  3279 02a5 00        		.byte	0
  3280 02a6 00        		.byte	0
-68K GAS  /tmp/cc9NmUTM.s 			page 64
+68K GAS  /tmp/ccofjRxk.s 			page 64
 
 
  3281 02a7 38        		.uleb128 0x38
@@ -3838,7 +3838,7 @@
  3335 02e2 13        		.uleb128 0x13
  3336 02e3 02        		.uleb128 0x2
  3337 02e4 17        		.uleb128 0x17
-68K GAS  /tmp/cc9NmUTM.s 			page 65
+68K GAS  /tmp/ccofjRxk.s 			page 65
 
 
  3338 02e5 00        		.byte	0
@@ -3898,7 +3898,7 @@
  3392 031b 00        		.byte	0
  3393 031c 00        		.byte	0
  3394 031d 41        		.uleb128 0x41
-68K GAS  /tmp/cc9NmUTM.s 			page 66
+68K GAS  /tmp/ccofjRxk.s 			page 66
 
 
  3395 031e 34        		.uleb128 0x34
@@ -3958,7 +3958,7 @@
  3449               	.Ldebug_loc0:
  3450               	.LLST0:
  3451 0000 0000 000E 		.long	.LVL0-.Ltext0
-68K GAS  /tmp/cc9NmUTM.s 			page 67
+68K GAS  /tmp/ccofjRxk.s 			page 67
 
 
  3452 0004 0000 001C 		.long	.LVL1-.Ltext0
@@ -4018,7 +4018,7 @@
  3506 008b 0001      		.word	0x1
  3507 008d 58        		.byte	0x58
  3508 008e 0000 0084 		.long	.LVL9-.Ltext0
-68K GAS  /tmp/cc9NmUTM.s 			page 68
+68K GAS  /tmp/ccofjRxk.s 			page 68
 
 
  3509 0092 0000 0088 		.long	.LVL10-.Ltext0
@@ -4078,7 +4078,7 @@
  3563 0116 9F        		.byte	0x9f
  3564 0117 0000 0142 		.long	.LVL27-.Ltext0
  3565 011b 0000 0144 		.long	.LVL28-.Ltext0
-68K GAS  /tmp/cc9NmUTM.s 			page 69
+68K GAS  /tmp/ccofjRxk.s 			page 69
 
 
  3566 011f 0009      		.word	0x9
@@ -4138,7 +4138,7 @@
  3620 01aa 0003      		.word	0x3
  3621 01ac 78        		.byte	0x78
  3622 01ad 7C        		.sleb128 -4
-68K GAS  /tmp/cc9NmUTM.s 			page 70
+68K GAS  /tmp/ccofjRxk.s 			page 70
 
 
  3623 01ae 9F        		.byte	0x9f
@@ -4198,7 +4198,7 @@
  3677 023c 0001      		.word	0x1
  3678 023e 51        		.byte	0x51
  3679 023f 0000 0000 		.long	0
-68K GAS  /tmp/cc9NmUTM.s 			page 71
+68K GAS  /tmp/ccofjRxk.s 			page 71
 
 
  3680 0243 0000 0000 		.long	0
@@ -4258,7 +4258,7 @@
  3734 02c7 0001      		.word	0x1
  3735 02c9 59        		.byte	0x59
  3736 02ca 0000 02C6 		.long	.LVL57-.Ltext0
-68K GAS  /tmp/cc9NmUTM.s 			page 72
+68K GAS  /tmp/ccofjRxk.s 			page 72
 
 
  3737 02ce 0000 02D2 		.long	.LVL58-.Ltext0
@@ -4318,7 +4318,7 @@
  3791 0351 0000 0000 		.long	0
  3792 0355 0000 0000 		.long	0
  3793               	.LLST27:
-68K GAS  /tmp/cc9NmUTM.s 			page 73
+68K GAS  /tmp/ccofjRxk.s 			page 73
 
 
  3794 0359 0000 0314 		.long	.LVL64-.Ltext0
@@ -4378,7 +4378,7 @@
  3848 03d8 9F        		.byte	0x9f
  3849 03d9 0000 038E 		.long	.LVL74-.Ltext0
  3850 03dd 0000 039C 		.long	.LFE11-.Ltext0
-68K GAS  /tmp/cc9NmUTM.s 			page 74
+68K GAS  /tmp/ccofjRxk.s 			page 74
 
 
  3851 03e1 0006      		.word	0x6
@@ -4438,7 +4438,7 @@
  3905 001c 0000 0000 		.long	0
  3906               		.section	.debug_ranges,"",@progbits
  3907               	.Ldebug_ranges0:
-68K GAS  /tmp/cc9NmUTM.s 			page 75
+68K GAS  /tmp/ccofjRxk.s 			page 75
 
 
  3908 0000 0000 00E2 		.long	.LBB31-.Ltext0
@@ -4498,7 +4498,7 @@
  3948      7267 656E 
  3948      6379 00
  3949               	.LASF133:
-68K GAS  /tmp/cc9NmUTM.s 			page 76
+68K GAS  /tmp/ccofjRxk.s 			page 76
 
 
  3950 003f 6865 6164 		.string	"head_task_id"
@@ -4558,7 +4558,7 @@
  3976 00d1 6E65 7874 		.string	"next_task"
  3976      5F74 6173 
  3976      6B00 
-68K GAS  /tmp/cc9NmUTM.s 			page 77
+68K GAS  /tmp/ccofjRxk.s 			page 77
 
 
  3977               	.LASF124:
@@ -4618,7 +4618,7 @@
  4006 015c 5F63 6F6F 		.string	"_cookie"
  4006      6B69 6500 
  4007               	.LASF100:
-68K GAS  /tmp/cc9NmUTM.s 			page 78
+68K GAS  /tmp/ccofjRxk.s 			page 78
 
 
  4008 0164 5F5F 7367 		.string	"__sglue"
@@ -4678,7 +4678,7 @@
  4038 01ef 6865 6164 		.string	"head_sem"
  4038      5F73 656D 
  4038      00
-68K GAS  /tmp/cc9NmUTM.s 			page 79
+68K GAS  /tmp/ccofjRxk.s 			page 79
 
 
  4039               	.LASF162:
@@ -4738,7 +4738,7 @@
  4070 02ab 6375 7272 		.string	"curr_task"
  4070      5F74 6173 
  4070      6B00 
-68K GAS  /tmp/cc9NmUTM.s 			page 80
+68K GAS  /tmp/ccofjRxk.s 			page 80
 
 
  4071               	.LASF20:
@@ -4798,7 +4798,7 @@
  4098      7269 7479 
  4098      00
  4099               	.LASF28:
-68K GAS  /tmp/cc9NmUTM.s 			page 81
+68K GAS  /tmp/ccofjRxk.s 			page 81
 
 
  4100 0342 7769 6E74 		.string	"wint_t"
@@ -4858,7 +4858,7 @@
  4130      6964 696E 
  4130      6974 00
  4131               	.LASF25:
-68K GAS  /tmp/cc9NmUTM.s 			page 82
+68K GAS  /tmp/ccofjRxk.s 			page 82
 
 
  4132 03cc 5F6F 6666 		.string	"_off_t"
@@ -4866,85 +4866,85 @@
  4133               	.LASF149:
  4134 03d3 705F 626F 		.string	"p_body"
  4134      6479 00
- 4135               	.LASF164:
- 4136 03da 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/theme2"
- 4136      652F 7374 
- 4136      7564 656E 
- 4136      7473 2F32 
- 4136      3032 3038 
- 4137               	.LASF24:
- 4138 0409 5F4C 4F43 		.string	"_LOCK_RECURSIVE_T"
- 4138      4B5F 5245 
- 4138      4355 5253 
- 4138      4956 455F 
- 4138      5400 
- 4139               	.LASF146:
- 4140 041b 6265 6769 		.string	"begin_sch"
- 4140      6E5F 7363 
- 4140      6800 
- 4141               	.LASF139:
- 4142 0425 6164 6471 		.string	"addq"
- 4142      00
- 4143               	.LASF117:
- 4144 042a 5F6D 626C 		.string	"_mblen_state"
- 4144      656E 5F73 
- 4144      7461 7465 
+ 4135               	.LASF94:
+ 4136 03da 5F66 7265 		.string	"_freelist"
+ 4136      656C 6973 
+ 4136      7400 
+ 4137               	.LASF164:
+ 4138 03e4 2F68 6F6D 		.string	"/home/students/2020894891/schoolpc2/SW2/theme3"
+ 4138      652F 7374 
+ 4138      7564 656E 
+ 4138      7473 2F32 
+ 4138      3032 3038 
+ 4139               	.LASF24:
+ 4140 0413 5F4C 4F43 		.string	"_LOCK_RECURSIVE_T"
+ 4140      4B5F 5245 
+ 4140      4355 5253 
+ 4140      4956 455F 
+ 4140      5400 
+ 4141               	.LASF146:
+ 4142 0425 6265 6769 		.string	"begin_sch"
+ 4142      6E5F 7363 
+ 4142      6800 
+ 4143               	.LASF139:
+ 4144 042f 6164 6471 		.string	"addq"
  4144      00
  4145               	.LASF155:
- 4146 0437 7365 6D61 		.string	"semaphore"
+ 4146 0434 7365 6D61 		.string	"semaphore"
  4146      7068 6F72 
  4146      6500 
  4147               	.LASF16:
- 4148 0441 756E 7369 		.string	"unsigned char"
+ 4148 043e 756E 7369 		.string	"unsigned char"
  4148      676E 6564 
  4148      2063 6861 
  4148      7200 
  4149               	.LASF97:
- 4150 044f 5F6E 6577 		.string	"_new"
+ 4150 044c 5F6E 6577 		.string	"_new"
  4150      00
  4151               	.LASF128:
- 4152 0454 5F68 5F65 		.string	"_h_errno"
+ 4152 0451 5F68 5F65 		.string	"_h_errno"
  4152      7272 6E6F 
  4152      00
  4153               	.LASF17:
- 4154 045d 7368 6F72 		.string	"short int"
+ 4154 045a 7368 6F72 		.string	"short int"
  4154      7420 696E 
  4154      7400 
  4155               	.LASF50:
- 4156 0467 5F5F 746D 		.string	"__tm_yday"
+ 4156 0464 5F5F 746D 		.string	"__tm_yday"
  4156      5F79 6461 
  4156      7900 
  4157               	.LASF60:
- 4158 0471 5F5F 7362 		.string	"__sbuf"
+ 4158 046e 5F5F 7362 		.string	"__sbuf"
  4158      7566 00
- 4159               	.LASF94:
-68K GAS  /tmp/cc9NmUTM.s 			page 83
+ 4159               	.LASF105:
+ 4160 0475 5F69 6F62 		.string	"_iobs"
+68K GAS  /tmp/ccofjRxk.s 			page 83
 
 
- 4160 0478 5F66 7265 		.string	"_freelist"
- 4160      656C 6973 
- 4160      7400 
+ 4160      7300 
  4161               	.LASF102:
- 4162 0482 5F5F 4649 		.string	"__FILE"
+ 4162 047b 5F5F 4649 		.string	"__FILE"
  4162      4C45 00
  4163               	.LASF34:
- 4164 0489 5F6D 6273 		.string	"_mbstate_t"
+ 4164 0482 5F6D 6273 		.string	"_mbstate_t"
  4164      7461 7465 
  4164      5F74 00
  4165               	.LASF63:
- 4166 0494 5F5F 7346 		.string	"__sFILE"
+ 4166 048d 5F5F 7346 		.string	"__sFILE"
  4166      494C 4500 
  4167               	.LASF78:
- 4168 049c 5F6D 6273 		.string	"_mbstate"
+ 4168 0495 5F6D 6273 		.string	"_mbstate"
  4168      7461 7465 
  4168      00
  4169               	.LASF115:
- 4170 04a5 5F72 616E 		.string	"_rand_next"
+ 4170 049e 5F72 616E 		.string	"_rand_next"
  4170      645F 6E65 
  4170      7874 00
- 4171               	.LASF105:
- 4172 04b0 5F69 6F62 		.string	"_iobs"
- 4172      7300 
+ 4171               	.LASF117:
+ 4172 04a9 5F6D 626C 		.string	"_mblen_state"
+ 4172      656E 5F73 
+ 4172      7461 7465 
+ 4172      00
  4173               	.LASF85:
  4174 04b6 5F69 6E63 		.string	"_inc"
  4174      00
@@ -4978,7 +4978,7 @@
  4190      6400 
  4191               	.LASF32:
  4192 0506 5F5F 636F 		.string	"__count"
-68K GAS  /tmp/cc9NmUTM.s 			page 84
+68K GAS  /tmp/ccofjRxk.s 			page 84
 
 
  4192      756E 7400 
@@ -5038,7 +5038,7 @@
  4222      00
  4223               	.LASF109:
  4224 0590 5F61 6464 		.string	"_add"
-68K GAS  /tmp/cc9NmUTM.s 			page 85
+68K GAS  /tmp/ccofjRxk.s 			page 85
 
 
  4224      00
@@ -5098,7 +5098,7 @@
  4254      7365 6400 
  4255               	.LASF51:
  4256 0614 5F5F 746D 		.string	"__tm_isdst"
-68K GAS  /tmp/cc9NmUTM.s 			page 86
+68K GAS  /tmp/ccofjRxk.s 			page 86
 
 
  4256      5F69 7364 
@@ -5135,29 +5135,29 @@
  4272      5F6D 6461 
  4272      7900 
  4273               		.ident	"GCC: (GNU) 5.5.0"
-68K GAS  /tmp/cc9NmUTM.s 			page 87
+68K GAS  /tmp/ccofjRxk.s 			page 87
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 mtk_c.c
-     /tmp/cc9NmUTM.s:9      .text:0000000000000000 init_kernel
+     /tmp/ccofjRxk.s:9      .text:0000000000000000 init_kernel
                             *COM*:0000000000000004 ready
                             *COM*:0000000000000018 semaphore
                             *COM*:00000000000000a0 task_tab
-     /tmp/cc9NmUTM.s:64     .text:000000000000005a set_task
+     /tmp/ccofjRxk.s:64     .text:000000000000005a set_task
                             *COM*:0000000000000004 new_task
                             *COM*:0000000000003800 stacks
-     /tmp/cc9NmUTM.s:218    .text:000000000000014c init_stack
-     /tmp/cc9NmUTM.s:265    .text:0000000000000192 begin_sch
+     /tmp/ccofjRxk.s:218    .text:000000000000014c init_stack
+     /tmp/ccofjRxk.s:265    .text:0000000000000192 begin_sch
                             *COM*:0000000000000004 curr_task
-     /tmp/cc9NmUTM.s:302    .text:00000000000001c4 removeq
-     /tmp/cc9NmUTM.s:333    .text:00000000000001e2 sched
+     /tmp/ccofjRxk.s:302    .text:00000000000001c4 removeq
+     /tmp/ccofjRxk.s:333    .text:00000000000001e2 sched
                             *COM*:0000000000000004 next_task
-     /tmp/cc9NmUTM.s:376    .text:000000000000021c addq
-     /tmp/cc9NmUTM.s:429    .text:0000000000000272 sleep
-     /tmp/cc9NmUTM.s:532    .text:0000000000000310 wakeup
-     /tmp/cc9NmUTM.s:635    .text:000000000000039c p_body
-     /tmp/cc9NmUTM.s:667    .text:00000000000003c2 v_body
+     /tmp/ccofjRxk.s:376    .text:000000000000021c addq
+     /tmp/ccofjRxk.s:429    .text:0000000000000272 sleep
+     /tmp/ccofjRxk.s:532    .text:0000000000000310 wakeup
+     /tmp/ccofjRxk.s:635    .text:000000000000039c p_body
+     /tmp/ccofjRxk.s:667    .text:00000000000003c2 v_body
 
 UNDEFINED SYMBOLS
 pv_handler
