@@ -8,7 +8,7 @@
 
 /* 定数の定義 */
 #define NULLTASKID      0  /* キューの終端 */
-#define NUMTASK         7  /* 最大タスク数 */
+#define NUMTASK         5  /* 最大タスク数 */
 #define STKSIZE      1024  /* スタックサイズ = 1KB */
 #define NUMSEMAPHORE    3
 
@@ -38,13 +38,14 @@ typedef struct{
 TASK_ID_TYPE curr_task;
 TASK_ID_TYPE new_task;
 TASK_ID_TYPE next_task;
-
 TASK_ID_TYPE ready;
 
 SEMAPHORE_TYPE semaphore[NUMSEMAPHORE];
+
 TCB_TYPE task_tab[NUMTASK + 1];
 
 STACK_TYPE stacks[NUMTASK];
+
 /* 関数のプロトタイプ宣言 */
 void init_kernel(void);
 void set_task(void *p);
@@ -53,7 +54,6 @@ void begin_sch(void);
 void sched(void);
 TASK_ID_TYPE removeq(TASK_ID_TYPE *q);
 void addq(TASK_ID_TYPE *q, TASK_ID_TYPE task_id);
-//void addq1(TASK_ID_TYPE *q, TASK_ID_TYPE task_id);
 void sleep(int s_id);
 void wakeup(int s_id);
 void p_body(int s_id);

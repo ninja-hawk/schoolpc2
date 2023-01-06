@@ -1,0 +1,230 @@
+68K GAS  mtk_asm.s 			page 1
+
+
+   1               	.section .bss
+   2               	
+   3               	.global first_task
+   4               	.global pv_handler
+   5               	.global P
+   6               	.global V
+   7               	.global swtch
+   8               	.global hard_clock
+   9               	.global init_timer
+  10               	
+  11               	.extern addq
+  12               	.extern sched
+  13               	.extern curr_task
+  14               	.extern next_task
+  15               	.extern task_tab
+  16               	.extern ready
+  17               	
+  18               	.equ    SIZE_OF_TCB, 0x14
+  19               	.equ IOBASE,    0x00d00000
+  20               	.equ LED7,  IOBASE+0x000002f | ボード搭載のLED用レジスタ
+  21               	.equ LED6,  IOBASE+0x000002d | 使用法については付録 A.4.3.1
+  22               	.equ LED5,  IOBASE+0x000002b
+  23               	.equ LED4,  IOBASE+0x0000029
+  24               	.equ LED3,  IOBASE+0x000003f
+  25               	.equ LED2,  IOBASE+0x000003d
+  26               	.equ LED1,  IOBASE+0x000003b
+  27               	.equ LED0,  IOBASE+0x0000039
+  28               	.section .text
+  29               	.even
+  30               	swtch:
+  31               			* %SR,全レジスタの値をスタックに積む
+  32 0000 40E7      			move.w %SR, -(%SP)
+  33 0002 48E7 FFFE 			movem.l %D0-%D7/%A0-%A6, -(%SP)
+  34 0006 4E68      			move.l  %USP, %a0
+  35 0008 2F08      			move.l	%a0, -(%SP)
+  36 000a 4EBA 0018 			jsr     get_tcb_ssp              | %a0 <- TCBのSSPの位置
+  37 000e 208F      			move.l  %SP, (%a0)               | SSPをTCBの所定の位置に格納
+  38 0010 23F9 0000 	        move.l  next_task, curr_task     
+  38      0000 0000 
+  38      0000 
+  39 001a 4EBA 0008 			jsr     get_tcb_ssp              | %a0 <- TCBのSSPの位置
+  40 001e 2E50      			move.l  (%a0), %SP               | TCBに記録されているSSPを回復
+  41 0020 6000 001C 			bra     end_swtch
+  42               	get_tcb_ssp:
+  43 0024 2039 0000 			move.l  curr_task, %d0           | %d0 = 現タスクのID 例 d0 = 2
+  43      0000 
+  44 002a 7214      			move.l  #SIZE_OF_TCB, %d1        | %d1 = TCBのサイズ voidが４バイトで要素が５個だ
+  45 002c C2C0      			mulu.w  %d0, %d1                 | 該当タスクのTCBにアクセスするためのオフセ�
+  46 002e 41F9 0000 			lea.l   task_tab, %a0            | task_tabの先頭アドレス 
+  46      0000 
+  47 0034 D1C1      			adda.l  %d1, %a0                 | アドレスとオフセットを加算= 現
+  48 0036 D1FC 0000 			adda.l  #4,  %a0                 | task_tab[ID].stack_ptrの位置を取得
+  48      0004 
+  49 003c 4E75      			rts
+  50               	end_swtch:	
+  51 003e 205F      	        move.l  (%SP)+, %A0             
+  52 0040 4E60      			move.l  %A0, %USP
+68K GAS  mtk_asm.s 			page 2
+
+
+  53 0042 4CDF 7FFF 			movem.l (%SP)+, %D0-%D7/%A0-%A6 | 各レジスタを復帰
+  54 0046 4E73      			rte
+  55               	
+  56               	pv_handler:
+  57               	
+  58 0048 48E7 FFFE 	     movem.l %D0-%D7/%A0-%A6, -(%sp) |使用可能性のあるレジスタの退避
+  59 004c 40E7      	     move.w %SR, -(%sp)  |SRの退避
+  60 004e 46FC 2700 	     move.w #0x2700, %SR  |走行レベルを７へ
+  61 0052 48E7 4000 	     movem.l %D1, -(%sp)  |D1を引数としてスタックに積む
+  62               	     
+  63 0056 0C80 0000 	     cmp.l  #0, %D0       |Pからの呼び出しの場合
+  63      0000 
+  64 005c 6700 000C 	     beq    p_order
+  65 0060 0C80 0000 	     cmp.l  #1, %D0       |Qからの呼び出しの場合
+  65      0001 
+  66 0066 6700 000C 	     beq    v_order
+  67               	     
+  68               	p_order:
+  69               	
+  70 006a 4EB9 0000 	     jsr p_body      |p命令実行
+  70      0000 
+  71 0070 6000 000C 	     bra end_pv_handler
+  72               	
+  73               	v_order:
+  74 0074 4EB9 0000 	     jsr v_body      |v命令実行
+  74      0000 
+  75 007a 6000 0002 	     bra end_pv_handler
+  76               	     
+  77               	end_pv_handler: 
+  78 007e 588F      	     add.l #4, %sp        |引数(d1)分spを上げる
+  79 0080 46DF      	     move.w (%sp)+, %SR  |SRを復帰
+  80 0082 4CDF 7FFF 	     movem.l (%sp)+, %D0-%D7/%A0-%A6  |レジスタの復帰
+  81 0086 4E73      	     rte
+  82               	     
+  83               	
+  84               	P:
+  85 0088 48E7 C000 	     movem.l %D0-%D1, -(%sp)
+  86 008c 7000      	     move.l #0, %D0        |PシステムコールのID＝０をD0レジスタに
+  87 008e 222F 000C 	     move.l  0x0c(%sp) ,%D1   |スタックに入っている引数をD1に（d0-d1+戻り番地の
+  88 0092 4E41      	     trap #1
+  89 0094 4CDF 0003 	     movem.l (%sp)+, %D0-%d1
+  90 0098 4E75      	     rts
+  91               	     
+  92               	V:
+  93 009a 48E7 C000 	     movem.l %D0-%D1, -(%sp)
+  94 009e 7001      	     move.l #1, %D0        |VシステムコールのID＝1をD0レジスタに
+  95 00a0 222F 000C 	     move.l  0x0c(%sp) ,%D1  |スタックに入っている引数をD1に（d0-d1+戻り番地のP
+  96 00a4 4E41      	     trap #1
+  97 00a6 4CDF 0003 	     movem.l (%sp)+, %D0-%d1
+  98 00aa 4E75      	     rts
+  99               	     
+ 100               	****************************************************************
+ 101               	** hard_clock
+ 102               	** SW実験1で作成したタイマ用ハードウェア割り込み処理インターフェース
+ 103               	**
+ 104               	** このルーチン内で使用するレジスタをスーパーバイザスタックに積むが
+ 105               	** タイマ割り込みで実行されるルーチンであるため退避忘れが多いらしい
+68K GAS  mtk_asm.s 			page 3
+
+
+ 106               	****************************************************************
+ 107               	
+ 108               	hard_clock:
+ 109 00ac 48E7 FFFE 	        movem.l %D0-%D7/%A0-%A6, -(%sp)         | 使用可能性のあるレジスタの退避
+ 110 00b0 40C0      	        move.w  %SR, %D0                        | %SRを%D0へ
+ 111 00b2 0800 000D 	        btst.l  #13, %D0                        | SRの13bit目を見てスーパーバイザか否
+ 112 00b6 6700 0040 	        beq     end_hard_clock                  | 13bit目が1でなければ、スーパーバイ�
+ 113 00ba 2F39 0000 	        move.l  curr_task, -(%sp)
+ 113      0000 
+ 114 00c0 2F3C 0000 	        move.l  #ready,   -(%sp)
+ 114      0000 
+ 115 00c6 13FC 0061 	       move.b	#'a', LED1
+ 115      00D0 003B 
+ 116 00ce 4EB9 0000 	        jsr     addq                            | current_taskをreadyの末尾に追加
+ 116      0000 
+ 117 00d4 508F      	        add.l   #8, %sp
+ 118 00d6 13FC 0061 		move.b	#'a', LED2
+ 118      00D0 003D 
+ 119 00de 4EB9 0000 	        jsr     sched                           | schedを起動し、次に実行されるタス�
+ 119      0000 
+ 120 00e4 13FC 0061 		move.b	#'a', LED3
+ 120      00D0 003F 
+ 121 00ec 4EBA FF12 	        jsr     swtch                           | swtchの起動
+ 122 00f0 13FC 0061 		move.b	#'a', LED4
+ 122      00D0 0029 
+ 123               	
+ 124               	end_hard_clock:
+ 125 00f8 4CDF 7FFF 	        movem.l (%sp)+, %D0-%D7/%A0-%A6         |レジスタ復帰退避
+ 126 00fc 4E75      	        rts
+ 127               	
+ 128               	init_timer:
+ 129 00fe 48E7 E000 	        movem.l %D0-%D2, -(%sp)         | 使用可能性のあるレジスタの退避
+ 130 0102 7003      	        move.l  #3, %D0                 | システムコールRESET_TIMERの番号
+ 131 0104 4E40      	        trap    #0                      | RESET_TIMER呼び出し
+ 132 0106 7004      	        move.l  #4, %D0                 | システムコールSET_TIMERの番号
+ 133 0108 323C 2710 	        move.w  #10000, %D1             | 割り込み発生周期は1秒に設定(p38)
+ 134 010c 243C 0000 	        move.l  #hard_clock, %d2        | 割り込み時に起動するルーチンの先頭アド
+ 134      0000 
+ 135 0112 4E40      	        trap    #0                      | SET_TIMER呼び出し
+ 136 0114 4CDF 0007 	        movem.l (%sp)+,%D0-%D2          | SRの退避
+ 137 0118 4E75      	        rts
+ 138               	
+ 139               	**************************
+ 140               	**first_task
+ 141               	*************************
+ 142               	first_task:
+ 143 011a 2039 0000 		    move.l curr_task, %d0     /* TCB先頭番地の計算 */
+ 143      0000 
+ 144 0120 43F9 0000 	        lea.l  task_tab, %a1      /* 見つけたアドレスを%a1に */
+ 144      0000 
+ 145               	loop_first_task:
+ 146 0126 5380      	        subq.l #1, %d0            /* 配列の何番目なのか計算 */
+ 147 0128 D3FC 0000 	        add.l  #0x14, %a1         /* %a1:先頭アドレス */
+ 147      0014 
+ 148 012e 0C40 0000 	        cmp    #0, %d0
+ 149 0132 6600 FFF2 	        bne    loop_first_task
+ 150               	        /*USP,SSPの値の回復*/
+68K GAS  mtk_asm.s 			page 4
+
+
+ 151 0136 5889      	        add.l   #4, %a1           /* a1にTCBのSSP */
+ 152 0138 2E51      	        move.l  (%a1), %ssp
+ 153               	
+ 154 013a 4CDF 0100 	        movem.l (%sp)+, %a0
+ 155 013e 4E60      	        move.l  %a0, %usp
+ 156 0140 4CDF 7FFF 	        movem.l (%sp)+, %d0-%d7/%a0-%a6
+ 157               	
+ 158 0144 4E73      			rte                       /*rte*/
+ 159               	
+68K GAS  mtk_asm.s 			page 5
+
+
+DEFINED SYMBOLS
+           mtk_asm.s:142    .text:000000000000011a first_task
+           mtk_asm.s:56     .text:0000000000000048 pv_handler
+           mtk_asm.s:84     .text:0000000000000088 P
+           mtk_asm.s:92     .text:000000000000009a V
+           mtk_asm.s:30     .text:0000000000000000 swtch
+           mtk_asm.s:108    .text:00000000000000ac hard_clock
+           mtk_asm.s:128    .text:00000000000000fe init_timer
+           mtk_asm.s:18     *ABS*:0000000000000014 SIZE_OF_TCB
+           mtk_asm.s:19     *ABS*:0000000000d00000 IOBASE
+           mtk_asm.s:20     *ABS*:0000000000d0002f LED7
+           mtk_asm.s:21     *ABS*:0000000000d0002d LED6
+           mtk_asm.s:22     *ABS*:0000000000d0002b LED5
+           mtk_asm.s:23     *ABS*:0000000000d00029 LED4
+           mtk_asm.s:24     *ABS*:0000000000d0003f LED3
+           mtk_asm.s:25     *ABS*:0000000000d0003d LED2
+           mtk_asm.s:26     *ABS*:0000000000d0003b LED1
+           mtk_asm.s:27     *ABS*:0000000000d00039 LED0
+           mtk_asm.s:42     .text:0000000000000024 get_tcb_ssp
+           mtk_asm.s:50     .text:000000000000003e end_swtch
+           mtk_asm.s:68     .text:000000000000006a p_order
+           mtk_asm.s:73     .text:0000000000000074 v_order
+           mtk_asm.s:77     .text:000000000000007e end_pv_handler
+           mtk_asm.s:124    .text:00000000000000f8 end_hard_clock
+           mtk_asm.s:145    .text:0000000000000126 loop_first_task
+
+UNDEFINED SYMBOLS
+next_task
+curr_task
+task_tab
+p_body
+v_body
+ready
+addq
+sched
