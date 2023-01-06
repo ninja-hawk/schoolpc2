@@ -1,0 +1,37 @@
+68K GAS  inchrw.s 			page 1
+
+
+   1               	.global inbyte
+   2               	
+   3               	.text
+   4               	.even
+   5               	
+   6               	inbyte:
+   7 0000 48E7 7000 			movem.l %D1-%D3, -(%sp)
+   8               	inbyte_loop:
+   9 0004 7001      			move.l #1,  %D0         | GETSTRINGを呼び出す
+  10 0006 222F 0010 			move.l 16(%sp), %D1     | ch   = 0 or 1
+  11 000a 243C 0000 			move.l #In_BUF, %D2     | p    = #BUF
+  11      0000 
+  12 0010 7601      			move.l #1, %D3          | size = 1
+  13 0012 4E40      			trap   #0
+  14 0014 0C40 0001 	        cmpi   #1, %d0       | GETSTRINGの返り値が1と一致するか確認
+  15 0018 6600 FFEA 			bne    inbyte_loop   | 一致しなければ再受信
+  16 001c 1039 0000 			move.b In_BUF, %d0   | 戻り値をd0に追加
+  16      0000 
+  17 0022 4CDF 000E 			movem.l	(%sp)+, %D1-%D3
+  18 0026 4E75      	        rts
+  19               	
+  20               	.section .bss
+  21               	In_BUF: 
+  22 0000 00        			.ds.b 1
+  23               	
+68K GAS  inchrw.s 			page 2
+
+
+DEFINED SYMBOLS
+            inchrw.s:6      .text:0000000000000000 inbyte
+            inchrw.s:8      .text:0000000000000004 inbyte_loop
+            inchrw.s:21     .bss:0000000000000000 In_BUF
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,43 @@
+68K GAS  outchr.s 			page 1
+
+
+   1               	.global outbyte
+   2               	
+   3               	.section .text
+   4               	.even
+   5               	*******************************
+   6               	** outbyte
+   7               	** 引数：
+   8               	**       char型のデータ(スタックに格納済)
+   9               	** 出力：
+  10               	**       シリアルポート0に出力
+  11               	*******************************
+  12               	outbyte:
+  13 0000 48E7 F000 			movem.l %d0-%d3, -(%sp)
+  14               	out_byte_loop:	
+  15 0004 203C 0000 			move.l #SYSCALL_NUM_PUTSTRING, %d0 | PUTSTRINGを指定
+  15      0002 
+  16 000a 222F 0014 			move.l 20(%sp), %d1  | ch   = 0 or 1
+  17 000e 240F      			move.l %sp, %d2      | data = char[1]
+  18 0010 0682 0000 			add.l  #27, %d2
+  18      001B 
+  19 0016 7601      			move.l #1, %d3       | size = 1
+  20 0018 4E40      			trap   #0
+  21 001a 0C80 0000 			cmpi.l #1, %d0       | PUTSTRINGの返り値が送信数と一致するか確認
+  21      0001 
+  22 0020 6600 FFE2 			bne    out_byte_loop | 一致しなければ再送信
+  23 0024 4CDF 000F 			movem.l (%sp)+, %d0-%d3
+  24 0028 4E75      			rts
+  25               	
+  26               	.equ SYSCALL_NUM_PUTSTRING,    2
+  27               	
+  28               	
+68K GAS  outchr.s 			page 2
+
+
+DEFINED SYMBOLS
+            outchr.s:12     .text:0000000000000000 outbyte
+            outchr.s:14     .text:0000000000000004 out_byte_loop
+                            *ABS*:0000000000000002 SYSCALL_NUM_PUTSTRING
+
+NO UNDEFINED SYMBOLS
