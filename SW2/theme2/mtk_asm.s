@@ -130,7 +130,7 @@ init_timer:
         move.l  #3, %D0                 | システムコールRESET_TIMERの番号
         trap    #0                      | RESET_TIMER呼び出し
         move.l  #4, %D0                 | システムコールSET_TIMERの番号
-        move.w  #10000, %D1             | 割り込み発生周期は1秒に設定(p38)
+        move.w  #1, %D1             | 割り込み発生周期は1秒に設定(p38)
         move.l  #hard_clock, %d2        | 割り込み時に起動するルーチンの先頭アドレス
         trap    #0                      | SET_TIMER呼び出し
         movem.l (%sp)+,%D0-%D2          | SRの退避

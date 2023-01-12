@@ -22,6 +22,10 @@ test1:
 test2:
 	$(MAKE) $(MAKEFLAGS) LIB_JIKKEN=$(LIB_JIKKEN) -f Makefile.2
 test3:
+	rm -f mon.o
+	cp mon_r/mon_r2_230k.o mon.o
+	touch mon.o
 	$(MAKE) $(MAKEFLAGS) LIB_JIKKEN=$(LIB_JIKKEN) -f Makefile.3
 
 include $(LIB_JIKKEN)/make.conf
+
