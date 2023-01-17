@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<string.h>
 #include "mtk_c.h"
 FILE* com0in;
 FILE* com0out;
@@ -18,8 +19,12 @@ while(1){
     char s0;
     //fprintf(com0out, "\n%s\n","------------------------------------画面0から入力：------------------------------------");
     fscanf(com0in, "%s", &s0);
+    //char *a = "A10";
     P(0);
     fprintf(com0out, "\e[A\e[K");
+    //if(strcmp(&s0,a)==0){
+	//fprintf(com0out, "Correct!!!!! \n");
+    //}
     // フォントを赤色に
     fprintf(com0out, "\x1b[31m");
     fprintf(com1out, "\x1b[31m");

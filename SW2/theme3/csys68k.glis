@@ -1,4 +1,4 @@
-68K GAS  /tmp/cc65OqbT.s 			page 1
+68K GAS  /tmp/ccA0Bnm2.s 			page 1
 
 
    1               	#NO_APP
@@ -58,7 +58,7 @@
   19:csys68k.c     ****       ch = 1;
   20:csys68k.c     ****       break;
   21:csys68k.c     ****       
-68K GAS  /tmp/cc65OqbT.s 			page 2
+68K GAS  /tmp/ccA0Bnm2.s 			page 2
 
 
   22:csys68k.c     ****   default:
@@ -118,7 +118,7 @@
   52 0036 7400      		moveq #0,%d2
   53 0038 45F9 0000 		lea inbyte,%a2
   53      0000 
-68K GAS  /tmp/cc65OqbT.s 			page 3
+68K GAS  /tmp/ccA0Bnm2.s 			page 3
 
 
   49:csys68k.c     ****         *(buf + i) = c;
@@ -178,7 +178,7 @@
   43:csys68k.c     ****       }
   98               		.loc 1 43 0
   99 0078 5382      		subq.l #1,%d2
-68K GAS  /tmp/cc65OqbT.s 			page 4
+68K GAS  /tmp/ccA0Bnm2.s 			page 4
 
 
  100               	.LVL7:
@@ -238,7 +238,7 @@
  146 00b8 588F      		addq.l #4,%sp
  147 00ba 4E75      		rts
  148               	.LVL15:
-68K GAS  /tmp/cc65OqbT.s 			page 5
+68K GAS  /tmp/ccA0Bnm2.s 			page 5
 
 
  149               	.L7:
@@ -298,7 +298,7 @@
  196               		.cfi_offset 4, -16
  197               		.cfi_offset 10, -12
  198               		.cfi_offset 11, -8
-68K GAS  /tmp/cc65OqbT.s 			page 6
+68K GAS  /tmp/ccA0Bnm2.s 			page 6
 
 
  199 00ee 202F 0018 		move.l 24(%sp),%d0
@@ -358,7 +358,7 @@
  231 012a 2F01      		move.l %d1,-(%sp)
  232               		.cfi_def_cfa_offset 28
  233 012c 2F02      		move.l %d2,-(%sp)
-68K GAS  /tmp/cc65OqbT.s 			page 7
+68K GAS  /tmp/ccA0Bnm2.s 			page 7
 
 
  234               		.cfi_def_cfa_offset 32
@@ -418,7 +418,7 @@
   74:csys68k.c     ****   }
  278               		.loc 1 74 0
  279 0160 7009      		moveq #9,%d0
-68K GAS  /tmp/cc65OqbT.s 			page 8
+68K GAS  /tmp/ccA0Bnm2.s 			page 8
 
 
  280               		.loc 1 84 0
@@ -478,7 +478,7 @@
  320 000a 04        		.byte	0x4
  321 000b 01        		.uleb128 0x1
  322 000c 0000 0000 		.long	.LASF15
-68K GAS  /tmp/cc65OqbT.s 			page 9
+68K GAS  /tmp/ccA0Bnm2.s 			page 9
 
 
  323 0010 0C        		.byte	0xc
@@ -538,7 +538,7 @@
  377 0079 04        		.uleb128 0x4
  378 007a 04        		.byte	0x4
  379 007b 0000 007F 		.long	0x7f
-68K GAS  /tmp/cc65OqbT.s 			page 10
+68K GAS  /tmp/ccA0Bnm2.s 			page 10
 
 
  380 007f 02        		.uleb128 0x2
@@ -598,7 +598,7 @@
  434 00e8 0000 0064 		.long	0x64
  435 00ec 0000 0000 		.long	.LLST2
  436 00f0 09        		.uleb128 0x9
-68K GAS  /tmp/cc65OqbT.s 			page 11
+68K GAS  /tmp/ccA0Bnm2.s 			page 11
 
 
  437 00f1 0000 0000 		.long	.LVL12
@@ -658,7 +658,7 @@
  491 0155 0000 0064 		.long	0x64
  492 0159 0000 0000 		.long	.LLST4
  493 015d 08        		.uleb128 0x8
-68K GAS  /tmp/cc65OqbT.s 			page 12
+68K GAS  /tmp/ccA0Bnm2.s 			page 12
 
 
  494 015e 6368 00   		.string	"ch"
@@ -718,7 +718,7 @@
  548 0012 00        		.byte	0
  549 0013 02        		.uleb128 0x2
  550 0014 24        		.uleb128 0x24
-68K GAS  /tmp/cc65OqbT.s 			page 13
+68K GAS  /tmp/ccA0Bnm2.s 			page 13
 
 
  551 0015 00        		.byte	0
@@ -778,7 +778,7 @@
  605 004c 00        		.byte	0
  606 004d 00        		.byte	0
  607 004e 06        		.uleb128 0x6
-68K GAS  /tmp/cc65OqbT.s 			page 14
+68K GAS  /tmp/ccA0Bnm2.s 			page 14
 
 
  608 004f 05        		.uleb128 0x5
@@ -838,7 +838,7 @@
  662 0088 2E        		.uleb128 0x2e
  663 0089 01        		.byte	0x1
  664 008a 3F        		.uleb128 0x3f
-68K GAS  /tmp/cc65OqbT.s 			page 15
+68K GAS  /tmp/ccA0Bnm2.s 			page 15
 
 
  665 008b 19        		.uleb128 0x19
@@ -898,7 +898,7 @@
  719 0043 0000 009D 		.long	.LVL12-1-.Ltext0
  720 0047 0001      		.word	0x1
  721 0049 50        		.byte	0x50
-68K GAS  /tmp/cc65OqbT.s 			page 16
+68K GAS  /tmp/ccA0Bnm2.s 			page 16
 
 
  722 004a 0000 00BC 		.long	.LVL15-.Ltext0
@@ -958,7 +958,7 @@
  776 00d0 06        		.byte	0x6
  777 00d1 1C        		.byte	0x1c
  778 00d2 9F        		.byte	0x9f
-68K GAS  /tmp/cc65OqbT.s 			page 17
+68K GAS  /tmp/ccA0Bnm2.s 			page 17
 
 
  779 00d3 0000 011E 		.long	.LVL23-.Ltext0
@@ -1018,7 +1018,7 @@
  833 0138 9F        		.byte	0x9f
  834 0139 0000 0000 		.long	0
  835 013d 0000 0000 		.long	0
-68K GAS  /tmp/cc65OqbT.s 			page 18
+68K GAS  /tmp/ccA0Bnm2.s 			page 18
 
 
  836               	.LLST5:
@@ -1078,7 +1078,7 @@
  871      7400 
  872               	.LASF7:
  873 0046 6C6F 6E67 		.string	"long long unsigned int"
-68K GAS  /tmp/cc65OqbT.s 			page 19
+68K GAS  /tmp/ccA0Bnm2.s 			page 19
 
 
  873      206C 6F6E 
@@ -1138,18 +1138,18 @@
  899 0129 7369 7A65 		.string	"sizetype"
  899      7479 7065 
  899      00
-68K GAS  /tmp/cc65OqbT.s 			page 20
+68K GAS  /tmp/ccA0Bnm2.s 			page 20
 
 
  900               		.ident	"GCC: (GNU) 5.5.0"
-68K GAS  /tmp/cc65OqbT.s 			page 21
+68K GAS  /tmp/ccA0Bnm2.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 csys68k.c
-     /tmp/cc65OqbT.s:9      .text:0000000000000000 read
-     /tmp/cc65OqbT.s:187    .text:00000000000000ea write
-     /tmp/cc65OqbT.s:293    .text:000000000000016c fcntl
+     /tmp/ccA0Bnm2.s:9      .text:0000000000000000 read
+     /tmp/ccA0Bnm2.s:187    .text:00000000000000ea write
+     /tmp/ccA0Bnm2.s:293    .text:000000000000016c fcntl
 
 UNDEFINED SYMBOLS
 inbyte
