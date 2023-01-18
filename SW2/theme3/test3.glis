@@ -1,4 +1,4 @@
-68K GAS  /tmp/cck24UG8.s 			page 1
+68K GAS  /tmp/ccl6dwQc.s 			page 1
 
 
    1               	#NO_APP
@@ -32,21 +32,22 @@
   24               	.LFB4:
   25               		.file 1 "test3.c"
    1:test3.c       **** #include <stdio.h>
-   2:test3.c       **** #include "mtk_c.h"
-   3:test3.c       **** FILE* com0in;
-   4:test3.c       **** FILE* com0out;
-   5:test3.c       **** FILE* com1in;
-   6:test3.c       **** FILE* com1out;
-   7:test3.c       **** 
-   8:test3.c       **** void init_file(){
-   9:test3.c       ****    com0in = fdopen(3, "r");
-  10:test3.c       ****    com0out = fdopen(3, "w");
-  11:test3.c       ****    com1in = fdopen(4, "r");
-  12:test3.c       ****    com1out = fdopen(4, "w");
-  13:test3.c       **** }
-  14:test3.c       **** 
-  15:test3.c       **** void task0(){
-  26               		.loc 1 15 0
+   2:test3.c       **** #include<string.h>
+   3:test3.c       **** #include "mtk_c.h"
+   4:test3.c       **** FILE* com0in;
+   5:test3.c       **** FILE* com0out;
+   6:test3.c       **** FILE* com1in;
+   7:test3.c       **** FILE* com1out;
+   8:test3.c       **** 
+   9:test3.c       **** void init_file(){
+  10:test3.c       ****    com0in = fdopen(3, "r");
+  11:test3.c       ****    com0out = fdopen(3, "w");
+  12:test3.c       ****    com1in = fdopen(4, "r");
+  13:test3.c       ****    com1out = fdopen(4, "w");
+  14:test3.c       **** }
+  15:test3.c       **** 
+  16:test3.c       **** void task0(){
+  26               		.loc 1 16 0
   27               		.cfi_startproc
   28 0000 598F      		subq.l #4,%sp
   29               		.cfi_def_cfa_offset 8
@@ -57,10 +58,10 @@
   34               		.cfi_offset 11, -24
   35               		.cfi_offset 12, -20
   36               		.cfi_offset 13, -16
+68K GAS  /tmp/ccl6dwQc.s 			page 2
+
+
   37               		.cfi_offset 14, -12
-68K GAS  /tmp/cck24UG8.s 			page 2
-
-
   38 0006 741B      		moveq #27,%d2
   39 0008 D48F      		add.l %sp,%d2
   40 000a 4DF9 0000 		lea fscanf,%a6
@@ -75,12 +76,12 @@
   44      0000 
   45               	.L2:
   46               	.LBB2:
-  16:test3.c       **** while(1){
-  17:test3.c       ****     //P(0);
-  18:test3.c       ****     char s0;
-  19:test3.c       ****     //fprintf(com0out, "\n%s\n","------------------------------------画面0から入力：--------
-  20:test3.c       ****     fscanf(com0in, "%s", &s0);
-  47               		.loc 1 20 0 discriminator 1
+  17:test3.c       **** while(1){
+  18:test3.c       ****     //P(0);
+  19:test3.c       ****     char s0;
+  20:test3.c       ****     //fprintf(com0out, "\n%s\n","------------------------------------画面0から入力：--------
+  21:test3.c       ****     fscanf(com0in, "%s", &s0);
+  47               		.loc 1 21 0 discriminator 1
   48 0028 2F02      		move.l %d2,-(%sp)
   49               		.cfi_def_cfa_offset 36
   50 002a 4879 0000 		pea .LC0
@@ -91,14 +92,15 @@
   53               		.cfi_def_cfa_offset 44
   54 0036 4E96      		jsr (%a6)
   55               	.LVL0:
-  21:test3.c       ****     P(0);
-  56               		.loc 1 21 0 discriminator 1
+  22:test3.c       ****     //char *a = "A10";
+  23:test3.c       ****     P(0);
+  56               		.loc 1 23 0 discriminator 1
   57 0038 42A7      		clr.l -(%sp)
   58               		.cfi_def_cfa_offset 48
   59 003a 4E95      		jsr (%a5)
   60               	.LVL1:
-  22:test3.c       ****     fprintf(com0out, "\e[A\e[K");
-  61               		.loc 1 22 0 discriminator 1
+  24:test3.c       ****     fprintf(com0out, "\e[A\e[K");
+  61               		.loc 1 24 0 discriminator 1
   62 003c 2F39 0000 		move.l com0out,-(%sp)
   62      0000 
   63               		.cfi_def_cfa_offset 52
@@ -111,16 +113,19 @@
   69               		.cfi_def_cfa_offset 64
   70 0050 4E92      		jsr (%a2)
   71               	.LVL2:
-  23:test3.c       ****     // フォントを赤色に
-  24:test3.c       ****     fprintf(com0out, "\x1b[31m");
-  72               		.loc 1 24 0 discriminator 1
+  25:test3.c       ****     //if(strcmp(&s0,a)==0){
+  26:test3.c       **** 	//fprintf(com0out, "Correct!!!!! \n");
+  27:test3.c       ****     //}
+  28:test3.c       ****     // フォントを赤色に
+  29:test3.c       ****     fprintf(com0out, "\x1b[31m");
+68K GAS  /tmp/ccl6dwQc.s 			page 3
+
+
+  72               		.loc 1 29 0 discriminator 1
   73 0052 4FEF 001C 		lea (28,%sp),%sp
   74               		.cfi_def_cfa_offset 36
   75 0056 2EB9 0000 		move.l com0out,(%sp)
   75      0000 
-68K GAS  /tmp/cck24UG8.s 			page 3
-
-
   76 005c 4878 0005 		pea 5.w
   77               		.cfi_def_cfa_offset 40
   78 0060 4878 0001 		pea 1.w
@@ -130,8 +135,8 @@
   81               		.cfi_def_cfa_offset 48
   82 006a 4E92      		jsr (%a2)
   83               	.LVL3:
-  25:test3.c       ****     fprintf(com1out, "\x1b[31m");
-  84               		.loc 1 25 0 discriminator 1
+  30:test3.c       ****     fprintf(com1out, "\x1b[31m");
+  84               		.loc 1 30 0 discriminator 1
   85 006c 2F39 0000 		move.l com1out,-(%sp)
   85      0000 
   86               		.cfi_def_cfa_offset 52
@@ -144,8 +149,8 @@
   92               		.cfi_def_cfa_offset 64
   93 0080 4E92      		jsr (%a2)
   94               	.LVL4:
-  26:test3.c       ****     fprintf(com0out, "\n%80s\n", &s0);
-  95               		.loc 1 26 0 discriminator 1
+  31:test3.c       ****     fprintf(com0out, "\n%80s\n", &s0);
+  95               		.loc 1 31 0 discriminator 1
   96 0082 4FEF 001C 		lea (28,%sp),%sp
   97               		.cfi_def_cfa_offset 36
   98 0086 2E82      		move.l %d2,(%sp)
@@ -157,8 +162,8 @@
  102               		.cfi_def_cfa_offset 44
  103 0094 4E93      		jsr (%a3)
  104               	.LVL5:
-  27:test3.c       ****     fprintf(com1out, "\e[A\e[K");
- 105               		.loc 1 27 0 discriminator 1
+  32:test3.c       ****     fprintf(com1out, "\e[A\e[K");
+ 105               		.loc 1 32 0 discriminator 1
  106 0096 2F39 0000 		move.l com1out,-(%sp)
  106      0000 
  107               		.cfi_def_cfa_offset 48
@@ -171,23 +176,23 @@
  113               		.cfi_def_cfa_offset 60
  114 00aa 4E92      		jsr (%a2)
  115               	.LVL6:
-  28:test3.c       ****     fprintf(com1out, "\n%s\n", &s0);
- 116               		.loc 1 28 0 discriminator 1
+  33:test3.c       ****     fprintf(com1out, "\n%s\n", &s0);
+ 116               		.loc 1 33 0 discriminator 1
+68K GAS  /tmp/ccl6dwQc.s 			page 4
+
+
  117 00ac 2F02      		move.l %d2,-(%sp)
  118               		.cfi_def_cfa_offset 64
  119 00ae 4879 0000 		pea .LC4
  119      0000 
  120               		.cfi_def_cfa_offset 68
-68K GAS  /tmp/cck24UG8.s 			page 4
-
-
  121 00b4 2F39 0000 		move.l com1out,-(%sp)
  121      0000 
  122               		.cfi_def_cfa_offset 72
  123 00ba 4E93      		jsr (%a3)
  124               	.LVL7:
-  29:test3.c       ****     fprintf(com0out, "\x1b[0m");
- 125               		.loc 1 29 0 discriminator 1
+  34:test3.c       ****     fprintf(com0out, "\x1b[0m");
+ 125               		.loc 1 34 0 discriminator 1
  126 00bc 4FEF 0024 		lea (36,%sp),%sp
  127               		.cfi_def_cfa_offset 36
  128 00c0 2EB9 0000 		move.l com0out,(%sp)
@@ -201,8 +206,8 @@
  134               		.cfi_def_cfa_offset 48
  135 00d4 4E92      		jsr (%a2)
  136               	.LVL8:
-  30:test3.c       ****     fprintf(com1out, "\x1b[0m");
- 137               		.loc 1 30 0 discriminator 1
+  35:test3.c       ****     fprintf(com1out, "\x1b[0m");
+ 137               		.loc 1 35 0 discriminator 1
  138 00d6 2F39 0000 		move.l com1out,-(%sp)
  138      0000 
  139               		.cfi_def_cfa_offset 52
@@ -215,8 +220,8 @@
  145               		.cfi_def_cfa_offset 64
  146 00ea 4E92      		jsr (%a2)
  147               	.LVL9:
-  31:test3.c       ****     V(0);
- 148               		.loc 1 31 0 discriminator 1
+  36:test3.c       ****     V(0);
+ 148               		.loc 1 36 0 discriminator 1
  149 00ec 4FEF 001C 		lea (28,%sp),%sp
  150               		.cfi_def_cfa_offset 36
  151 00f0 4297      		clr.l (%sp)
@@ -224,8 +229,8 @@
  153               	.LVL10:
  154 00f4 588F      		addq.l #4,%sp
  155               		.cfi_def_cfa_offset 32
-  20:test3.c       ****     P(0);
- 156               		.loc 1 20 0 discriminator 1
+  21:test3.c       ****     //char *a = "A10";
+ 156               		.loc 1 21 0 discriminator 1
  157 00f6 2F02      		move.l %d2,-(%sp)
  158               		.cfi_def_cfa_offset 36
  159 00f8 4879 0000 		pea .LC0
@@ -233,20 +238,20 @@
  160               		.cfi_def_cfa_offset 40
  161 00fe 2F39 0000 		move.l com0in,-(%sp)
  161      0000 
+68K GAS  /tmp/ccl6dwQc.s 			page 5
+
+
  162               		.cfi_def_cfa_offset 44
  163 0104 4E96      		jsr (%a6)
  164               	.LVL11:
-  21:test3.c       ****     fprintf(com0out, "\e[A\e[K");
- 165               		.loc 1 21 0 discriminator 1
-68K GAS  /tmp/cck24UG8.s 			page 5
-
-
+  23:test3.c       ****     fprintf(com0out, "\e[A\e[K");
+ 165               		.loc 1 23 0 discriminator 1
  166 0106 42A7      		clr.l -(%sp)
  167               		.cfi_def_cfa_offset 48
  168 0108 4E95      		jsr (%a5)
  169               	.LVL12:
-  22:test3.c       ****     // フォントを赤色に
- 170               		.loc 1 22 0 discriminator 1
+  24:test3.c       ****     //if(strcmp(&s0,a)==0){
+ 170               		.loc 1 24 0 discriminator 1
  171 010a 2F39 0000 		move.l com0out,-(%sp)
  171      0000 
  172               		.cfi_def_cfa_offset 52
@@ -259,8 +264,8 @@
  178               		.cfi_def_cfa_offset 64
  179 011e 4E92      		jsr (%a2)
  180               	.LVL13:
-  24:test3.c       ****     fprintf(com1out, "\x1b[31m");
- 181               		.loc 1 24 0 discriminator 1
+  29:test3.c       ****     fprintf(com1out, "\x1b[31m");
+ 181               		.loc 1 29 0 discriminator 1
  182 0120 4FEF 001C 		lea (28,%sp),%sp
  183               		.cfi_def_cfa_offset 36
  184 0124 2EB9 0000 		move.l com0out,(%sp)
@@ -274,8 +279,8 @@
  190               		.cfi_def_cfa_offset 48
  191 0138 4E92      		jsr (%a2)
  192               	.LVL14:
-  25:test3.c       ****     fprintf(com0out, "\n%80s\n", &s0);
- 193               		.loc 1 25 0 discriminator 1
+  30:test3.c       ****     fprintf(com0out, "\n%80s\n", &s0);
+ 193               		.loc 1 30 0 discriminator 1
  194 013a 2F39 0000 		move.l com1out,-(%sp)
  194      0000 
  195               		.cfi_def_cfa_offset 52
@@ -288,24 +293,24 @@
  201               		.cfi_def_cfa_offset 64
  202 014e 4E92      		jsr (%a2)
  203               	.LVL15:
-  26:test3.c       ****     fprintf(com1out, "\e[A\e[K");
- 204               		.loc 1 26 0 discriminator 1
+  31:test3.c       ****     fprintf(com1out, "\e[A\e[K");
+ 204               		.loc 1 31 0 discriminator 1
  205 0150 4FEF 001C 		lea (28,%sp),%sp
  206               		.cfi_def_cfa_offset 36
  207 0154 2E82      		move.l %d2,(%sp)
+68K GAS  /tmp/ccl6dwQc.s 			page 6
+
+
  208 0156 4879 0000 		pea .LC3
  208      0000 
  209               		.cfi_def_cfa_offset 40
  210 015c 2F39 0000 		move.l com0out,-(%sp)
  210      0000 
-68K GAS  /tmp/cck24UG8.s 			page 6
-
-
  211               		.cfi_def_cfa_offset 44
  212 0162 4E93      		jsr (%a3)
  213               	.LVL16:
-  27:test3.c       ****     fprintf(com1out, "\n%s\n", &s0);
- 214               		.loc 1 27 0 discriminator 1
+  32:test3.c       ****     fprintf(com1out, "\n%s\n", &s0);
+ 214               		.loc 1 32 0 discriminator 1
  215 0164 2F39 0000 		move.l com1out,-(%sp)
  215      0000 
  216               		.cfi_def_cfa_offset 48
@@ -318,8 +323,8 @@
  222               		.cfi_def_cfa_offset 60
  223 0178 4E92      		jsr (%a2)
  224               	.LVL17:
-  28:test3.c       ****     fprintf(com0out, "\x1b[0m");
- 225               		.loc 1 28 0 discriminator 1
+  33:test3.c       ****     fprintf(com0out, "\x1b[0m");
+ 225               		.loc 1 33 0 discriminator 1
  226 017a 2F02      		move.l %d2,-(%sp)
  227               		.cfi_def_cfa_offset 64
  228 017c 4879 0000 		pea .LC4
@@ -330,8 +335,8 @@
  231               		.cfi_def_cfa_offset 72
  232 0188 4E93      		jsr (%a3)
  233               	.LVL18:
-  29:test3.c       ****     fprintf(com1out, "\x1b[0m");
- 234               		.loc 1 29 0 discriminator 1
+  34:test3.c       ****     fprintf(com1out, "\x1b[0m");
+ 234               		.loc 1 34 0 discriminator 1
  235 018a 4FEF 0024 		lea (36,%sp),%sp
  236               		.cfi_def_cfa_offset 36
  237 018e 2EB9 0000 		move.l com0out,(%sp)
@@ -345,24 +350,24 @@
  243               		.cfi_def_cfa_offset 48
  244 01a2 4E92      		jsr (%a2)
  245               	.LVL19:
-  30:test3.c       ****     V(0);
- 246               		.loc 1 30 0 discriminator 1
+  35:test3.c       ****     V(0);
+ 246               		.loc 1 35 0 discriminator 1
  247 01a4 2F39 0000 		move.l com1out,-(%sp)
  247      0000 
  248               		.cfi_def_cfa_offset 52
  249 01aa 4878 0004 		pea 4.w
  250               		.cfi_def_cfa_offset 56
  251 01ae 4878 0001 		pea 1.w
+68K GAS  /tmp/ccl6dwQc.s 			page 7
+
+
  252               		.cfi_def_cfa_offset 60
  253 01b2 4879 0000 		pea .LC5
  253      0000 
  254               		.cfi_def_cfa_offset 64
  255 01b8 4E92      		jsr (%a2)
-68K GAS  /tmp/cck24UG8.s 			page 7
-
-
  256               	.LVL20:
- 257               		.loc 1 31 0 discriminator 1
+ 257               		.loc 1 36 0 discriminator 1
  258 01ba 4FEF 001C 		lea (28,%sp),%sp
  259               		.cfi_def_cfa_offset 36
  260 01be 4297      		clr.l (%sp)
@@ -385,12 +390,12 @@
  276               		.type	task1, @function
  277               	task1:
  278               	.LFB5:
-  32:test3.c       ****     //V(0);
-  33:test3.c       **** }
-  34:test3.c       **** }
-  35:test3.c       **** 
-  36:test3.c       **** void task1(){
- 279               		.loc 1 36 0
+  37:test3.c       ****     //V(0);
+  38:test3.c       **** }
+  39:test3.c       **** }
+  40:test3.c       **** 
+  41:test3.c       **** void task1(){
+ 279               		.loc 1 41 0
  280               		.cfi_startproc
  281 01c8 598F      		subq.l #4,%sp
  282               		.cfi_def_cfa_offset 8
@@ -413,18 +418,18 @@
  296 01e4 47F9 0000 		lea fprintf,%a3
  296      0000 
  297 01ea 49F9 0000 		lea V,%a4
+68K GAS  /tmp/ccl6dwQc.s 			page 8
+
+
  297      0000 
  298               	.L6:
  299               	.LBB3:
-  37:test3.c       **** while(1){
-  38:test3.c       ****     //P(0);
-68K GAS  /tmp/cck24UG8.s 			page 8
-
-
-  39:test3.c       ****     char s1;
-  40:test3.c       ****     //fprintf(com1out, "\n%s\n","------------------------------------画面1から入力：--------
-  41:test3.c       ****     fscanf(com1in, "%s", &s1);
- 300               		.loc 1 41 0 discriminator 1
+  42:test3.c       **** while(1){
+  43:test3.c       ****     //P(0);
+  44:test3.c       ****     char s1;
+  45:test3.c       ****     //fprintf(com1out, "\n%s\n","------------------------------------画面1から入力：--------
+  46:test3.c       ****     fscanf(com1in, "%s", &s1);
+ 300               		.loc 1 46 0 discriminator 1
  301 01f0 2F02      		move.l %d2,-(%sp)
  302               		.cfi_def_cfa_offset 36
  303 01f2 4879 0000 		pea .LC0
@@ -435,14 +440,14 @@
  306               		.cfi_def_cfa_offset 44
  307 01fe 4E96      		jsr (%a6)
  308               	.LVL22:
-  42:test3.c       ****     P(0);
- 309               		.loc 1 42 0 discriminator 1
+  47:test3.c       ****     P(0);
+ 309               		.loc 1 47 0 discriminator 1
  310 0200 42A7      		clr.l -(%sp)
  311               		.cfi_def_cfa_offset 48
  312 0202 4E95      		jsr (%a5)
  313               	.LVL23:
-  43:test3.c       ****     fprintf(com1out, "\e[A\e[K");
- 314               		.loc 1 43 0 discriminator 1
+  48:test3.c       ****     fprintf(com1out, "\e[A\e[K");
+ 314               		.loc 1 48 0 discriminator 1
  315 0204 2F39 0000 		move.l com1out,-(%sp)
  315      0000 
  316               		.cfi_def_cfa_offset 52
@@ -455,9 +460,9 @@
  322               		.cfi_def_cfa_offset 64
  323 0218 4E92      		jsr (%a2)
  324               	.LVL24:
-  44:test3.c       ****     // フォントを緑色に
-  45:test3.c       ****     fprintf(com0out, "\x1b[32m");
- 325               		.loc 1 45 0 discriminator 1
+  49:test3.c       ****     // フォントを緑色に
+  50:test3.c       ****     fprintf(com0out, "\x1b[32m");
+ 325               		.loc 1 50 0 discriminator 1
  326 021a 4FEF 001C 		lea (28,%sp),%sp
  327               		.cfi_def_cfa_offset 36
  328 021e 2EB9 0000 		move.l com0out,(%sp)
@@ -471,16 +476,16 @@
  334               		.cfi_def_cfa_offset 48
  335 0232 4E92      		jsr (%a2)
  336               	.LVL25:
-  46:test3.c       ****     fprintf(com1out, "\x1b[32m");
- 337               		.loc 1 46 0 discriminator 1
+  51:test3.c       ****     fprintf(com1out, "\x1b[32m");
+ 337               		.loc 1 51 0 discriminator 1
+68K GAS  /tmp/ccl6dwQc.s 			page 9
+
+
  338 0234 2F39 0000 		move.l com1out,-(%sp)
  338      0000 
  339               		.cfi_def_cfa_offset 52
  340 023a 4878 0005 		pea 5.w
  341               		.cfi_def_cfa_offset 56
-68K GAS  /tmp/cck24UG8.s 			page 9
-
-
  342 023e 4878 0001 		pea 1.w
  343               		.cfi_def_cfa_offset 60
  344 0242 4879 0000 		pea .LC6
@@ -488,8 +493,8 @@
  345               		.cfi_def_cfa_offset 64
  346 0248 4E92      		jsr (%a2)
  347               	.LVL26:
-  47:test3.c       ****     fprintf(com0out, "\e[A\e[K");
- 348               		.loc 1 47 0 discriminator 1
+  52:test3.c       ****     fprintf(com0out, "\e[A\e[K");
+ 348               		.loc 1 52 0 discriminator 1
  349 024a 4FEF 001C 		lea (28,%sp),%sp
  350               		.cfi_def_cfa_offset 36
  351 024e 2EB9 0000 		move.l com0out,(%sp)
@@ -503,8 +508,8 @@
  357               		.cfi_def_cfa_offset 48
  358 0262 4E92      		jsr (%a2)
  359               	.LVL27:
-  48:test3.c       ****     fprintf(com0out, "\n%s\n", &s1);
- 360               		.loc 1 48 0 discriminator 1
+  53:test3.c       ****     fprintf(com0out, "\n%s\n", &s1);
+ 360               		.loc 1 53 0 discriminator 1
  361 0264 2F02      		move.l %d2,-(%sp)
  362               		.cfi_def_cfa_offset 52
  363 0266 4879 0000 		pea .LC4
@@ -515,8 +520,8 @@
  366               		.cfi_def_cfa_offset 60
  367 0272 4E93      		jsr (%a3)
  368               	.LVL28:
-  49:test3.c       ****     fprintf(com1out, "\n%80s\n", &s1);
- 369               		.loc 1 49 0 discriminator 1
+  54:test3.c       ****     fprintf(com1out, "\n%80s\n", &s1);
+ 369               		.loc 1 54 0 discriminator 1
  370 0274 2F02      		move.l %d2,-(%sp)
  371               		.cfi_def_cfa_offset 64
  372 0276 4879 0000 		pea .LC3
@@ -527,26 +532,26 @@
  375               		.cfi_def_cfa_offset 72
  376 0282 4E93      		jsr (%a3)
  377               	.LVL29:
-  50:test3.c       ****     fprintf(com0out, "\x1b[0m");
- 378               		.loc 1 50 0 discriminator 1
+  55:test3.c       ****     fprintf(com0out, "\x1b[0m");
+ 378               		.loc 1 55 0 discriminator 1
  379 0284 4FEF 0024 		lea (36,%sp),%sp
  380               		.cfi_def_cfa_offset 36
  381 0288 2EB9 0000 		move.l com0out,(%sp)
  381      0000 
+68K GAS  /tmp/ccl6dwQc.s 			page 10
+
+
  382 028e 4878 0004 		pea 4.w
  383               		.cfi_def_cfa_offset 40
  384 0292 4878 0001 		pea 1.w
  385               		.cfi_def_cfa_offset 44
  386 0296 4879 0000 		pea .LC5
-68K GAS  /tmp/cck24UG8.s 			page 10
-
-
  386      0000 
  387               		.cfi_def_cfa_offset 48
  388 029c 4E92      		jsr (%a2)
  389               	.LVL30:
-  51:test3.c       ****     fprintf(com1out, "\x1b[0m");
- 390               		.loc 1 51 0 discriminator 1
+  56:test3.c       ****     fprintf(com1out, "\x1b[0m");
+ 390               		.loc 1 56 0 discriminator 1
  391 029e 2F39 0000 		move.l com1out,-(%sp)
  391      0000 
  392               		.cfi_def_cfa_offset 52
@@ -559,8 +564,8 @@
  398               		.cfi_def_cfa_offset 64
  399 02b2 4E92      		jsr (%a2)
  400               	.LVL31:
-  52:test3.c       ****     V(0);
- 401               		.loc 1 52 0 discriminator 1
+  57:test3.c       ****     V(0);
+ 401               		.loc 1 57 0 discriminator 1
  402 02b4 4FEF 001C 		lea (28,%sp),%sp
  403               		.cfi_def_cfa_offset 36
  404 02b8 4297      		clr.l (%sp)
@@ -568,8 +573,8 @@
  406               	.LVL32:
  407 02bc 588F      		addq.l #4,%sp
  408               		.cfi_def_cfa_offset 32
-  41:test3.c       ****     P(0);
- 409               		.loc 1 41 0 discriminator 1
+  46:test3.c       ****     P(0);
+ 409               		.loc 1 46 0 discriminator 1
  410 02be 2F02      		move.l %d2,-(%sp)
  411               		.cfi_def_cfa_offset 36
  412 02c0 4879 0000 		pea .LC0
@@ -580,31 +585,31 @@
  415               		.cfi_def_cfa_offset 44
  416 02cc 4E96      		jsr (%a6)
  417               	.LVL33:
-  42:test3.c       ****     fprintf(com1out, "\e[A\e[K");
- 418               		.loc 1 42 0 discriminator 1
+  47:test3.c       ****     fprintf(com1out, "\e[A\e[K");
+ 418               		.loc 1 47 0 discriminator 1
  419 02ce 42A7      		clr.l -(%sp)
  420               		.cfi_def_cfa_offset 48
  421 02d0 4E95      		jsr (%a5)
  422               	.LVL34:
-  43:test3.c       ****     // フォントを緑色に
- 423               		.loc 1 43 0 discriminator 1
+  48:test3.c       ****     // フォントを緑色に
+ 423               		.loc 1 48 0 discriminator 1
  424 02d2 2F39 0000 		move.l com1out,-(%sp)
  424      0000 
  425               		.cfi_def_cfa_offset 52
  426 02d8 4878 0006 		pea 6.w
  427               		.cfi_def_cfa_offset 56
+68K GAS  /tmp/ccl6dwQc.s 			page 11
+
+
  428 02dc 4878 0001 		pea 1.w
  429               		.cfi_def_cfa_offset 60
  430 02e0 4879 0000 		pea .LC1
  430      0000 
  431               		.cfi_def_cfa_offset 64
-68K GAS  /tmp/cck24UG8.s 			page 11
-
-
  432 02e6 4E92      		jsr (%a2)
  433               	.LVL35:
-  45:test3.c       ****     fprintf(com1out, "\x1b[32m");
- 434               		.loc 1 45 0 discriminator 1
+  50:test3.c       ****     fprintf(com1out, "\x1b[32m");
+ 434               		.loc 1 50 0 discriminator 1
  435 02e8 4FEF 001C 		lea (28,%sp),%sp
  436               		.cfi_def_cfa_offset 36
  437 02ec 2EB9 0000 		move.l com0out,(%sp)
@@ -618,8 +623,8 @@
  443               		.cfi_def_cfa_offset 48
  444 0300 4E92      		jsr (%a2)
  445               	.LVL36:
-  46:test3.c       ****     fprintf(com0out, "\e[A\e[K");
- 446               		.loc 1 46 0 discriminator 1
+  51:test3.c       ****     fprintf(com0out, "\e[A\e[K");
+ 446               		.loc 1 51 0 discriminator 1
  447 0302 2F39 0000 		move.l com1out,-(%sp)
  447      0000 
  448               		.cfi_def_cfa_offset 52
@@ -632,8 +637,8 @@
  454               		.cfi_def_cfa_offset 64
  455 0316 4E92      		jsr (%a2)
  456               	.LVL37:
-  47:test3.c       ****     fprintf(com0out, "\n%s\n", &s1);
- 457               		.loc 1 47 0 discriminator 1
+  52:test3.c       ****     fprintf(com0out, "\n%s\n", &s1);
+ 457               		.loc 1 52 0 discriminator 1
  458 0318 4FEF 001C 		lea (28,%sp),%sp
  459               		.cfi_def_cfa_offset 36
  460 031c 2EB9 0000 		move.l com0out,(%sp)
@@ -647,23 +652,23 @@
  466               		.cfi_def_cfa_offset 48
  467 0330 4E92      		jsr (%a2)
  468               	.LVL38:
-  48:test3.c       ****     fprintf(com1out, "\n%80s\n", &s1);
- 469               		.loc 1 48 0 discriminator 1
+  53:test3.c       ****     fprintf(com1out, "\n%80s\n", &s1);
+ 469               		.loc 1 53 0 discriminator 1
  470 0332 2F02      		move.l %d2,-(%sp)
  471               		.cfi_def_cfa_offset 52
  472 0334 4879 0000 		pea .LC4
  472      0000 
+68K GAS  /tmp/ccl6dwQc.s 			page 12
+
+
  473               		.cfi_def_cfa_offset 56
  474 033a 2F39 0000 		move.l com0out,-(%sp)
  474      0000 
  475               		.cfi_def_cfa_offset 60
  476 0340 4E93      		jsr (%a3)
-68K GAS  /tmp/cck24UG8.s 			page 12
-
-
  477               	.LVL39:
-  49:test3.c       ****     fprintf(com0out, "\x1b[0m");
- 478               		.loc 1 49 0 discriminator 1
+  54:test3.c       ****     fprintf(com0out, "\x1b[0m");
+ 478               		.loc 1 54 0 discriminator 1
  479 0342 2F02      		move.l %d2,-(%sp)
  480               		.cfi_def_cfa_offset 64
  481 0344 4879 0000 		pea .LC3
@@ -674,8 +679,8 @@
  484               		.cfi_def_cfa_offset 72
  485 0350 4E93      		jsr (%a3)
  486               	.LVL40:
-  50:test3.c       ****     fprintf(com1out, "\x1b[0m");
- 487               		.loc 1 50 0 discriminator 1
+  55:test3.c       ****     fprintf(com1out, "\x1b[0m");
+ 487               		.loc 1 55 0 discriminator 1
  488 0352 4FEF 0024 		lea (36,%sp),%sp
  489               		.cfi_def_cfa_offset 36
  490 0356 2EB9 0000 		move.l com0out,(%sp)
@@ -689,8 +694,8 @@
  496               		.cfi_def_cfa_offset 48
  497 036a 4E92      		jsr (%a2)
  498               	.LVL41:
-  51:test3.c       ****     V(0);
- 499               		.loc 1 51 0 discriminator 1
+  56:test3.c       ****     V(0);
+ 499               		.loc 1 56 0 discriminator 1
  500 036c 2F39 0000 		move.l com1out,-(%sp)
  500      0000 
  501               		.cfi_def_cfa_offset 52
@@ -703,7 +708,7 @@
  507               		.cfi_def_cfa_offset 64
  508 0380 4E92      		jsr (%a2)
  509               	.LVL42:
- 510               		.loc 1 52 0 discriminator 1
+ 510               		.loc 1 57 0 discriminator 1
  511 0382 4FEF 001C 		lea (28,%sp),%sp
  512               		.cfi_def_cfa_offset 36
  513 0386 4297      		clr.l (%sp)
@@ -713,14 +718,14 @@
  517               		.cfi_def_cfa_offset 32
  518 038c 6000 FE62 		jra .L6
  519               	.LBE3:
+68K GAS  /tmp/ccl6dwQc.s 			page 13
+
+
  520               		.cfi_endproc
  521               	.LFE5:
  522               		.size	task1, .-task1
  523               		.section	.rodata.str1.1
  524               	.LC7:
-68K GAS  /tmp/cck24UG8.s 			page 13
-
-
  525 0027 7200      		.string	"r"
  526               	.LC8:
  527 0029 7700      		.string	"w"
@@ -730,14 +735,14 @@
  531               		.type	init_file, @function
  532               	init_file:
  533               	.LFB3:
-   8:test3.c       ****    com0in = fdopen(3, "r");
- 534               		.loc 1 8 0
+   9:test3.c       ****    com0in = fdopen(3, "r");
+ 534               		.loc 1 9 0
  535               		.cfi_startproc
  536 0390 2F0A      		move.l %a2,-(%sp)
  537               		.cfi_def_cfa_offset 8
  538               		.cfi_offset 10, -8
-   9:test3.c       ****    com0out = fdopen(3, "w");
- 539               		.loc 1 9 0
+  10:test3.c       ****    com0out = fdopen(3, "w");
+ 539               		.loc 1 10 0
  540 0392 4879 0000 		pea .LC7
  540      0000 
  541               		.cfi_def_cfa_offset 12
@@ -749,8 +754,8 @@
  546               	.LVL44:
  547 03a4 23C0 0000 		move.l %d0,com0in
  547      0000 
-  10:test3.c       ****    com1in = fdopen(4, "r");
- 548               		.loc 1 10 0
+  11:test3.c       ****    com1in = fdopen(4, "r");
+ 548               		.loc 1 11 0
  549 03aa 4879 0000 		pea .LC8
  549      0000 
  550               		.cfi_def_cfa_offset 20
@@ -760,8 +765,8 @@
  554               	.LVL45:
  555 03b6 23C0 0000 		move.l %d0,com0out
  555      0000 
-  11:test3.c       ****    com1out = fdopen(4, "w");
- 556               		.loc 1 11 0
+  12:test3.c       ****    com1out = fdopen(4, "w");
+ 556               		.loc 1 12 0
  557 03bc 4879 0000 		pea .LC7
  557      0000 
  558               		.cfi_def_cfa_offset 28
@@ -771,22 +776,22 @@
  562               	.LVL46:
  563 03c8 23C0 0000 		move.l %d0,com1in
  563      0000 
-  12:test3.c       **** }
- 564               		.loc 1 12 0
+  13:test3.c       **** }
+ 564               		.loc 1 13 0
+68K GAS  /tmp/ccl6dwQc.s 			page 14
+
+
  565 03ce 4879 0000 		pea .LC8
  565      0000 
  566               		.cfi_def_cfa_offset 36
  567 03d4 4878 0004 		pea 4.w
  568               		.cfi_def_cfa_offset 40
-68K GAS  /tmp/cck24UG8.s 			page 14
-
-
  569 03d8 4E92      		jsr (%a2)
  570               	.LVL47:
  571 03da 23C0 0000 		move.l %d0,com1out
  571      0000 
-  13:test3.c       **** 
- 572               		.loc 1 13 0
+  14:test3.c       **** 
+ 572               		.loc 1 14 0
  573 03e0 4FEF 0020 		lea (32,%sp),%sp
  574               		.cfi_def_cfa_offset 8
  575 03e4 245F      		move.l (%sp)+,%a2
@@ -800,31 +805,31 @@
  583               		.type	main, @function
  584               	main:
  585               	.LFB6:
-  53:test3.c       ****     //V(0);
-  54:test3.c       **** }
-  55:test3.c       **** }
-  56:test3.c       **** 
-  57:test3.c       **** 
-  58:test3.c       **** 
-  59:test3.c       **** int main(void){
- 586               		.loc 1 59 0
+  58:test3.c       ****     //V(0);
+  59:test3.c       **** }
+  60:test3.c       **** }
+  61:test3.c       **** 
+  62:test3.c       **** 
+  63:test3.c       **** 
+  64:test3.c       **** int main(void){
+ 586               		.loc 1 64 0
  587               		.cfi_startproc
  588 0000 2F0A      		move.l %a2,-(%sp)
  589               		.cfi_def_cfa_offset 8
  590               		.cfi_offset 10, -8
-  60:test3.c       ****   init_kernel();
- 591               		.loc 1 60 0
+  65:test3.c       ****   init_kernel();
+ 591               		.loc 1 65 0
  592 0002 4EB9 0000 		jsr init_kernel
  592      0000 
  593               	.LVL48:
-  61:test3.c       ****   init_file();
- 594               		.loc 1 61 0
+  66:test3.c       ****   init_file();
+ 594               		.loc 1 66 0
  595 0008 4EB9 0000 		jsr init_file
  595      0000 
  596               	.LVL49:
-  62:test3.c       **** 
-  63:test3.c       ****   set_task(task0);
- 597               		.loc 1 63 0
+  67:test3.c       **** 
+  68:test3.c       ****   set_task(task0);
+ 597               		.loc 1 68 0
  598 000e 4879 0000 		pea task0
  598      0000 
  599               		.cfi_def_cfa_offset 12
@@ -832,26 +837,26 @@
  600      0000 
  601 001a 4E92      		jsr (%a2)
  602               	.LVL50:
-  64:test3.c       ****   set_task(task1);
- 603               		.loc 1 64 0
+  69:test3.c       ****   set_task(task1);
+68K GAS  /tmp/ccl6dwQc.s 			page 15
+
+
+ 603               		.loc 1 69 0
  604 001c 4879 0000 		pea task1
  604      0000 
  605               		.cfi_def_cfa_offset 16
  606 0022 4E92      		jsr (%a2)
-68K GAS  /tmp/cck24UG8.s 			page 15
-
-
  607               	.LVL51:
-  65:test3.c       ****   begin_sch();  
- 608               		.loc 1 65 0
+  70:test3.c       ****   begin_sch();  
+ 608               		.loc 1 70 0
  609 0024 4EB9 0000 		jsr begin_sch
  609      0000 
  610               	.LVL52:
  611 002a 508F      		addq.l #8,%sp
  612               		.cfi_def_cfa_offset 8
-  66:test3.c       ****   return 0;
-  67:test3.c       **** }
- 613               		.loc 1 67 0
+  71:test3.c       ****   return 0;
+  72:test3.c       **** }
+ 613               		.loc 1 72 0
  614 002c 7000      		moveq #0,%d0
  615 002e 245F      		move.l (%sp)+,%a2
  616 0030 4E75      		rts
@@ -893,14 +898,14 @@
  652 0021 0000 0000 		.long	.Ldebug_line0
  653 0025 02        		.uleb128 0x2
  654 0026 01        		.byte	0x1
+68K GAS  /tmp/ccl6dwQc.s 			page 16
+
+
  655 0027 06        		.byte	0x6
  656 0028 0000 0000 		.long	.LASF0
  657 002c 02        		.uleb128 0x2
  658 002d 01        		.byte	0x1
  659 002e 08        		.byte	0x8
-68K GAS  /tmp/cck24UG8.s 			page 16
-
-
  660 002f 0000 0000 		.long	.LASF1
  661 0033 02        		.uleb128 0x2
  662 0034 02        		.byte	0x2
@@ -953,14 +958,14 @@
  709 008d 0000 0000 		.long	.LASF12
  710 0091 03        		.byte	0x3
  711 0092 91        		.byte	0x91
+68K GAS  /tmp/ccl6dwQc.s 			page 17
+
+
  712 0093 0000 0041 		.long	0x41
  713 0097 05        		.uleb128 0x5
  714 0098 0000 0000 		.long	.LASF13
  715 009c 04        		.byte	0x4
  716 009d 0165      		.word	0x165
-68K GAS  /tmp/cck24UG8.s 			page 17
-
-
  717 009f 0000 00A3 		.long	0xa3
  718 00a3 02        		.uleb128 0x2
  719 00a4 04        		.byte	0x4
@@ -1013,14 +1018,14 @@
  766 0100 00        		.byte	0
  767 0101 04        		.uleb128 0x4
  768 0102 0000 0000 		.long	.LASF20
+68K GAS  /tmp/ccl6dwQc.s 			page 18
+
+
  769 0106 03        		.byte	0x3
  770 0107 AB        		.byte	0xab
  771 0108 0000 00E0 		.long	0xe0
  772 010c 04        		.uleb128 0x4
  773 010d 0000 0000 		.long	.LASF21
-68K GAS  /tmp/cck24UG8.s 			page 18
-
-
  774 0111 03        		.byte	0x3
  775 0112 AF        		.byte	0xaf
  776 0113 0000 006B 		.long	0x6b
@@ -1073,14 +1078,14 @@
  823 0170 33        		.byte	0x33
  824 0171 0000 017D 		.long	0x17d
  825 0175 14        		.byte	0x14
+68K GAS  /tmp/ccl6dwQc.s 			page 19
+
+
  826 0176 00        		.byte	0
  827 0177 0F        		.uleb128 0xf
  828 0178 04        		.byte	0x4
  829 0179 0000 0124 		.long	0x124
  830 017d 08        		.uleb128 0x8
-68K GAS  /tmp/cck24UG8.s 			page 19
-
-
  831 017e 0000 0119 		.long	0x119
  832 0182 0000 018D 		.long	0x18d
  833 0186 09        		.uleb128 0x9
@@ -1133,14 +1138,14 @@
  880 01e2 0000 0000 		.long	.LASF35
  881 01e6 05        		.byte	0x5
  882 01e7 3F        		.byte	0x3f
+68K GAS  /tmp/ccl6dwQc.s 			page 20
+
+
  883 01e8 0000 0064 		.long	0x64
  884 01ec 18        		.byte	0x18
  885 01ed 0B        		.uleb128 0xb
  886 01ee 0000 0000 		.long	.LASF36
  887 01f2 05        		.byte	0x5
-68K GAS  /tmp/cck24UG8.s 			page 20
-
-
  888 01f3 40        		.byte	0x40
  889 01f4 0000 0064 		.long	0x64
  890 01f8 1C        		.byte	0x1c
@@ -1193,14 +1198,14 @@
  937 0257 0000 0000 		.long	.LASF43
  938 025b 0190      		.word	0x190
  939 025d 05        		.byte	0x5
+68K GAS  /tmp/ccl6dwQc.s 			page 21
+
+
  940 025e 5D        		.byte	0x5d
  941 025f 0000 0294 		.long	0x294
  942 0263 0B        		.uleb128 0xb
  943 0264 0000 0000 		.long	.LASF23
  944 0268 05        		.byte	0x5
-68K GAS  /tmp/cck24UG8.s 			page 21
-
-
  945 0269 5E        		.byte	0x5e
  946 026a 0000 0294 		.long	0x294
  947 026e 00        		.byte	0
@@ -1253,14 +1258,14 @@
  994 02ca 0000 0000 		.long	.LASF48
  995 02ce 05        		.byte	0x5
  996 02cf 77        		.byte	0x77
+68K GAS  /tmp/ccl6dwQc.s 			page 22
+
+
  997 02d0 0000 0064 		.long	0x64
  998 02d4 04        		.byte	0x4
  999 02d5 00        		.byte	0
  1000 02d6 0F        		.uleb128 0xf
  1001 02d7 04        		.byte	0x4
-68K GAS  /tmp/cck24UG8.s 			page 22
-
-
  1002 02d8 0000 002C 		.long	0x2c
  1003 02dc 0D        		.uleb128 0xd
  1004 02dd 0000 0000 		.long	.LASF49
@@ -1313,14 +1318,14 @@
  1051 0339 0B        		.uleb128 0xb
  1052 033a 0000 0000 		.long	.LASF53
  1053 033e 05        		.byte	0x5
+68K GAS  /tmp/ccl6dwQc.s 			page 23
+
+
  1054 033f C3        		.byte	0xc3
  1055 0340 0000 0117 		.long	0x117
  1056 0344 1C        		.byte	0x1c
  1057 0345 0B        		.uleb128 0xb
  1058 0346 0000 0000 		.long	.LASF54
-68K GAS  /tmp/cck24UG8.s 			page 23
-
-
  1059 034a 05        		.byte	0x5
  1060 034b C5        		.byte	0xc5
  1061 034c 0000 0569 		.long	0x569
@@ -1373,14 +1378,14 @@
  1108 03ab D4        		.byte	0xd4
  1109 03ac 0000 05EC 		.long	0x5ec
  1110 03b0 43        		.byte	0x43
+68K GAS  /tmp/ccl6dwQc.s 			page 24
+
+
  1111 03b1 0E        		.uleb128 0xe
  1112 03b2 5F6C 6200 		.string	"_lb"
  1113 03b6 05        		.byte	0x5
  1114 03b7 D7        		.byte	0xd7
  1115 03b8 0000 02B1 		.long	0x2b1
-68K GAS  /tmp/cck24UG8.s 			page 24
-
-
  1116 03bc 44        		.byte	0x44
  1117 03bd 0B        		.uleb128 0xb
  1118 03be 0000 0000 		.long	.LASF60
@@ -1433,14 +1438,14 @@
  1165 0423 00        		.byte	0
  1166 0424 0F        		.uleb128 0xf
  1167 0425 04        		.byte	0x4
+68K GAS  /tmp/ccl6dwQc.s 			page 25
+
+
  1168 0426 0000 042A 		.long	0x42a
  1169 042a 15        		.uleb128 0x15
  1170 042b 0000 0000 		.long	.LASF66
  1171 042f 0422      		.word	0x422
  1172 0431 05        		.byte	0x5
-68K GAS  /tmp/cck24UG8.s 			page 25
-
-
  1173 0432 0239      		.word	0x239
  1174 0434 0000 055C 		.long	0x55c
  1175 0438 16        		.uleb128 0x16
@@ -1493,14 +1498,14 @@
  1222 049f 32        		.byte	0x32
  1223 04a0 16        		.uleb128 0x16
  1224 04a1 0000 0000 		.long	.LASF75
+68K GAS  /tmp/ccl6dwQc.s 			page 26
+
+
  1225 04a5 05        		.byte	0x5
  1226 04a6 0249      		.word	0x249
  1227 04a8 0000 0064 		.long	0x64
  1228 04ac 36        		.byte	0x36
  1229 04ad 16        		.uleb128 0x16
-68K GAS  /tmp/cck24UG8.s 			page 26
-
-
  1230 04ae 0000 0000 		.long	.LASF76
  1231 04b2 05        		.byte	0x5
  1232 04b3 024B      		.word	0x24b
@@ -1553,14 +1558,14 @@
  1279 051a 05        		.byte	0x5
  1280 051b 027C      		.word	0x27c
  1281 051d 0000 0294 		.long	0x294
+68K GAS  /tmp/ccl6dwQc.s 			page 27
+
+
  1282 0521 0146      		.word	0x146
  1283 0523 17        		.uleb128 0x17
  1284 0524 0000 0000 		.long	.LASF84
  1285 0528 05        		.byte	0x5
  1286 0529 027D      		.word	0x27d
-68K GAS  /tmp/cck24UG8.s 			page 27
-
-
  1287 052b 0000 0256 		.long	0x256
  1288 052f 014A      		.word	0x14a
  1289 0531 17        		.uleb128 0x17
@@ -1613,14 +1618,14 @@
  1336 0599 04        		.byte	0x4
  1337 059a 0000 056F 		.long	0x56f
  1338 059e 13        		.uleb128 0x13
+68K GAS  /tmp/ccl6dwQc.s 			page 28
+
+
  1339 059f 0000 0081 		.long	0x81
  1340 05a3 0000 05BC 		.long	0x5bc
  1341 05a7 14        		.uleb128 0x14
  1342 05a8 0000 0424 		.long	0x424
  1343 05ac 14        		.uleb128 0x14
-68K GAS  /tmp/cck24UG8.s 			page 28
-
-
  1344 05ad 0000 0117 		.long	0x117
  1345 05b1 14        		.uleb128 0x14
  1346 05b2 0000 0081 		.long	0x81
@@ -1673,14 +1678,14 @@
  1393 061d 0000 063D 		.long	0x63d
  1394 0621 00        		.byte	0
  1395 0622 16        		.uleb128 0x16
+68K GAS  /tmp/ccl6dwQc.s 			page 29
+
+
  1396 0623 0000 0000 		.long	.LASF91
  1397 0627 05        		.byte	0x5
  1398 0628 0126      		.word	0x126
  1399 062a 0000 0064 		.long	0x64
  1400 062e 04        		.byte	0x4
-68K GAS  /tmp/cck24UG8.s 			page 29
-
-
  1401 062f 16        		.uleb128 0x16
  1402 0630 0000 0000 		.long	.LASF92
  1403 0634 05        		.byte	0x5
@@ -1733,14 +1738,14 @@
  1450 0693 0000 078F 		.long	0x78f
  1451 0697 16        		.uleb128 0x16
  1452 0698 0000 0000 		.long	.LASF97
+68K GAS  /tmp/ccl6dwQc.s 			page 30
+
+
  1453 069c 05        		.byte	0x5
  1454 069d 025B      		.word	0x25b
  1455 069f 0000 00A3 		.long	0xa3
  1456 06a3 00        		.byte	0
  1457 06a4 16        		.uleb128 0x16
-68K GAS  /tmp/cck24UG8.s 			page 30
-
-
  1458 06a5 0000 0000 		.long	.LASF98
  1459 06a9 05        		.byte	0x5
  1460 06aa 025C      		.word	0x25c
@@ -1793,14 +1798,14 @@
  1507 0711 05        		.byte	0x5
  1508 0712 0264      		.word	0x264
  1509 0714 0000 0101 		.long	0x101
+68K GAS  /tmp/ccl6dwQc.s 			page 31
+
+
  1510 0718 70        		.byte	0x70
  1511 0719 16        		.uleb128 0x16
  1512 071a 0000 0000 		.long	.LASF107
  1513 071e 05        		.byte	0x5
  1514 071f 0265      		.word	0x265
-68K GAS  /tmp/cck24UG8.s 			page 31
-
-
  1515 0721 0000 079F 		.long	0x79f
  1516 0725 78        		.byte	0x78
  1517 0726 16        		.uleb128 0x16
@@ -1853,14 +1858,14 @@
  1564 078d C4        		.byte	0xc4
  1565 078e 00        		.byte	0
  1566 078f 08        		.uleb128 0x8
+68K GAS  /tmp/ccl6dwQc.s 			page 32
+
+
  1567 0790 0000 0562 		.long	0x562
  1568 0794 0000 079F 		.long	0x79f
  1569 0798 09        		.uleb128 0x9
  1570 0799 0000 00D9 		.long	0xd9
  1571 079d 19        		.byte	0x19
-68K GAS  /tmp/cck24UG8.s 			page 32
-
-
  1572 079e 00        		.byte	0
  1573 079f 08        		.uleb128 0x8
  1574 07a0 0000 0562 		.long	0x562
@@ -1913,14 +1918,14 @@
  1621 0805 05        		.byte	0x5
  1622 0806 0257      		.word	0x257
  1623 0808 0000 0825 		.long	0x825
+68K GAS  /tmp/ccl6dwQc.s 			page 33
+
+
  1624 080c 1C        		.uleb128 0x1c
  1625 080d 0000 0000 		.long	.LASF66
  1626 0811 05        		.byte	0x5
  1627 0812 026E      		.word	0x26e
  1628 0814 0000 068E 		.long	0x68e
-68K GAS  /tmp/cck24UG8.s 			page 33
-
-
  1629 0818 1C        		.uleb128 0x1c
  1630 0819 0000 0000 		.long	.LASF118
  1631 081d 05        		.byte	0x5
@@ -1973,14 +1978,14 @@
  1678 0883 06        		.byte	0x6
  1679 0884 42        		.byte	0x42
  1680 0885 0000 05FC 		.long	0x5fc
+68K GAS  /tmp/ccl6dwQc.s 			page 34
+
+
  1681 0889 04        		.uleb128 0x4
  1682 088a 0000 0000 		.long	.LASF120
  1683 088e 07        		.byte	0x7
  1684 088f 10        		.byte	0x10
  1685 0890 0000 0064 		.long	0x64
-68K GAS  /tmp/cck24UG8.s 			page 34
-
-
  1686 0894 0A        		.uleb128 0xa
  1687 0895 08        		.byte	0x8
  1688 0896 07        		.byte	0x7
@@ -2033,14 +2038,14 @@
  1735 08f2 1C        		.byte	0x1c
  1736 08f3 0000 0064 		.long	0x64
  1737 08f7 0C        		.byte	0xc
+68K GAS  /tmp/ccl6dwQc.s 			page 35
+
+
  1738 08f8 0B        		.uleb128 0xb
  1739 08f9 0000 0000 		.long	.LASF128
  1740 08fd 07        		.byte	0x7
  1741 08fe 1D        		.byte	0x1d
  1742 08ff 0000 0889 		.long	0x889
-68K GAS  /tmp/cck24UG8.s 			page 35
-
-
  1743 0903 10        		.byte	0x10
  1744 0904 00        		.byte	0
  1745 0905 1F        		.uleb128 0x1f
@@ -2088,22 +2093,22 @@
  1787 095c 23        		.uleb128 0x23
  1788 095d 0000 0000 		.long	.LASF133
  1789 0961 01        		.byte	0x1
- 1790 0962 0F        		.byte	0xf
+ 1790 0962 10        		.byte	0x10
  1791 0963 0000 0000 		.long	.LFB4
  1792 0967 0000 01C8 		.long	.LFE4-.LFB4
  1793 096b 01        		.uleb128 0x1
  1794 096c 9C        		.byte	0x9c
+68K GAS  /tmp/ccl6dwQc.s 			page 36
+
+
  1795 096d 0000 0989 		.long	0x989
  1796 0971 24        		.uleb128 0x24
  1797 0972 0000 0000 		.long	.LBB2
  1798 0976 0000 01A0 		.long	.LBE2-.LBB2
  1799 097a 25        		.uleb128 0x25
-68K GAS  /tmp/cck24UG8.s 			page 36
-
-
  1800 097b 7330 00   		.string	"s0"
  1801 097e 01        		.byte	0x1
- 1802 097f 12        		.byte	0x12
+ 1802 097f 13        		.byte	0x13
  1803 0980 0000 0562 		.long	0x562
  1804 0984 02        		.uleb128 0x2
  1805 0985 91        		.byte	0x91
@@ -2113,7 +2118,7 @@
  1809 0989 23        		.uleb128 0x23
  1810 098a 0000 0000 		.long	.LASF134
  1811 098e 01        		.byte	0x1
- 1812 098f 24        		.byte	0x24
+ 1812 098f 29        		.byte	0x29
  1813 0990 0000 0000 		.long	.LFB5
  1814 0994 0000 01C8 		.long	.LFE5-.LFB5
  1815 0998 01        		.uleb128 0x1
@@ -2125,7 +2130,7 @@
  1821 09a7 25        		.uleb128 0x25
  1822 09a8 7331 00   		.string	"s1"
  1823 09ab 01        		.byte	0x1
- 1824 09ac 27        		.byte	0x27
+ 1824 09ac 2C        		.byte	0x2c
  1825 09ad 0000 0562 		.long	0x562
  1826 09b1 02        		.uleb128 0x2
  1827 09b2 91        		.byte	0x91
@@ -2135,7 +2140,7 @@
  1831 09b6 26        		.uleb128 0x26
  1832 09b7 0000 0000 		.long	.LASF153
  1833 09bb 01        		.byte	0x1
- 1834 09bc 08        		.byte	0x8
+ 1834 09bc 09        		.byte	0x9
  1835 09bd 0000 0000 		.long	.LFB3
  1836 09c1 0000 0058 		.long	.LFE3-.LFB3
  1837 09c5 01        		.uleb128 0x1
@@ -2153,14 +2158,14 @@
  1849 09da 00        		.sleb128 0
  1850 09db 27        		.uleb128 0x27
  1851 09dc 0000 0000 		.long	.LVL46
+68K GAS  /tmp/ccl6dwQc.s 			page 37
+
+
  1852 09e0 02        		.uleb128 0x2
  1853 09e1 7A        		.byte	0x7a
  1854 09e2 00        		.sleb128 0
  1855 09e3 27        		.uleb128 0x27
  1856 09e4 0000 0000 		.long	.LVL47
-68K GAS  /tmp/cck24UG8.s 			page 37
-
-
  1857 09e8 02        		.uleb128 0x2
  1858 09e9 7A        		.byte	0x7a
  1859 09ea 00        		.sleb128 0
@@ -2168,7 +2173,7 @@
  1861 09ec 28        		.uleb128 0x28
  1862 09ed 0000 0000 		.long	.LASF154
  1863 09f1 01        		.byte	0x1
- 1864 09f2 3B        		.byte	0x3b
+ 1864 09f2 40        		.byte	0x40
  1865 09f3 0000 0064 		.long	0x64
  1866 09f7 0000 0000 		.long	.LFB6
  1867 09fb 0000 0032 		.long	.LFE6-.LFB6
@@ -2213,14 +2218,14 @@
  1906 0a53 07        		.byte	0x7
  1907 0a54 27        		.byte	0x27
  1908 0a55 0000 0889 		.long	0x889
+68K GAS  /tmp/ccl6dwQc.s 			page 38
+
+
  1909 0a59 05        		.uleb128 0x5
  1910 0a5a 03        		.byte	0x3
  1911 0a5b 0000 0000 		.long	new_task
  1912 0a5f 2B        		.uleb128 0x2b
  1913 0a60 0000 0000 		.long	.LASF138
-68K GAS  /tmp/cck24UG8.s 			page 38
-
-
  1914 0a64 07        		.byte	0x7
  1915 0a65 28        		.byte	0x28
  1916 0a66 0000 0889 		.long	0x889
@@ -2273,20 +2278,20 @@
  1963 0ad1 06        		.byte	0x6
  1964 0ad2 00        		.byte	0
  1965 0ad3 2B        		.uleb128 0x2b
+68K GAS  /tmp/ccl6dwQc.s 			page 39
+
+
  1966 0ad4 0000 0000 		.long	.LASF142
  1967 0ad8 07        		.byte	0x7
  1968 0ad9 2F        		.byte	0x2f
  1969 0ada 0000 0AC3 		.long	0xac3
  1970 0ade 05        		.uleb128 0x5
-68K GAS  /tmp/cck24UG8.s 			page 39
-
-
  1971 0adf 03        		.byte	0x3
  1972 0ae0 0000 0000 		.long	stacks
  1973 0ae4 2B        		.uleb128 0x2b
  1974 0ae5 0000 0000 		.long	.LASF143
  1975 0ae9 01        		.byte	0x1
- 1976 0aea 03        		.byte	0x3
+ 1976 0aea 04        		.byte	0x4
  1977 0aeb 0000 0AF5 		.long	0xaf5
  1978 0aef 05        		.uleb128 0x5
  1979 0af0 03        		.byte	0x3
@@ -2297,7 +2302,7 @@
  1984 0afb 2B        		.uleb128 0x2b
  1985 0afc 0000 0000 		.long	.LASF144
  1986 0b00 01        		.byte	0x1
- 1987 0b01 04        		.byte	0x4
+ 1987 0b01 05        		.byte	0x5
  1988 0b02 0000 0AF5 		.long	0xaf5
  1989 0b06 05        		.uleb128 0x5
  1990 0b07 03        		.byte	0x3
@@ -2305,7 +2310,7 @@
  1992 0b0c 2B        		.uleb128 0x2b
  1993 0b0d 0000 0000 		.long	.LASF145
  1994 0b11 01        		.byte	0x1
- 1995 0b12 05        		.byte	0x5
+ 1995 0b12 06        		.byte	0x6
  1996 0b13 0000 0AF5 		.long	0xaf5
  1997 0b17 05        		.uleb128 0x5
  1998 0b18 03        		.byte	0x3
@@ -2313,7 +2318,7 @@
  2000 0b1d 2B        		.uleb128 0x2b
  2001 0b1e 0000 0000 		.long	.LASF146
  2002 0b22 01        		.byte	0x1
- 2003 0b23 06        		.byte	0x6
+ 2003 0b23 07        		.byte	0x7
  2004 0b24 0000 0AF5 		.long	0xaf5
  2005 0b28 05        		.uleb128 0x5
  2006 0b29 03        		.byte	0x3
@@ -2333,14 +2338,14 @@
  2020               	.Ldebug_abbrev0:
  2021 0000 01        		.uleb128 0x1
  2022 0001 11        		.uleb128 0x11
+68K GAS  /tmp/ccl6dwQc.s 			page 40
+
+
  2023 0002 01        		.byte	0x1
  2024 0003 25        		.uleb128 0x25
  2025 0004 0E        		.uleb128 0xe
  2026 0005 13        		.uleb128 0x13
  2027 0006 0B        		.uleb128 0xb
-68K GAS  /tmp/cck24UG8.s 			page 40
-
-
  2028 0007 03        		.uleb128 0x3
  2029 0008 0E        		.uleb128 0xe
  2030 0009 1B        		.uleb128 0x1b
@@ -2393,14 +2398,14 @@
  2077 0038 00        		.byte	0
  2078 0039 03        		.uleb128 0x3
  2079 003a 0E        		.uleb128 0xe
+68K GAS  /tmp/ccl6dwQc.s 			page 41
+
+
  2080 003b 3A        		.uleb128 0x3a
  2081 003c 0B        		.uleb128 0xb
  2082 003d 3B        		.uleb128 0x3b
  2083 003e 05        		.uleb128 0x5
  2084 003f 49        		.uleb128 0x49
-68K GAS  /tmp/cck24UG8.s 			page 41
-
-
  2085 0040 13        		.uleb128 0x13
  2086 0041 00        		.byte	0
  2087 0042 00        		.byte	0
@@ -2453,14 +2458,14 @@
  2134 0071 01        		.byte	0x1
  2135 0072 0B        		.uleb128 0xb
  2136 0073 0B        		.uleb128 0xb
+68K GAS  /tmp/ccl6dwQc.s 			page 42
+
+
  2137 0074 3A        		.uleb128 0x3a
  2138 0075 0B        		.uleb128 0xb
  2139 0076 3B        		.uleb128 0x3b
  2140 0077 0B        		.uleb128 0xb
  2141 0078 01        		.uleb128 0x1
-68K GAS  /tmp/cck24UG8.s 			page 42
-
-
  2142 0079 13        		.uleb128 0x13
  2143 007a 00        		.byte	0
  2144 007b 00        		.byte	0
@@ -2513,14 +2518,14 @@
  2191 00aa 49        		.uleb128 0x49
  2192 00ab 13        		.uleb128 0x13
  2193 00ac 38        		.uleb128 0x38
+68K GAS  /tmp/ccl6dwQc.s 			page 43
+
+
  2194 00ad 0B        		.uleb128 0xb
  2195 00ae 00        		.byte	0
  2196 00af 00        		.byte	0
  2197 00b0 0F        		.uleb128 0xf
  2198 00b1 0F        		.uleb128 0xf
-68K GAS  /tmp/cck24UG8.s 			page 43
-
-
  2199 00b2 00        		.byte	0
  2200 00b3 0B        		.uleb128 0xb
  2201 00b4 0B        		.uleb128 0xb
@@ -2573,14 +2578,14 @@
  2248 00e3 49        		.uleb128 0x49
  2249 00e4 13        		.uleb128 0x13
  2250 00e5 01        		.uleb128 0x1
+68K GAS  /tmp/ccl6dwQc.s 			page 44
+
+
  2251 00e6 13        		.uleb128 0x13
  2252 00e7 00        		.byte	0
  2253 00e8 00        		.byte	0
  2254 00e9 14        		.uleb128 0x14
  2255 00ea 05        		.uleb128 0x5
-68K GAS  /tmp/cck24UG8.s 			page 44
-
-
  2256 00eb 00        		.byte	0
  2257 00ec 49        		.uleb128 0x49
  2258 00ed 13        		.uleb128 0x13
@@ -2633,14 +2638,14 @@
  2305 011c 00        		.byte	0
  2306 011d 18        		.uleb128 0x18
  2307 011e 26        		.uleb128 0x26
+68K GAS  /tmp/ccl6dwQc.s 			page 45
+
+
  2308 011f 00        		.byte	0
  2309 0120 49        		.uleb128 0x49
  2310 0121 13        		.uleb128 0x13
  2311 0122 00        		.byte	0
  2312 0123 00        		.byte	0
-68K GAS  /tmp/cck24UG8.s 			page 45
-
-
  2313 0124 19        		.uleb128 0x19
  2314 0125 13        		.uleb128 0x13
  2315 0126 01        		.byte	0x1
@@ -2693,14 +2698,14 @@
  2362 0155 05        		.uleb128 0x5
  2363 0156 49        		.uleb128 0x49
  2364 0157 13        		.uleb128 0x13
+68K GAS  /tmp/ccl6dwQc.s 			page 46
+
+
  2365 0158 00        		.byte	0
  2366 0159 00        		.byte	0
  2367 015a 1D        		.uleb128 0x1d
  2368 015b 13        		.uleb128 0x13
  2369 015c 00        		.byte	0
-68K GAS  /tmp/cck24UG8.s 			page 46
-
-
  2370 015d 03        		.uleb128 0x3
  2371 015e 0E        		.uleb128 0xe
  2372 015f 3C        		.uleb128 0x3c
@@ -2753,14 +2758,14 @@
  2419 018e 23        		.uleb128 0x23
  2420 018f 2E        		.uleb128 0x2e
  2421 0190 01        		.byte	0x1
+68K GAS  /tmp/ccl6dwQc.s 			page 47
+
+
  2422 0191 3F        		.uleb128 0x3f
  2423 0192 19        		.uleb128 0x19
  2424 0193 03        		.uleb128 0x3
  2425 0194 0E        		.uleb128 0xe
  2426 0195 3A        		.uleb128 0x3a
-68K GAS  /tmp/cck24UG8.s 			page 47
-
-
  2427 0196 0B        		.uleb128 0xb
  2428 0197 3B        		.uleb128 0x3b
  2429 0198 0B        		.uleb128 0xb
@@ -2813,14 +2818,14 @@
  2476 01c9 0B        		.uleb128 0xb
  2477 01ca 3B        		.uleb128 0x3b
  2478 01cb 0B        		.uleb128 0xb
+68K GAS  /tmp/ccl6dwQc.s 			page 48
+
+
  2479 01cc 11        		.uleb128 0x11
  2480 01cd 01        		.uleb128 0x1
  2481 01ce 12        		.uleb128 0x12
  2482 01cf 06        		.uleb128 0x6
  2483 01d0 40        		.uleb128 0x40
-68K GAS  /tmp/cck24UG8.s 			page 48
-
-
  2484 01d1 18        		.uleb128 0x18
  2485 01d2 9742      		.uleb128 0x2117
  2486 01d4 19        		.uleb128 0x19
@@ -2873,14 +2878,14 @@
  2533 0209 13        		.uleb128 0x13
  2534 020a 00        		.byte	0
  2535 020b 00        		.byte	0
+68K GAS  /tmp/ccl6dwQc.s 			page 49
+
+
  2536 020c 2A        		.uleb128 0x2a
  2537 020d 34        		.uleb128 0x34
  2538 020e 00        		.byte	0
  2539 020f 03        		.uleb128 0x3
  2540 0210 0E        		.uleb128 0xe
-68K GAS  /tmp/cck24UG8.s 			page 49
-
-
  2541 0211 3A        		.uleb128 0x3a
  2542 0212 0B        		.uleb128 0xb
  2543 0213 3B        		.uleb128 0x3b
@@ -2933,14 +2938,14 @@
  2590 0004 0002      		.word	0x2
  2591 0006 0000 0000 		.long	.Ldebug_info0
  2592 000a 04        		.byte	0x4
+68K GAS  /tmp/ccl6dwQc.s 			page 50
+
+
  2593 000b 00        		.byte	0
  2594 000c 0000      		.word	0
  2595 000e 0000      		.word	0
  2596 0010 0000 0000 		.long	.Ltext0
  2597 0014 0000 03E8 		.long	.Letext0-.Ltext0
-68K GAS  /tmp/cck24UG8.s 			page 50
-
-
  2598 0018 0000 0000 		.long	.LFB6
  2599 001c 0000 0032 		.long	.LFE6-.LFB6
  2600 0020 0000 0000 		.long	0
@@ -2993,14 +2998,14 @@
  2630      7274 6F6D 
  2630      6273 5F73 
  2630      7461 7465 
+68K GAS  /tmp/ccl6dwQc.s 			page 51
+
+
  2630      00
  2631               	.LASF7:
  2632 0058 6C6F 6E67 		.string	"long long unsigned int"
  2632      206C 6F6E 
  2632      6720 756E 
-68K GAS  /tmp/cck24UG8.s 			page 51
-
-
  2632      7369 676E 
  2632      6564 2069 
  2633               	.LASF147:
@@ -3053,14 +3058,14 @@
  2656      332E 6300 
  2657               	.LASF47:
  2658 00ec 5F62 6173 		.string	"_base"
+68K GAS  /tmp/ccl6dwQc.s 			page 52
+
+
  2658      6500 
  2659               	.LASF31:
  2660 00f2 5F5F 746D 		.string	"__tm_hour"
  2660      5F68 6F75 
  2660      7200 
-68K GAS  /tmp/cck24UG8.s 			page 52
-
-
  2661               	.LASF87:
  2662 00fc 5F5F 7366 		.string	"__sf"
  2662      00
@@ -3113,14 +3118,14 @@
  2690      636B 00
  2691               	.LASF112:
  2692 0177 5F6D 6273 		.string	"_mbsrtowcs_state"
+68K GAS  /tmp/ccl6dwQc.s 			page 53
+
+
  2692      7274 6F77 
  2692      6373 5F73 
  2692      7461 7465 
  2692      00
  2693               	.LASF110:
-68K GAS  /tmp/cck24UG8.s 			page 53
-
-
  2694 0188 5F6D 6272 		.string	"_mbrlen_state"
  2694      6C65 6E5F 
  2694      7374 6174 
@@ -3173,14 +3178,14 @@
  2720 0233 756E 7369 		.string	"unsigned int"
  2720      676E 6564 
  2720      2069 6E74 
+68K GAS  /tmp/ccl6dwQc.s 			page 54
+
+
  2720      00
  2721               	.LASF141:
  2722 0240 7461 736B 		.string	"task_tab"
  2722      5F74 6162 
  2722      00
-68K GAS  /tmp/cck24UG8.s 			page 54
-
-
  2723               	.LASF16:
  2724 0249 5F5F 7763 		.string	"__wchb"
  2724      6862 00
@@ -3233,14 +3238,14 @@
  2749               	.LASF120:
  2750 02c8 5441 534B 		.string	"TASK_ID_TYPE"
  2750      5F49 445F 
+68K GAS  /tmp/ccl6dwQc.s 			page 55
+
+
  2750      5459 5045 
  2750      00
  2751               	.LASF108:
  2752 02d5 5F73 6967 		.string	"_signal_buf"
  2752      6E61 6C5F 
-68K GAS  /tmp/cck24UG8.s 			page 55
-
-
  2752      6275 6600 
  2753               	.LASF99:
  2754 02e1 5F61 7363 		.string	"_asctime_buf"
@@ -3293,14 +3298,14 @@
  2780      7479 7065 
  2780      00
  2781               	.LASF116:
+68K GAS  /tmp/ccl6dwQc.s 			page 56
+
+
  2782 0355 5F6E 6578 		.string	"_nextf"
  2782      7466 00
  2783               	.LASF33:
  2784 035c 5F5F 746D 		.string	"__tm_mon"
  2784      5F6D 6F6E 
-68K GAS  /tmp/cck24UG8.s 			page 56
-
-
  2784      00
  2785               	.LASF43:
  2786 0365 5F61 7465 		.string	"_atexit"
@@ -3353,14 +3358,14 @@
  2808      00
  2809               	.LASF143:
  2810 0402 636F 6D30 		.string	"com0in"
+68K GAS  /tmp/ccl6dwQc.s 			page 57
+
+
  2810      696E 00
  2811               	.LASF115:
  2812 0409 5F68 5F65 		.string	"_h_errno"
  2812      7272 6E6F 
  2812      00
-68K GAS  /tmp/cck24UG8.s 			page 57
-
-
  2813               	.LASF2:
  2814 0412 7368 6F72 		.string	"short int"
  2814      7420 696E 
@@ -3413,14 +3418,14 @@
  2841               	.LASF76:
  2842 0486 5F5F 636C 		.string	"__cleanup"
  2842      6561 6E75 
+68K GAS  /tmp/ccl6dwQc.s 			page 58
+
+
  2842      7000 
  2843               	.LASF73:
  2844 0490 5F75 6E73 		.string	"_unspecified_locale_info"
  2844      7065 6369 
  2844      6669 6564 
-68K GAS  /tmp/cck24UG8.s 			page 58
-
-
  2844      5F6C 6F63 
  2844      616C 655F 
  2845               	.LASF24:
@@ -3473,14 +3478,14 @@
  2874 051a 5F6E 6578 		.string	"_next"
  2874      7400 
  2875               	.LASF98:
+68K GAS  /tmp/ccl6dwQc.s 			page 59
+
+
  2876 0520 5F73 7472 		.string	"_strtok_last"
  2876      746F 6B5F 
  2876      6C61 7374 
  2876      00
  2877               	.LASF41:
-68K GAS  /tmp/cck24UG8.s 			page 59
-
-
  2878 052d 5F66 6E74 		.string	"_fntypes"
  2878      7970 6573 
  2878      00
@@ -3533,14 +3538,14 @@
  2904      7365 6400 
  2905               	.LASF37:
  2906 05a4 5F5F 746D 		.string	"__tm_isdst"
+68K GAS  /tmp/ccl6dwQc.s 			page 60
+
+
  2906      5F69 7364 
  2906      7374 00
  2907               	.LASF100:
  2908 05af 5F6C 6F63 		.string	"_localtime_buf"
  2908      616C 7469 
-68K GAS  /tmp/cck24UG8.s 			page 60
-
-
  2908      6D65 5F62 
  2908      7566 00
  2909               	.LASF57:
@@ -3569,19 +3574,19 @@
  2922      5F6D 6461 
  2922      7900 
  2923               		.ident	"GCC: (GNU) 5.5.0"
-68K GAS  /tmp/cck24UG8.s 			page 61
+68K GAS  /tmp/ccl6dwQc.s 			page 61
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 test3.c
-     /tmp/cck24UG8.s:23     .text:0000000000000000 task0
+     /tmp/ccl6dwQc.s:23     .text:0000000000000000 task0
                             *COM*:0000000000000004 com0in
                             *COM*:0000000000000004 com0out
                             *COM*:0000000000000004 com1out
-     /tmp/cck24UG8.s:277    .text:00000000000001c8 task1
+     /tmp/ccl6dwQc.s:277    .text:00000000000001c8 task1
                             *COM*:0000000000000004 com1in
-     /tmp/cck24UG8.s:532    .text:0000000000000390 init_file
-     /tmp/cck24UG8.s:584    .text.startup:0000000000000000 main
+     /tmp/ccl6dwQc.s:532    .text:0000000000000390 init_file
+     /tmp/ccl6dwQc.s:584    .text.startup:0000000000000000 main
                             *COM*:0000000000003800 stacks
                             *COM*:00000000000000a0 task_tab
                             *COM*:0000000000000018 semaphore
