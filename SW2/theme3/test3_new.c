@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
 #include "mtk_c.h"
 FILE* com0in;
 FILE* com0out;
@@ -18,38 +18,43 @@ void show(int width, int height, char question[height][width], char column[width
     int w,h;
     // 描画部分
     // 列名および空白描画
-    printf("     |");
+    fprintf(com0out, "     |");
+    fprintf(com1out, "     |");
     for (w = 1; w < width-1; w++){
-        printf("%c", column[2*w]);
-        // fprintf(com1out ,"%c", column[2*w]);
-        printf("%c|", column[2*w+1]);
-        // fprintf(com1out, "%c|", column[2*w+1]);
+        fprintf(com0out, "%c", column[2*w]);
+        fprintf(com1out ,"%c", column[2*w]);
+        fprintf(com0out, "%c|", column[2*w+1]);
+        fprintf(com1out, "%c|", column[2*w+1]);
     }
-    printf("\n   ");
+    fprintf(com0out, "\n   ");
+    fprintf(com1out, "\n   ");
     for (w = 0; w < width-1; w++){
-        printf("  |");
-        // fprintf(com1out, "  |");
+        fprintf(com0out, "  |");
+        fprintf(com1out, "  |");
     }
-    printf("\n");
+    fprintf(com0out, "\n");
+    fprintf(com1out, "\n");
     // 間違い本体
     for(h=0; h<height; h++){
         // 列名を描画するかどうか
         for (w = 0; w < width; w++){
           if(h == h_answer && w == w_answer && a1 == 0 ){
-              printf("\x1b[101m%2c\x1b[0m|", question[h][w]);
-            //   fprintf(com1out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
+              fprintf(com0out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
+              fprintf(com1out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
+	      continue;
           }
           if(h == h_answer && w == w_answer && a1 == 1 ){
-              printf("\x1b[101m%2c\x1b[0m|", question[h][w]);
-            //   fprintf(com1out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
+              fprintf(com0out, "\x1b[102m%2c\x1b[0m|", question[h][w]);
+              fprintf(com1out, "\x1b[102m%2c\x1b[0m|", question[h][w]);
+	      continue;
           }
           else{
-              printf("%2c|", question[h][w]);
-            //   fprintf(com1out, "%2c|", question[h][w]);
+              fprintf(com0out, "%2c|", question[h][w]);
+              fprintf(com1out, "%2c|", question[h][w]);
           }
         }
-        printf("\n");
-        // fprintf(com1out, "\n");
+        fprintf(com0out, "\n");
+        fprintf(com1out, "\n");
   }  
 }
 
@@ -64,36 +69,40 @@ while(1){
 
     // トーク画面制限
     P(0);
-
-    // 自分の入力値削除
-    fprintf(com0out, "\e[A\e[K");
-    // 自分をフォントを赤色にして自分の右側に表示
-    fprintf(com0out, "\x1b[31m\n%80s\n\x1b[0m", &s0);
-    // 相手のの入力値削除
+    fprintf(com0out, "\x1b[31m");
+    fprintf(com1out, "\x1b[31m");
+    fprintf(com0out, "\n%80s\n", &s0);
     fprintf(com1out, "\e[A\e[K");
+    fprintf(com1out, "\n%s\n", &s0);
+    fprintf(com0out, "\x1b[0m");
+    fprintf(com1out, "\x1b[0m");
+    // 自分の入力値削除
+    //fprintf(com0out, "\e[A\e[K");
+    // 自分をフォントを赤色にして自分の右側に表示
+    //fprintf(com0out, "\x1b[31m\n%80s\n\x1b[0m", &s0);
+    // 相手のの入力値削除
+    //fprintf(com1out, "\e[A\e[K");
     // 自分をフォントを赤色にして相手の左側に表示
-    fprintf(com1out, "\x1b[31m\n%s\n\x1b[0m", &s0);
+    //fprintf(com1out, "\x1b[31m\n%s\n\x1b[0m", &s0);
 
     // ゲームスタートコマンドかどうか
-    if(strncmp(&s0, "start",5)!=0){
+    if(strncmp(&s0, "start",5) == 0){
         int width, height;
         int width_input, height_input;
-        // fprintf(com1out, "Player0 is now setting rule ...");
-        printf("\nThe size of widths(letters) more than 2, less than 40 ");
+        fprintf(com1out, "Player0 is now setting rule ...");
+        fprintf(com0out, "\nThe size of widths(letters) more than 2, less than 40 ");
         scanf("%d", &width_input);
-        // fprintf(com0out, "\e[A\e[K");
         width = width_input;
+        fprintf(com1out, "\nThe size of width = %d\n", width);
         width += 2;
 
-        // fprintf(com1out, "\nThe size of width = %d\n", width);
-
         
-        printf("The size of heights(letters) less than 26 ");
+        fprintf(com0out, "The size of heights(letters) less than 26 ");
         scanf("%d", &height_input);
-        printf("\n");
+        fprintf(com0out, "\n");
         height = height_input;
 
-        // fprintf(com1out, "\nThe height of width = %d\n", width);
+        fprintf(com1out, "\nThe height of width = %d\n", width);
 
         int h,w;
         char column[2*width-1];
@@ -151,6 +160,7 @@ while(1){
         fprintf(com0out, "\nGive cell name faster than your opponent! ex)A01\n");
         fprintf(com1out, "\nGive cell name faster than your opponent! ex)A01\n");
 
+
         // トーク画面解放
         V(0);
 
@@ -172,11 +182,14 @@ while(1){
         
             if(strncmp(&s0, check_answer, 3)==0 && answerer != 1){
                 answerer = 0;
-                printf("\n\n That's correct!!!\n\n");
+                fprintf(com0out, "\n\n Player0 solved faster!\n\n");
+		fprintf(com1out, "\n\n Player0 solved faster!\n\n");
                 show(width, height, question, column, w_answer,h_answer,answerer);
                 break;;
             }
             if(answerer == 1){
+                fprintf(com0out, "\n\n Player1 solved faster!\n\n");
+		fprintf(com1out, "\n\n Player1 solved faster!\n\n");
                 show(width, height, question, column, w_answer,h_answer,answerer);
                 break;
             }
@@ -187,15 +200,9 @@ while(1){
             // トーク画面解放
             V(0);
         }
-    }
-
-
-
-    //char *a = "A10";
-    //if(strcmp(&s0,a)==0){
-	//fprintf(com0out, "Correct!!!!! \n");
-    //}
-    
+     // トーク画面解放
+     V(0);
+    }    
 
 }
 }
@@ -208,15 +215,21 @@ while(1){
     
     // トーク画面制限
     P(0);
-
-    // 自分の入力値削除
-    fprintf(com1out, "\e[A\e[K");
-    // 自分をフォントを緑色にして自分の右側に表示
-    fprintf(com1out, "\x1b[32m\n%80s\n\x1b[0m", &s1);
-    // 相手のの入力値削除
+    fprintf(com0out, "\x1b[32m");
+    fprintf(com1out, "\x1b[32m");
     fprintf(com0out, "\e[A\e[K");
+    fprintf(com0out, "\n%s\n", &s1);
+    fprintf(com1out, "\n%80s\n", &s1);
+    fprintf(com0out, "\x1b[0m");
+    fprintf(com1out, "\x1b[0m");
+    // 自分の入力値削除
+    //fprintf(com1out, "\e[A\e[K");
+    // 自分をフォントを緑色にして自分の右側に表示
+    //fprintf(com1out, "\x1b[32m\n%80s\n\x1b[0m", &s1);
+    // 相手のの入力値削除
+    //fprintf(com0out, "\e[A\e[K");
     // 自分をフォントを緑色にして相手の左側に表示
-    fprintf(com0out, "\x1b[32m\n%s\n\x1b[0m", &s1);
+    //fprintf(com0out, "\x1b[32m\n%s\n\x1b[0m", &s1);
 
     if(!check_answer){
         strncmp(&s1, check_answer, 3) == 0;
@@ -224,7 +237,7 @@ while(1){
     }
 
     // トーク画面解放
-    P(0);
+    V(0);
 }
 }
 
@@ -241,8 +254,8 @@ int main(void){
   fprintf(com0out, "\nYou're Player0 You can set rule\n");
   fprintf(com0out, "Give 'start' to play!\n");
   fprintf(com1out, "\nYou're Player1 You can't set rule\n");
-  fprintf(com0out, "\nYou can also enjoy chatting\n");
-  fprintf(com1out, "\nYou can also enjoy chatting\n");
+  fprintf(com0out, "\nYou can also enjoy chatting\n\n");
+  fprintf(com1out, "\nYou can also enjoy chatting\n\n");
 
   begin_sch();  
   return 0;
