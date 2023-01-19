@@ -15,7 +15,6 @@ void init_file(){
 }
 
 void show(int width, int height, char question[height][width], char column[width], int w_answer, int h_answer, int a1){
-    fprintf(com0out, "a1 = %d\n", a1);
     int w,h;
     // 描画部分
     // 列名および空白描画
@@ -40,13 +39,13 @@ void show(int width, int height, char question[height][width], char column[width
         // 列名を描画するかどうか
         for (w = 0; w < width; w++){
           if(h == h_answer && w == w_answer && a1 == 0 ){
-              fprintf(com0out, "\x1b[104m%2c\x1b[0m|", question[h][w]);
-              fprintf(com1out, "\x1b[104m%2c\x1b[0m|", question[h][w]);
+              fprintf(com0out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
+              fprintf(com1out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
 	      continue;
           }
           if(h == h_answer && w == w_answer && a1 == 1 ){
-              fprintf(com0out, "\x1b[104m%2c\x1b[0m|", question[h][w]);
-              fprintf(com1out, "\x1b[104m%2c\x1b[0m|", question[h][w]);
+              fprintf(com0out, "\x1b[102m%2c\x1b[0m|", question[h][w]);
+              fprintf(com1out, "\x1b[102m%2c\x1b[0m|", question[h][w]);
 	      continue;
           }
           else{
@@ -172,20 +171,20 @@ while(1){
             fprintf(com1out, "\e[A\e[K");
             // 自分をフォントを赤色にして相手の左側に表示
             fprintf(com1out, "\x1b[31m\n%s\n\x1b[0m\n", &s0);
-        
-            if(strncmp(&s0, check_answer, 3) == 0 && answerer != 1){
-                answerer = 0;
-                fprintf(com0out, "\n\n Player0 solved faster!\n\n");
-		fprintf(com1out, "\n\n Player0 solved faster!\n\n");
-                show(width, height, question, column, w_answer,h_answer,0);
-                break;;
-            }
             if(answerer == 1){
-                fprintf(com0out, "\n\n Player1 solved faster!\n\n");
-		fprintf(com1out, "\n\n Player1 solved faster!\n\n");
+                fprintf(com0out, "\n\n \x1b[32mPlayer1\x1b[0m solved faster!\n\n");
+		fprintf(com1out, "\n\n \x1b[32mPlayer1\x1b[0m solved faster!\n\n");
                 show(width, height, question, column, w_answer,h_answer,1);
                 break;
+            }        
+            if(strncmp(&s0, check_answer, 3) == 0){
+                answerer = 0;
+                fprintf(com0out, "\n\n \x1b[31mPlayer0\x1b[0m solved faster!\n\n");
+		fprintf(com1out, "\n\n \x1b[31mPlayer0\x1b[0m solved faster!\n\n");
+                show(width, height, question, column, w_answer,h_answer,0);
+                break;
             }
+
             if(strncmp(&s0, "restart",7)==0){
                 break;
             }
