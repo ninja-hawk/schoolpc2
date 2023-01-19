@@ -21,7 +21,7 @@ void show(int width, int height, char question[height][width], char column[width
         // 列名を描画するかどうか
         for (w = 0; w < width; w++){
           if(h == h_answer && w == w_answer && a1 ){
-              printf("\x1b[31m%2c\x1b[0m|", question[h][w]);
+              printf("\x1b[101m%2c\x1b[0m|", question[h][w]);
           }
           else{
               printf("%2c|", question[h][w]);
@@ -38,7 +38,7 @@ int main(void){
       int width, height;
       int width_input, height_input;
       
-      printf("\ninput: ");
+      printf("\ngive 'start' to play game! input: ");
       scanf("%s", &input);
 
       if(strncmp(&input, "break",5)==0){
@@ -111,23 +111,21 @@ int main(void){
       sprintf(check, "%c%c%c\n", check0[0], check1[0], check2[0]);
       // printf("%s\n", check);
       
-      printf("\ncheck! ");
-      scanf("%s", &input);
 
-      if(strncmp(&input, check,3)==0){
-        a1 = 1;
-        printf("That's correct!!!\n\n");
-        show(width, height, question, column, w_answer,h_answer,a1);
+
+      while(1){
+					printf("\nanswer or 'restart' ");
+					scanf("%s", &input);
+          if(strncmp(&input, check,3)==0){
+              a1 = 1;
+              printf("That's correct!!!\n\n");
+              show(width, height, question, column, w_answer,h_answer,a1);
+							break;
+          }
+          if(strncmp(&input, "restart",7)==0){
+              break;
+          }      
       }
-
-      // while(1){
-      //     if(strncmp(&input, "break",5)==0){
-      //         break;
-      //     }
-      //     if(strncmp(&input, "start",5)!=0){
-      //         continue;
-      //     }      
-      // }
       
       // V(0);
     }

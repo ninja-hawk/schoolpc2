@@ -21,46 +21,71 @@ void show(int width, int height, char question[height][width], char column[width
     printf("     |");
     for (w = 1; w < width-1; w++){
         printf("%c", column[2*w]);
+        // fprintf(com1out ,"%c", column[2*w]);
         printf("%c|", column[2*w+1]);
+        // fprintf(com1out, "%c|", column[2*w+1]);
     }
     printf("\n   ");
     for (w = 0; w < width-1; w++){
         printf("  |");
+        // fprintf(com1out, "  |");
     }
     printf("\n");
     // 間違い本体
     for(h=0; h<height; h++){
         // 列名を描画するかどうか
         for (w = 0; w < width; w++){
-          if(h == h_answer && w == w_answer && a1 ){
-              printf("\x1b[31m%2c\x1b[0m|", question[h][w]);
+          if(h == h_answer && w == w_answer && a1 == 0 ){
+              printf("\x1b[101m%2c\x1b[0m|", question[h][w]);
+            //   fprintf(com1out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
+          }
+          if(h == h_answer && w == w_answer && a1 == 1 ){
+              printf("\x1b[101m%2c\x1b[0m|", question[h][w]);
+            //   fprintf(com1out, "\x1b[101m%2c\x1b[0m|", question[h][w]);
           }
           else{
               printf("%2c|", question[h][w]);
+            //   fprintf(com1out, "%2c|", question[h][w]);
           }
         }
         printf("\n");
+        // fprintf(com1out, "\n");
   }  
 }
 
-
+char *check_answer;
+int answerer = 2; 
 
 void task0(){
 while(1){
-    P(0);
     char s0;
+    // 入力受付
     fscanf(com0in, "%s", &s0);
+
+    // トーク画面制限
+    P(0);
+
+    // 自分の入力値削除
     fprintf(com0out, "\e[A\e[K");
+    // 自分をフォントを赤色にして自分の右側に表示
+    fprintf(com0out, "\x1b[31m\n%80s\n\x1b[0m", &s0);
+    // 相手のの入力値削除
+    fprintf(com1out, "\e[A\e[K");
+    // 自分をフォントを赤色にして相手の左側に表示
+    fprintf(com1out, "\x1b[31m\n%s\n\x1b[0m", &s0);
 
-    P(1);
-
+    // ゲームスタートコマンドかどうか
     if(strncmp(&s0, "start",5)!=0){
         int width, height;
         int width_input, height_input;
+        // fprintf(com1out, "Player0 is now setting rule ...");
         printf("\nThe size of widths(letters) more than 2, less than 40 ");
         scanf("%d", &width_input);
+        // fprintf(com0out, "\e[A\e[K");
         width = width_input;
         width += 2;
+
+        // fprintf(com1out, "\nThe size of width = %d\n", width);
 
         
         printf("The size of heights(letters) less than 26 ");
@@ -68,12 +93,14 @@ while(1){
         printf("\n");
         height = height_input;
 
+        // fprintf(com1out, "\nThe height of width = %d\n", width);
+
         int h,w;
         char column[2*width-1];
         char question[height][width];
         char q = 'a';
         char a = 'e';
-        int a1 = 0;
+        int a1 = 2;
         
         int w_answer, h_answer;
         w_answer = rand() % (width - 2) + 2;
@@ -119,51 +146,85 @@ while(1){
         char *check;
         sprintf(check, "%c%c%c\n", check0[0], check1[0], check2[0]);
         // printf("%s\n", check);
-        
-        // printf("\ncheck! ");
-        // scanf("%s", &input);
+        check_answer = check;
 
-        // if(strncmp(&input, check,3)==0){
-        //   a1 = 1;
-        //   printf("That's correct!!!\n\n");
-        //   show(width, height, question, column, w_answer,h_answer,a1);
-        // }
+        fprintf(com0out, "\nGive cell name faster than your opponent! ex)A01\n");
+        fprintf(com1out, "\nGive cell name faster than your opponent! ex)A01\n");
+
+        // トーク画面解放
+        V(0);
+
+        while(1){
+            // 入力受付
+            fscanf(com0in, "%s", &s0);
+
+            // トーク画面制限
+            P(0);
+
+            // 自分の入力値削除
+            fprintf(com0out, "\e[A\e[K");
+            // 自分をフォントを青色にして自分の右側に表示
+            fprintf(com0out, "\x1b[31m\n%80s\n\x1b[0m", &s0);
+            // 相手のの入力値削除
+            fprintf(com1out, "\e[A\e[K");
+            // 自分をフォントを青色にして相手の左側に表示
+            fprintf(com1out, "\x1b[31m\n%s\n\x1b[0m", &s0);
+        
+            if(strncmp(&s0, check_answer, 3)==0 && answerer != 1){
+                answerer = 0;
+                printf("\n\n That's correct!!!\n\n");
+                show(width, height, question, column, w_answer,h_answer,answerer);
+                break;;
+            }
+            if(answerer == 1){
+                show(width, height, question, column, w_answer,h_answer,answerer);
+                break;
+            }
+            if(strncmp(&s0, "restart",7)==0){
+                break;
+            }
+
+            // トーク画面解放
+            V(0);
+        }
     }
-    V(1);
+
+
 
     //char *a = "A10";
     //if(strcmp(&s0,a)==0){
 	//fprintf(com0out, "Correct!!!!! \n");
     //}
-    // フォントを赤色に
-    fprintf(com0out, "\x1b[31m");
-    fprintf(com1out, "\x1b[31m");
-    fprintf(com0out, "\n%80s\n", &s0);
-    fprintf(com1out, "\e[A\e[K");
-    fprintf(com1out, "\n%s\n", &s0);
-    fprintf(com0out, "\x1b[0m");
-    fprintf(com1out, "\x1b[0m");
-    V(0);
+    
+
 }
 }
 
 void task1(){
 while(1){
-    P(1);
     char s1;
+    // 入力受付
     fscanf(com1in, "%s", &s1);
+    
+    // トーク画面制限
+    P(0);
+
+    // 自分の入力値削除
     fprintf(com1out, "\e[A\e[K");
-    // V(0);
-    // P(1);
-    // フォントを緑色に
-    fprintf(com0out, "\x1b[32m");
-    fprintf(com1out, "\x1b[32m");
+    // 自分をフォントを緑色にして自分の右側に表示
+    fprintf(com1out, "\x1b[32m\n%80s\n\x1b[0m", &s1);
+    // 相手のの入力値削除
     fprintf(com0out, "\e[A\e[K");
-    fprintf(com0out, "\n%s\n", &s1);
-    fprintf(com1out, "\n%80s\n", &s1);
-    fprintf(com0out, "\x1b[0m");
-    fprintf(com1out, "\x1b[0m");
-    V(1);
+    // 自分をフォントを緑色にして相手の左側に表示
+    fprintf(com0out, "\x1b[32m\n%s\n\x1b[0m", &s1);
+
+    if(!check_answer){
+        strncmp(&s1, check_answer, 3) == 0;
+        answerer = 1;
+    }
+
+    // トーク画面解放
+    P(0);
 }
 }
 
@@ -175,6 +236,14 @@ int main(void){
 
   set_task(task0);
   set_task(task1);
+  fprintf(com0out, "\nFind 'e'\n");
+  fprintf(com1out, "\nFind 'e'\n");
+  fprintf(com0out, "\nYou're Player0 You can set rule\n");
+  fprintf(com0out, "Give 'start' to play!\n");
+  fprintf(com1out, "\nYou're Player1 You can't set rule\n");
+  fprintf(com0out, "\nYou can also enjoy chatting\n");
+  fprintf(com1out, "\nYou can also enjoy chatting\n");
+
   begin_sch();  
   return 0;
 }
