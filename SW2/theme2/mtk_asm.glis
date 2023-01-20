@@ -127,76 +127,81 @@
  109 00ac 48E7 FFFE 	        movem.l %D0-%D7/%A0-%A6, -(%sp)         | 使用可能性のあるレジスタの退避
  110 00b0 40C0      	        move.w  %SR, %D0                        | %SRを%D0へ
  111 00b2 0800 000D 	        btst.l  #13, %D0                        | SRの13bit目を見てスーパーバイザか否
- 112 00b6 6700 0020 	        beq     end_hard_clock                  | 13bit目が1でなければ、スーパーバイ�
+ 112 00b6 6700 0040 	        beq     end_hard_clock                  | 13bit目が1でなければ、スーパーバイ�
  113 00ba 2F39 0000 	        move.l  curr_task, -(%sp)
  113      0000 
  114 00c0 2F3C 0000 	        move.l  #ready,   -(%sp)
  114      0000 
- 115               	       
- 116 00c6 4EB9 0000 	        jsr     addq                            | current_taskをreadyの末尾に追加
+ 115 00c6 13FC 0061 	       move.b	#'a', LED1
+ 115      00D0 003B 
+ 116 00ce 4EB9 0000 	        jsr     addq                            | current_taskをreadyの末尾に追加
  116      0000 
- 117 00cc 508F      	        add.l   #8, %sp
- 118               		
- 119 00ce 4EB9 0000 	        jsr     sched                           | schedを起動し、次に実行されるタス�
+ 117 00d4 508F      	        add.l   #8, %sp
+ 118 00d6 13FC 0061 		move.b	#'a', LED2
+ 118      00D0 003D 
+ 119 00de 4EB9 0000 	        jsr     sched                           | schedを起動し、次に実行されるタス�
  119      0000 
- 120               		
- 121 00d4 4EBA FF2A 	        jsr     swtch                           | swtchの起動
- 122               		
+ 120 00e4 13FC 0061 		move.b	#'a', LED3
+ 120      00D0 003F 
+ 121 00ec 4EBA FF12 	        jsr     swtch                           | swtchの起動
+ 122 00f0 13FC 0061 		move.b	#'a', LED4
+ 122      00D0 0029 
  123               	
  124               	end_hard_clock:
- 125 00d8 4CDF 7FFF 	        movem.l (%sp)+, %D0-%D7/%A0-%A6         |レジスタ復帰退避
- 126 00dc 4E75      	        rts
+ 125 00f8 4CDF 7FFF 	        movem.l (%sp)+, %D0-%D7/%A0-%A6         |レジスタ復帰退避
+ 126 00fc 4E75      	        rts
  127               	
  128               	init_timer:
- 129 00de 48E7 E000 	        movem.l %D0-%D2, -(%sp)         | 使用可能性のあるレジスタの退避
- 130 00e2 7003      	        move.l  #3, %D0                 | システムコールRESET_TIMERの番号
- 131 00e4 4E40      	        trap    #0                      | RESET_TIMER呼び出し
- 132 00e6 7004      	        move.l  #4, %D0                 | システムコールSET_TIMERの番号
- 133 00e8 323C 03E8 	        move.w  #1000, %D1             | 割り込み発生周期は1秒に設定(p38)
- 134 00ec 243C 0000 	        move.l  #hard_clock, %d2        | 割り込み時に起動するルーチンの先頭アド
+ 129 00fe 48E7 E000 	        movem.l %D0-%D2, -(%sp)         | 使用可能性のあるレジスタの退避
+ 130 0102 7003      	        move.l  #3, %D0                 | システムコールRESET_TIMERの番号
+ 131 0104 4E40      	        trap    #0                      | RESET_TIMER呼び出し
+ 132 0106 7004      	        move.l  #4, %D0                 | システムコールSET_TIMERの番号
+ 133 0108 323C 0001 	        move.w  #1, %D1             | 割り込み発生周期は1秒に設定(p38)
+ 134 010c 243C 0000 	        move.l  #hard_clock, %d2        | 割り込み時に起動するルーチンの先頭アド
  134      0000 
- 135 00f2 4E40      	        trap    #0                      | SET_TIMER呼び出し
- 136 00f4 4CDF 0007 	        movem.l (%sp)+,%D0-%D2          | SRの退避
- 137 00f8 4E75      	        rts
+ 135 0112 4E40      	        trap    #0                      | SET_TIMER呼び出し
+ 136 0114 4CDF 0007 	        movem.l (%sp)+,%D0-%D2          | SRの退避
+ 137 0118 4E75      	        rts
  138               	
  139               	**************************
  140               	**first_task
  141               	*************************
  142               	first_task:
- 143 00fa 2039 0000 		    move.l curr_task, %d0     /* TCB先頭番地の計算 */
+ 143 011a 2039 0000 		    move.l curr_task, %d0     /* TCB先頭番地の計算 */
  143      0000 
- 144 0100 43F9 0000 	        lea.l  task_tab, %a1      /* 見つけたアドレスを%a1に */
+ 144 0120 43F9 0000 	        lea.l  task_tab, %a1      /* 見つけたアドレスを%a1に */
  144      0000 
  145               	loop_first_task:
- 146 0106 5380      	        subq.l #1, %d0            /* 配列の何番目なのか計算 */
- 147 0108 D3FC 0000 	        add.l  #0x14, %a1         /* %a1:先頭アドレス */
+ 146 0126 5380      	        subq.l #1, %d0            /* 配列の何番目なのか計算 */
+ 147 0128 D3FC 0000 	        add.l  #0x14, %a1         /* %a1:先頭アドレス */
  147      0014 
- 148 010e 0C40 0000 	        cmp    #0, %d0
- 149 0112 6600 FFF2 	        bne    loop_first_task
+ 148 012e 0C40 0000 	        cmp    #0, %d0
+ 149 0132 6600 FFF2 	        bne    loop_first_task
  150               	        /*USP,SSPの値の回復*/
- 151 0116 5889      	        add.l   #4, %a1           /* a1にTCBのSSP */
- 152 0118 2E51      	        move.l  (%a1), %ssp
- 153               	
- 154 011a 4CDF 0100 	        movem.l (%sp)+, %a0
 68K GAS  mtk_asm.s 			page 4
 
 
- 155 011e 4E60      	        move.l  %a0, %usp
- 156 0120 4CDF 7FFF 	        movem.l (%sp)+, %d0-%d7/%a0-%a6
+ 151 0136 5889      	        add.l   #4, %a1           /* a1にTCBのSSP */
+ 152 0138 2E51      	        move.l  (%a1), %ssp
+ 153               	
+ 154 013a 4CDF 0100 	        movem.l (%sp)+, %a0
+ 155 013e 4E60      	        move.l  %a0, %usp
+ 156 0140 4CDF 7FFF 	        movem.l (%sp)+, %d0-%d7/%a0-%a6
  157               	
- 158 0124 4E73      			rte                       /*rte*/
+ 158 0144 4E73      			rte                       /*rte*/
  159               	
+ 160               	
 68K GAS  mtk_asm.s 			page 5
 
 
 DEFINED SYMBOLS
-           mtk_asm.s:142    .text:00000000000000fa first_task
+           mtk_asm.s:142    .text:000000000000011a first_task
            mtk_asm.s:56     .text:0000000000000048 pv_handler
            mtk_asm.s:84     .text:0000000000000088 P
            mtk_asm.s:92     .text:000000000000009a V
            mtk_asm.s:30     .text:0000000000000000 swtch
            mtk_asm.s:108    .text:00000000000000ac hard_clock
-           mtk_asm.s:128    .text:00000000000000de init_timer
+           mtk_asm.s:128    .text:00000000000000fe init_timer
            mtk_asm.s:18     *ABS*:0000000000000014 SIZE_OF_TCB
            mtk_asm.s:19     *ABS*:0000000000d00000 IOBASE
            mtk_asm.s:20     *ABS*:0000000000d0002f LED7
@@ -212,8 +217,8 @@ DEFINED SYMBOLS
            mtk_asm.s:68     .text:000000000000006a p_order
            mtk_asm.s:73     .text:0000000000000074 v_order
            mtk_asm.s:77     .text:000000000000007e end_pv_handler
-           mtk_asm.s:124    .text:00000000000000d8 end_hard_clock
-           mtk_asm.s:145    .text:0000000000000106 loop_first_task
+           mtk_asm.s:124    .text:00000000000000f8 end_hard_clock
+           mtk_asm.s:145    .text:0000000000000126 loop_first_task
 
 UNDEFINED SYMBOLS
 next_task
