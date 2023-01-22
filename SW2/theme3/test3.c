@@ -173,14 +173,14 @@ while(1){
             fprintf(com1out, "\x1b[31m\n%s\n\x1b[0m\n", &s0);
             if(answerer == 1){
                 fprintf(com0out, "\n\n \x1b[32mPlayer1\x1b[0m solved faster!\n\n");
-		fprintf(com1out, "\n\n \x1b[32mPlayer1\x1b[0m solved faster!\n\n");
+		    fprintf(com1out, "\n\n \x1b[32mPlayer1\x1b[0m solved faster!\n\n");
                 show(width, height, question, column, w_answer,h_answer,1);
                 break;
             }        
             if(strncmp(&s0, check_answer, 3) == 0){
                 answerer = 0;
                 fprintf(com0out, "\n\n \x1b[31mPlayer0\x1b[0m solved faster!\n\n");
-		fprintf(com1out, "\n\n \x1b[31mPlayer0\x1b[0m solved faster!\n\n");
+	    	fprintf(com1out, "\n\n \x1b[31mPlayer0\x1b[0m solved faster!\n\n");
                 show(width, height, question, column, w_answer,h_answer,0);
                 break;
             }
